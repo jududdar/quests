@@ -3,6 +3,15 @@ local items = {}
 function items.check_turn_in(npc, trade, trade_check, keepitems, text, emote)
 	keepitems = keepitems or 1;	
 	
+	local trade_return = {};
+	for key, value in pairs(trade) do
+		trade_return[key] = value;
+	end
+	
+	if(trade_return["enable_multiquest"] == 0) then
+		keepitems = 0;
+	end
+	
 	local required_items = 0;
 	if(text ~= nil or emote ~= nil) then
 		for i = 1, 4 do
@@ -15,11 +24,6 @@ function items.check_turn_in(npc, trade, trade_check, keepitems, text, emote)
 		end
 
 		eq.debug("".. npc:GetCleanName() .. " requires " .. required_items .. " more items for this handin.", 3);
-	end
-
-	local trade_return = {};
-	for key, value in pairs(trade) do
-		trade_return[key] = value;
 	end
 	
     local accepted = false;
