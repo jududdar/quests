@@ -11,8 +11,8 @@ function event_say(e)
 	end
 	if(e.other:GetLevel() == 1 and e.other:IsSelfFound() == 0 and e.other:IsSoloOnly() == 0 and e.other:IsHardcore() == 0) then
 		if(e.message:findi("rulesets")) then
-		e.self:Say("I can offer you flags for the [solo] ruleset, where groups and raids become unavailable as well as external buffs, as well as the [self found] ruleset which allows you to be prevented from interacting with anyone else except others with the same flags of similar level, though you are prevented from trading as well. There is also the [hardcore] ruleset, which will result in your mortal coil being emptied - permanently - on death. You may include all three of these rulesets together.");
-		e.other:Message(13, "By accepting any of these options, you will be disconnected instantly to prevent abuse.");
+			e.self:Say("I can offer you flags for the [solo] ruleset, [self found], and [hardcore] rulesets. You must tell me all of the rulesets you wish to embark on in the same sentence. In the [solo] ruleset, all external interactions become unavailable - as well as external buffs. In the [self found] ruleset you are prevented from interacting with anyone else except others with the same flags of similar level, though you are additionally prevented from trading. There is also the [hardcore] ruleset, which will result in your mortal coil being emptied - permanently - on death. You may include all three of these rulesets together.");
+			e.other:Message(13, "By accepting any of these options, you will be disconnected instantly to prevent abuse.");
 		end
 	
 		if(e.message:findi("solo")) then
