@@ -16,7 +16,7 @@ function event_trade(e)
 	local item_lib = require("items");
 	local expansion_flag = eq.get_current_expansion();
 	
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 19918}) and expansion_flag >= 4.0) then
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 19918})) then
 		e.self:Say("Sharpen this dagger and take it with this gem and a rattlesnake skin to Verona Rankin.");
 		e.other:Faction(e.self,336,5); -- Coalition of Trade Folk Underground
 		e.other:Faction(e.self,229,5); -- Coalition of Trade Folk

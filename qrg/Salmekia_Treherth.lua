@@ -39,7 +39,7 @@ end
 function event_trade(e)
 	local item_lib = require("items");
 	local expansion_flag = eq.get_current_expansion();
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 20268}) and expansion_flag >= 4.0) then
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 20268})) then
 		e.self:Say("It is a shame that some people decide to throw away their humanity with the worship of evil deities. Your actions have saved the lives of many creatures that rely on the waters of this glade. Take this Rusty Pine Druid Scimitar and sharpen it in a forge with a sharpening stone. It may take you several attempts if you are unfamiliar with the process. Once that is done return to me with the Sharpened Pine Druid Scimitar, a Gnoll Fang, and a Large King Snake Skin.");
 		-- Confirmed Live Experience and Faction
 		e.other:Faction(e.self,272,10,0); -- Jaggedpine Treefolk
@@ -48,7 +48,7 @@ function event_trade(e)
 		e.other:Faction(e.self,324,-2,0); -- Unkempt Druids
 		e.other:Faction(e.self,262,1,0); -- Guards of Qeynos
 		e.other:QuestReward(e.self,{itemid = 20258,exp = 1000}); -- Item: Rusty Pine Druid Scimitar
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 20259,item2 = 13915,item3 = 19945}) and expansion_flag >= 4.0) then
+	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 20259,item2 = 13915,item3 = 19945})) then
 		e.self:Emote("fashions a grip from the large king snake skin, attaches the gnoll fang to the heel of the swords hilt, and polishes the blade of the sword with a luminescent green polish. 'Here is your new weapon young druid. May it serve you well.'");
 		-- Confirmed Live Experience and Faction
 		e.other:Faction(e.self,272,5,0); -- Jaggedpine Treefolk

@@ -37,7 +37,7 @@ end
 function event_trade(e)
 	local item_lib = require("items");
 	local expansion_flag = eq.get_current_expansion();
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 20204}) and expansion_flag >= 4.0) then
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 20204})) then
 		e.self:Say("Well done. The Bloodsabers have many enemies within the city of Qeynos and its surrounding regions. You must exercise much caution when not within the safety of our temple here in the Qeynos Catacombs. Take this Rough Bloodsaber Staff and when you have gathered a Giant King Snake Skin, two Gnoll Fangs, and a Giant Fire Beetle Eye, return them to me with this staff and I will complete its construction.");
 		e.other:Faction(e.self,221,10); -- Faction: Bloodsabers
 		e.other:Faction(e.self,262,-1); -- Faction: Guards of Qeynos
@@ -45,7 +45,7 @@ function event_trade(e)
 		e.other:Faction(e.self,341,-2); -- Faction: Priests of Life
 		e.other:Faction(e.self,230,1); -- Faction: Corrupted Qeynos Guards
 		e.other:QuestReward(e.self,0,0,0,0,20203,500);
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 13915, item2 = 20203, item3 = 19946, item4 = 13251}) and expansion_flag >= 4.0) then
+	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13915, item2 = 20203, item3 = 19946, item4 = 13251})) then
 		e.self:Emote("smooths the shaft of the staff, fashions a grip from the giant king snake skin, secures the giant fire beetle eye in a metal fixture and attaches it to the top of the staff. 'Here is your Staff of the Bloodsabers young Scourge Sorcerer. Go now and spread the disease!");
 		e.other:Faction(e.self,221,5); -- Faction: Bloodsabers
 		e.other:Faction(e.self,262,-1); -- Faction: Guards of Qeynos

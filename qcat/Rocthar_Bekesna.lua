@@ -23,7 +23,7 @@ function event_trade(e)
 		e.other:Faction(e.self,341,-25); --Priest of Life
 		e.other:Faction(e.self,230,5); --Corrupt Qeynos Guards
 		e.other:QuestReward(e.self,0,0,0,0,13598,20); --Ruined Training Tunic*
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 20175}) and expansion_flag >= 4.0) then
+	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 20175})) then
 		e.self:Say("Well done " .. e.other:GetCleanName() .. ". Now take this Rusty Scourge Warrior Broadsword to a forge and sharpen it with a sharpening stone. It may take you several attempts if you are unfamiliar with the process. Once that is done take the Tarnished Scourge Warrior Sword and a Giant King Snake Skin to Illie Roln and he will put the finishing touches on the weapon.");
 		e.other:Faction(e.self,221,10); -- Faction: Bloodsabers
 		e.other:Faction(e.self,262,-1); -- Faction: Guards of Qeynos

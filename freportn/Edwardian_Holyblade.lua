@@ -40,7 +40,7 @@ function event_trade(e)
 	local item_lib = require("items");
 	local expansion_flag = eq.get_current_expansion();
 	
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 9927,item2 = 9928,item3 = 9929,item4 = 9930}) and expansion_flag >= 4.0) then  -- Fefslans Bracer, Gnoosals Bracer, Walorinags Bracer, Eridals Bracer
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 9927,item2 = 9928,item3 = 9929,item4 = 9930})) then  -- Fefslans Bracer, Gnoosals Bracer, Walorinags Bracer, Eridals Bracer
 		e.self:Say("Your dedication to the Temple of Marr is unquestioned " .. e.other:GetCleanName() .. ".You have made your house very proud. May this blade bring you the best of luck and good fortune wherever your adventures may take you.");
 		e.other:Faction(e.self,281,25,0); -- Faction: Knights of Truth
 		e.other:Faction(e.self,271,-3,0); -- Faction: Dismal Rage

@@ -25,7 +25,7 @@ function event_trade(e)
 		e.other:Faction(e.self,292,15,0); -- +Merchants of Rivervale
 		e.other:Faction(e.self,324,-15,0); -- -Unkempt Druids
 		e.other:QuestReward(e.self,0,0,0,0,13541,100); -- Jumjum Sack Tunic*
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 19622,item2 = 19622,item3 = 19623,item4 = 19623}) and expansion_flag >= 4.0) then -- Handin 2 Orc LumberJack Axes and 2 Orc LumberJack Machetes
+	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 19622,item2 = 19622,item3 = 19623,item4 = 19623})) then -- Handin 2 Orc LumberJack Axes and 2 Orc LumberJack Machetes
 		e.self:Say("Excellent work young Storm Reaper " .. e.other:GetCleanName() .. ". Now take this Dull Storm Reaper Machete to a [forge] and sharpen it with a sharpening stone. It may take several attempts to get the blade to an adequate sharpness if you are unfamiliar with the process. Once it is sharpened give it to Bodbin Gimple with a ruined thorn drakeling scales and he will put the finishing touches on what will be a fine weapon!");
 		e.other:Faction(e.self,355,5,0); -- Faction: Storm Reapers
 		e.other:Faction(e.self,286,1,0); -- Faction: Mayor Gubbin

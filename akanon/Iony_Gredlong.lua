@@ -44,7 +44,7 @@ function event_trade(e)
 	local item_lib = require("items");
 	local expansion_flag = eq.get_current_expansion();
 	
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 9105,item2 = 9105,item3 = 9105,item4 = 9106}) and expansion_flag >= 4.0) then
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 9105,item2 = 9105,item3 = 9105,item4 = 9106})) then
 		e.self:Say("Thank you! Here, take this staff and good luck on your journey."); -- Text made up
 		e.other:QuestReward(e.self,0,0,0,0,9107); 	-- Walking Staff of the Shortnoble
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 18775})) then

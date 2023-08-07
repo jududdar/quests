@@ -40,7 +40,7 @@ function event_trade(e)
 	local item_lib = require("items");
 	local expansion_flag = eq.get_current_expansion();
 		
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 9917,item2 = 9917,item3 = 9933}) and expansion_flag >= 4.0) then -- Lion Tooth x 2, Shana's Necklace
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 9917,item2 = 9917,item3 = 9933})) then -- Lion Tooth x 2, Shana's Necklace
 		e.self:Say("I am so happy to have my necklace back! I cannot begin to tell you how much this means to me Reveree. Please take this dagger as a symbol of my sincere thanks. It was presented to me by the academy for my years of teaching but I hope you will take it. Good luck to you and come back to visit us soon!");
 		e.other:Faction(e.self,220,25); -- Arcane Scientists
 		e.other:Faction(e.self,281,6); -- Knights of Truth

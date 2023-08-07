@@ -41,7 +41,7 @@ end
 function event_trade(e)
 	local item_lib = require("items");
 	local expansion_flag = eq.get_current_expansion();
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 27537,item2 = 27537,item3 = 27538}) and expansion_flag >= 4.0) then
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 27537,item2 = 27537,item3 = 27538})) then
 		e.self:Say("There was no doubt in my mind that you could be counted on for this important mission. I will see that our tacticians get these battle plans so that they can be studied at once. Please take this Scimitar as a symbol of your dedication to your house and your god. You have done well, young Kiliak, may Tunare guide you always.");
 		e.other:Faction(e.self,310,5); -- soldier of Tunare
 		e.other:Faction(e.self,279,1); -- King Tearis Thex

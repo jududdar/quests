@@ -41,7 +41,7 @@ end
 function event_trade(e)
 	local expansion_flag = eq.get_current_expansion();
 	local item_lib = require("items");
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 2396, item2 = 28065, item3 = 28066}) and expansion_flag >= 4.0) then
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 2396, item2 = 28065, item3 = 28066})) then
 		e.self:Say("Dese will surely be a great addition to me trophy room " .. e.other:GetCleanName() .. "! I knew I could count on you to not have a problem collecting these things for me. As I promised, I have prepared you a fine blade that will surely guide you to victory wherever your travels may take you. Gud luck to ye " .. e.other:GetCleanName() .. ", hammers high!");
 		e.other:Faction(e.self,227,1); -- Faction: Clerics of Underfoot
 		e.other:Faction(e.self,274,1); -- Faction: Kazon Stormhammer

@@ -41,7 +41,7 @@ end
 function event_trade(e)
 	local item_lib = require("items");
 	local expansion_flag = eq.get_current_expansion();
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 27414, item2 =27415, item3 = 27415}) and expansion_flag >= 4.0) then
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 27414, item2 =27415, item3 = 27415})) then
 		e.self:Say("Your dedication to your house amazes me " .. e.other:GetCleanName() .. ". Please take this blade as a symbol of your loyalty to your faith.");
 		-- Confirmed Live Experience and Faction
 		e.other:Faction(e.self,280,10,0); -- Faction: Knights of Thunder

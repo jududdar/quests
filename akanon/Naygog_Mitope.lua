@@ -18,14 +18,14 @@ end
 function event_trade(e)
 	local expansion_flag = eq.get_current_expansion();
 	local item_lib = require("items");
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 10990}) and expansion_flag >= 4.0) then -- Yulcabis's axe
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 10990})) then -- Yulcabis's axe
 		e.self:Say("Well done " .. e.other:GetCleanName() .. ". Take this Dull Dark Reflection Axe and sharpen it in a forge with a sharpening stone. It may take several attempts if you are unfamiliar with the process. Once the axe has been sharpened take it to Clockwork SmithXIII with a Coyote Pelt and he will put the finishing touches on the weapon.");
 		e.other:Faction(e.self,238,10,0); 	-- Dark reflection
 		e.other:Faction(e.self,245,-1,0); 	-- eldritch collective
 		e.other:Faction(e.self,255,-1,0); -- gem choppers
 		e.other:Faction(e.self,240,-1,0); 	-- Deepmuses
 		e.other:QuestReward(e.self,0,0,0,0,10995,100);	-- Dull Dark Reflection Axe
-	elseif (item_lib.check_turn_in(e.self, e.trade, {item1 = 18759}) and expansion_flag >= 4.0) then -- Stained Parchment
+	elseif (expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 18759})) then -- Stained Parchment
 		e.self:Say("This is fabulous news!! You have done well, young one. Here, then, is your reward for a job well done.");
 		e.other:Faction(e.self,238,100,0); 	-- Dark reflection
 		e.other:Faction(e.self,245,-10,0); 	-- eldritch collective

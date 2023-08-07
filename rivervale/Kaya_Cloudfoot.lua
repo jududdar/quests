@@ -27,7 +27,7 @@ function event_trade(e)
 		e.other:Faction(e.self,292,15,0); -- +Merchants of Rivervale
 		e.other:Faction(e.self,324,-15,0); -- -Unkempt Druids
 		e.other:QuestReward(e.self,0,0,0,0,13541,100); -- Jumjum Sack Tunic*
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 19688}) and expansion_flag >= 4.0) then
+	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 19688})) then
 		e.self:Say("Take this Dull Bravefoot Short Sword to the forge at Tagglefoots farm and sharpen it with a sharpening stone. It may take several attempts if you are unfamiliar with the process. Once that is done present the blade and a large snake skin to Bodbin Gimple and he will put the finishing touches on the sword.");
 		e.other:Faction(e.self,355,10,0); -- +Storm Reapers
 		e.other:Faction(e.self,286,1,0); -- +Mayor Gubbin

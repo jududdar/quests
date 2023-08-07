@@ -40,7 +40,7 @@ function event_trade(e)
 		e.other:Faction(e.self,341,-25); --Priest of Life
 		e.other:Faction(e.self,230,5); --Corrupt Qeynos Guards
 		e.other:QuestReward(e.self,0,0,0,0,13598,100); --Ruined Training Tunic*
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 20197}) and expansion_flag >= 4.0) then
+	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 20197})) then
 		e.self:Say("You have done well, " .. e.other:GetCleanName() .. ". Take this Rusty Bloodsaber Mace to a forge and clean it up with a Sharpening Stone. It may take you several attempts to get all the rust off if you are not familiar with the process. Once that is done take the Refined Bloodsaber Mace to Torin Krentar with a Giant King Snake Skin and he will put the finishing touches on the weapon.");
 		e.other:Faction(e.self,221,10); -- Faction: Bloodsabers
 		e.other:Faction(e.self,262,-1); -- Faction: Guards of Qeynos

@@ -44,7 +44,7 @@ function event_trade(e)
 	local item_lib = require("items");
 	local expansion_flag = eq.get_current_expansion();
 	
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 27535,item2 =  27536,item3 =  27536}) and expansion_flag >= 4.0) then
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 27535,item2 =  27536,item3 =  27536})) then
 		e.self:Say("Excllent!  Here's your reward."); -- text made up
 		e.other:QuestReward(e.self,0,0,0,0,27530,500);
 	end	

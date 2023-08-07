@@ -38,13 +38,13 @@ function event_trade(e)
 	local item_lib = require("items");
 	local expansion_flag = eq.get_current_expansion();
 	
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 19935}) and expansion_flag >= 4.0) then
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 19935})) then
 		e.self:Say("Poor, poor Yovik Splegle. Haha! Excellent work, " .. e.other:GetCleanName() .. ". Quickly, fetch me a giant rattlesnake skin and a giant leaf scarab eye along with your Rough Hewn Dismal Staff and I will construct you the Staff of Dismal Rage before your very eyes.");
 		e.other:Faction(e.self,271,10,0); -- Faction: Dismal Rage
 		e.other:Faction(e.self,281,-1,0); -- Faction: Knights of Truth
 		e.other:Faction(e.self,296,2,0); -- Faction: Opal Dark Briar
 		e.other:QuestReward(e.self,0,0,0,0,19924); -- Item: Rough Hewn Dismal Staff
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 19924,item2 = 19852,item3 = 19936}) and expansion_flag >= 4.0) then
+	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 19924,item2 = 19852,item3 = 19936})) then
 		e.other:Faction(e.self,271,10,0); -- Faction: Dismal Rage
 		e.other:Faction(e.self,281,-1,0); -- Faction: Knights of Truth
 		e.other:Faction(e.self,296,2,0); -- Faction: Opal Dark Briar

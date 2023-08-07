@@ -22,10 +22,10 @@ end
 function event_trade(e)
 	local item_lib = require("items");
 	local expansion_flag = eq.get_current_expansion();
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 19574,item2 = 16197,item3 = 19554}) and expansion_flag >= 4.0) then
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 19574,item2 = 16197,item3 = 19554})) then
 		e.self:Say("Well, you're not completely useless, afterall. Take this sword and sharpen it. Then, return it to me.");
 		e.other:QuestReward(e.self,0,0,0,0,19572);
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 19573}) and expansion_flag >= 4.0) then
+	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 19573})) then
 		e.self:Say("I'm surprised, I really am. I didn't think somebody like you could pull it off. Here, take this before I change my mind.");
 		e.other:Faction(e.self,239,15); --The Dead
 		e.other:Faction(e.self,303,2); --Queen Cristanos Thex
@@ -34,7 +34,7 @@ function event_trade(e)
 		e.other:Faction(e.self,245,-2); --Eldritch Collective
 		e.other:Faction(e.self,1522,-30); --Primordial Malice
 		e.other:QuestReward(e.self,0,0,0,0,19607,1000);
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 19570,item2 = 19570,item3 = 19570,item4 = 19570}) and expansion_flag >= 4.0) then
+	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 19570,item2 = 19570,item3 = 19570,item4 = 19570})) then
 		e.self:Emote("fashions the petrified femurs into a shield frame. This will be the frame of your new shield. Return now again to the Nektulos Forest, in the gray ashen region of the forest near the Lavastorm mountains the basilisks often come down from the fiery peaks to lay their eggs in the ashen soil. Basilisk hatchlings can be found there as they make their way towards the warmer interior of the mountains. Hunt these basilisk hatchlings and gather two Basilisk Hatchling Skins. Once this is done take the skins and frame to Medron Y'Lask at the Furrier Royale.");
 		e.other:Faction(e.self,239,15); --The Dead
 		e.other:Faction(e.self,303,2); --Queen Cristanos Thex

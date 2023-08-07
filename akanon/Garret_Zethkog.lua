@@ -12,7 +12,12 @@ function event_say(e)
 		elseif(e.message:findi("next task")) then
 			e.self:Say("There are many through out Norrath who oppose the Dark Reflection. Even here in our home, Ak'Anon, the Eldrich Collective and the Deep Muses oppose us and wish to see us exiled or eradicated. A Paladin of the Deep Muses, Donlix Bonkle, has been leading a group of zealots that is hunting young members of the Dark Reflection in the Steamfont Mountains. Seek Donlix Bonkle and eliminate him. When you have accomplished this task return to me with Donlix's Short Sword.");
 		end
+	else
+			if(e.message:findi("hail")) then
+				e.self:Say("Hail " .. e.other:GetCleanName() .. "! I am Garret Zethkog, first Shadowknight of the Dark Reflection. Long ago I made the journey far to the west to the human city of Qeynos. In the catacombs of the Bloodsabres, human disciples of the Plague Lord, Bertoxxulous. I studied the ways of the Shadowknight.");
+			end
 	end
+	else
 end
 
 function event_trade(e)

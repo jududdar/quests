@@ -22,10 +22,10 @@ function event_trade(e)
 		e.other:Faction(e.self,281,-15,0); -- Knights of Truth
 		e.other:Faction(e.self,296,20,0); -- Opal Dark Briar
 		e.other:QuestReward(e.self,0,0,0,0,13561,20); -- Faded Crimson Tunic
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 19932}) and expansion_flag >= 4.0) then -- Tarsa Yovar's Head
+	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 19932})) then -- Tarsa Yovar's Head
 		e.self:Say("Take this and get it sharpened. Bring it back to me with a Giant Rattlesnake Skin and you will have proven yourself able to wield a Dismal Rage Battle Axe, to help teach the way of Innoruuk!");
 		e.other:QuestReward(e.self,0,0,0,0,19921,100); -- Dull Dismal Battleaxe
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 19926,item2 = 19852}) and expansion_flag >= 4.0) then -- Sharpened Dismal Battleaxe - Giant Rattlesnake Skin
+	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 19926,item2 = 19852})) then -- Sharpened Dismal Battleaxe - Giant Rattlesnake Skin
 		e.self:Say("You have proven your faith " .. e.other:GetCleanName() .. ". Take this to vanquish any and all whom question the absolute power of Innoruuk!");
 		e.other:QuestReward(e.self,0,0,0,0,19938,100); -- Dismal Rage BattleAxe
 	end

@@ -47,7 +47,7 @@ end
 function event_trade(e)
 	local expansion_flag = eq.get_current_expansion();
 	local item_lib = require("items");
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 28064, item2 = 28064, item3 = 28063}) and expansion_flag >= 4.0) then
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 28064, item2 = 28064, item3 = 28063})) then
 		e.self:Say("Here is that blade I promised you " .. e.other:GetCleanName() .. ".");
 		-- Summon: Gem-Etched Battle Axe
 		e.other:QuestReward(e.self,{itemid = 26076}); -- Item: Gem-Etched Battle Axe

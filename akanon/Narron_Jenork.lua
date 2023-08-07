@@ -44,7 +44,7 @@ function event_trade(e)
 	local item_lib = require("items");
 	local expansion_flag = eq.get_current_expansion();
 	
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 9111, item2 = 9112, item3 = 9113, item4 = 9114}) and expansion_flag >= 4.0) then
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 9111, item2 = 9112, item3 = 9113, item4 = 9114})) then
 		e.self:Say("Well done, young " .. e.other:GetCleanName() .. "! Since you have brought me the necessary items, I now present you with this Initiate Watchman's Long Sword. Use it worthily."); -- text made up
 		e.other:Faction(e.self,255,25); 	-- Gem Choppers better
 		e.other:Faction(e.self,288,6); 	-- Merchants of Ak'Anon better

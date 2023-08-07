@@ -36,7 +36,7 @@ function event_trade(e)
 	local item_lib = require("items");
 	local expansion_flag = eq.get_current_expansion();
 
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 20421}) and expansion_flag >= 4.0) then
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 20421})) then
 		e.self:Say("Well done " .. e.other:GetCleanName() .. ". I will have this translated immediately so that it may be studied. Take this Dull Fell Blade Cutlass and sharpen it in a forge with a sharpening stone. It may take you several attempts if you are unfamiliar with the process. Once that is done bring me the Sharp Fell Blade Cutlass, a Large Briar Snake Skin, and a Petrified Eyeball and I will put the finishing touches on the weapon.");
 		e.other:Faction(e.self,265,5);  -- +Heretics
 		e.other:Faction(e.self,242,-5);  -- -Deepwater Knights
@@ -44,7 +44,7 @@ function event_trade(e)
 		e.other:Faction(e.self,231,-5);  -- -Craftkeepers
 		e.other:Faction(e.self,233,-5);  -- -Crimson Hands
 		e.other:QuestReward(e.self,0,0,0,0,20403);
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 20404, item2 = 20355, item3 = 20402}) and expansion_flag >= 4.0) then
+	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 20404, item2 = 20355, item3 = 20402})) then
 		e.self:Emote("Faratain fashions a grip from the large briar snake skin, fastens the petrified eyeball to the pommel of the hilt, and polishes the blade with a shimmering black substance. I present you with your Fell Blade Cutlass. May it serve you well in the name of Cazic Thule.");
 		e.other:QuestReward(e.self,0,0,0,0,20416);
 	end

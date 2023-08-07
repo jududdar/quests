@@ -49,7 +49,7 @@ function event_trade(e)
 		e.other:Faction(e.self,336,5,0); -- Coalition of Tradefolk Underground
 		e.other:Faction(e.self,329,5,0); -- Carson McCabe
 		e.other:QuestReward(e.self,0,0,0,0,13539,20); -- Old Brown Vest*
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 22693,item2 = 22694}) and expansion_flag >= 4.0) then
+	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 22693,item2 = 22694})) then
 		e.other:Faction(e.self,241,10,0); -- Deeppockets
 		e.other:Faction(e.self,223,1,0); -- Circle of Unseen Hands
 		e.other:Faction(e.self,292,-1,0); -- Merchants of Rivervale

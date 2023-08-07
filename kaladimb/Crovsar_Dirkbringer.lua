@@ -49,7 +49,7 @@ end
 function event_trade(e)
 	local expansion_flag = eq.get_current_expansion();
 	local item_lib = require("items");
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 28067, item2 = 28068, item3 = 28068}) and expansion_flag >= 4.0) then
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 28067, item2 = 28068, item3 = 28068})) then
 		e.self:Say("Ah thank ye " .. e.other:GetCleanName() .. ". Here is yer minin pick.");
 		--Summon: Sharpened Mining Pick
 		e.other:QuestReward(e.self,0,0,0,0,26078); -- Item: Sharpened Mining Pick

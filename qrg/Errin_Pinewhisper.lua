@@ -37,7 +37,7 @@ end
 function event_trade(e)
 	local item_lib = require("items");
 	local expansion_flag = eq.get_current_expansion();
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 19949}) and expansion_flag >= 4.0) then
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 19949})) then
 		e.self:Say("It is a shame when human blood must be shed in the defense of our brother wolves and bears. I thank you for your dedication to the Jaggedpine Treefolk. Take this rusty pine scout sword and sharpen it in a forge with a sharpening stone. It may take you several attempts if you are unfamiliar with the process. Once that is done return the sharpened sword to me with a gnoll fang and a large king snake skin and I will put the finishing touches on the weapon.");
 		
 		e.other:Faction(e.self,272,10); --jaggedpine treefolk
@@ -46,7 +46,7 @@ function event_trade(e)
 		e.other:Faction(e.self,324,-2); --unkempt druids
 		e.other:Faction(e.self,262,1); --guards of qeynos
 		e.other:QuestReward(e.self,{itemid = 19950,exp = 1000}); -- Item: Rusty Pine Scout Sword
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 20104,item2 = 13915, item3 = 19945}) and expansion_flag >= 4.0) then
+	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 20104,item2 = 13915, item3 = 19945})) then
 		e.self:Emote("fashions a grip from the large king snake skin, attaches the gnoll fang to the heel of the swords hilt, and polishes the blade of the sword with a luminescent green polish. 'Here is your new weapon young ranger. May it serve you well.'");
 		e.other:Faction(e.self,272,5); --jaggedpine treefolk
 		e.other:Faction(e.self,302,1); --protectors of pine

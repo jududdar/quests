@@ -70,7 +70,7 @@ function event_trade(e)
 	local item_lib = require("items");
 	local expansion_flag = eq.get_current_expansion();
 	-- Silent Fist Clansman Hand Wraps require Sironans Head ID-27425, Yalroens Head ID-27426, and 1 High Quality Gnoll Fur ID-27427
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 27425, item2 = 27426, item3 = 27427}) and expansion_flag >= 4.0) then
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 27425, item2 = 27426, item3 = 27427})) then
 		e.self:Say("There are many more corrupt guards. I am sure this is just the beginning. You have helped Konem and for that I thank you . You are well on your way to enlightenment and tranquility. I bid you farewell and wish you well where ever your travels may take you.");
 		-- Confirmed Live Experience and Faction
 		e.other:Faction(e.self,309,10); -- Silent Fist Clan faction

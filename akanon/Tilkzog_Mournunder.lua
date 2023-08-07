@@ -41,7 +41,7 @@ end
 function event_trade(e)
 	local expansion_flag = eq.get_current_expansion();
 	local item_lib = require("items");
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 10994}) and expansion_flag >= 4.0) then
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 10994})) then
 		e.self:Say("It is good to know that one so zealously opposed to the Dark Reflection has been eliminated. Take this Rough Hewn Staff and when you have acquired a Harpies Eye and Pristine Ebon Drakeling Scales take the Staff, Eye, and Scales to Clockwork SmithXIII. The clockwork will put the finishing touches on your new staff.");
 		e.other:Faction(e.self,238,10); -- Faction: Dark Reflection
 		e.other:Faction(e.self,245,-1); -- Faction: Eldritch Collective

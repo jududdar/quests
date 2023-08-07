@@ -23,7 +23,7 @@ function event_trade(e)
 		e.other:Faction(e.self,292,15,0); -- +Merchants of Rivervale
 		e.other:Faction(e.self,324,-15,0); -- -Unkempt Druids
 		e.other:QuestReward(e.self,0,0,0,0,13541,20); -- Jumjum Sack Tunic*
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 19689}) and expansion_flag >= 4.0) then -- Rusbek's Head
+	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 19689})) then -- Rusbek's Head
 		e.self:Say("Excellent work young Storm Reaper. It is sad that one of our own would resort to such vile acts; his mind must have been twisted by evil desires. Such behavior is practically unheard of among the kind people of Rivervale. Take this dull scimitar and sharpen it in the forge here at the Tagglefoots Farm with a sharpening stone. It may take several attempts if you are unfamiliar with the process. Once that is done give the sharpened scimitar and a large fruit bat wing to Bodbin Gimple and he will put the finishing touches on what will be a fitting scimitar for a Druid of the Storm Reapers.");
 		e.other:Faction(e.self,355,10,0); -- +Storm Reapers
 		e.other:Faction(e.self,286,1,0); -- +Mayor Gubbin

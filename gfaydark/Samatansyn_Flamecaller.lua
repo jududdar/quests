@@ -40,7 +40,7 @@ function event_trade(e)
 	local item_lib = require("items");
 	local expansion_flag = eq.get_current_expansion();
 	
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 27539,item2 = 13266,item3 = 13266}) and expansion_flag >= 4.0) then -- Faydark Champions Long Sword, from Cb Cell Key
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 27539,item2 = 13266,item3 = 13266})) then -- Faydark Champions Long Sword, from Cb Cell Key
 		e.self:Say("Well done, " .. e.other:GetCleanName() .. "! Now we will be able to free more of our brothers and sisters from the orcs! Take this, as promised, a fine weapon with which to slay more orcs!!");
 		e.other:QuestReward(e.self,0,0,0,0,27532,7000);
 	end

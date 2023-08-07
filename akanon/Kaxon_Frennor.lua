@@ -17,7 +17,7 @@ end
 function event_trade(e)
 	local expansion_flag = eq.get_current_expansion();
 	local item_lib = require("items");
-	if (item_lib.check_turn_in(e.self, e.trade, {item1 = 10992}) and expansion_flag >= 4.0) then
+	if (expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 10992})) then
 		e.self:Say("At last that haughty rogue has met his end. Take this Dull Dark Reflection Stiletto and sharpen it in a forge with a sharpening stone. It may take several attempts if you are unfamiliar with the process. Once the blade has been sharpened take the sharpened stiletto to Clockwork Smith XIII with a Giant Rat Pelt and he will put the finishing touches on your new weapon.");
 		e.other:Faction(e.self,238,10,0); 	-- Dark reflection
 		e.other:Faction(e.self,245,-1,0); 	-- eldritch collective

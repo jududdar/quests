@@ -39,9 +39,9 @@ end
 function event_trade(e)
 	local item_lib = require("items");
 	local expansion_flag = eq.get_current_expansion();
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 20281}) and expansion_flag >= 4.0) then
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 20281})) then
 		e.other:QuestReward(e.self,0,0,0,0,20294,200);
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 20298,item2 = 20274,item3 = 20271}) and expansion_flag >= 4.0) then
+	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 20298,item2 = 20274,item3 = 20271})) then
 		e.other:QuestReward(e.self,0,0,0,0,20331,300);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)

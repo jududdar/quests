@@ -59,7 +59,7 @@ function event_trade(e)
 	local item_lib = require("items");
 	-- Handin: Aqua Goblin Blood, Green Goblin Blood
 	local expansion_flag = eq.get_current_expansion();
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 28062, item2 = 28062, item3 = 28061, item4 = 28061}) and expansion_flag >= 4.0) then
+	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 28062, item2 = 28062, item3 = 28061, item4 = 28061})) then
 		-- Quest: Brells Blessed Platemail Help (End)
 		e.self:Say("Well done " .. e.other:GetCleanName() .. "! Here is your reward.");
 		-- Blessed Brellium Warhammer

@@ -49,7 +49,7 @@ function event_trade(e)
 		e.other:Faction(e.self,330,-15,0); -- The Freeport Militia
 		e.other:Faction(e.self,281,20,0); -- Knight of Truth
 		e.other:QuestReward(e.self,{itemid = 13572,exp = 20}); -- Dirty Training Tunic*
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 27421,item2 = 27421, item3 = 27421,item4 = 27422}) and expansion_flag >= 4.0) then
+	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 27421,item2 = 27421, item3 = 27421,item4 = 27422})) then
 		e.self:Say("I knew he would still have it, such an unintelligent one Beris is. As I promised I have crafted you a blade for your trouble. I hope you will promptly stain it with the blood of the gnolls. You have done well " .. e.other:GetCleanName() .. ", good luck to you.");
 		-- Confirmed Live Experience and Faction
 		e.other:Faction(e.self,311,10,0); -- Steel Warriors
