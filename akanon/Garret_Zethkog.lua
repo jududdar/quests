@@ -17,14 +17,13 @@ function event_say(e)
 				e.self:Say("Hail " .. e.other:GetCleanName() .. "! I am Garret Zethkog, first Shadowknight of the Dark Reflection. Long ago I made the journey far to the west to the human city of Qeynos. In the catacombs of the Bloodsabres, human disciples of the Plague Lord, Bertoxxulous. I studied the ways of the Shadowknight.");
 			end
 	end
-	else
 end
 
 function event_trade(e)
 	local item_lib = require("items");
 	local expansion_flag = eq.get_current_expansion();
 	
-	if (item_lib.check_turn_in(e.self, e.trade, {item1 = 10991}) and expansion_flag >= 4.0) then
+	if (expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 10991})) then
 		e.self:Say("Ah! Donlix's sword! You have done well to bring this to me... but oh! Look at your corruption seep into it. I think now this sword belongs to you. Use it well.");
 		e.other:QuestReward(e.self,0,0,0,0,11078); -- Item: Plague Knight Short Sword
 	elseif (item_lib.check_turn_in(e.self, e.trade, {item1 = 18434})) then -- Gnome Shadowknight Note
