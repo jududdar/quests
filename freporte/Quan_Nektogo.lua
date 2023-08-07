@@ -1,29 +1,31 @@
 function event_say(e)
-	if(e.message:findi("hail")) then
-		e.self:Say("Sorry friend. I have nothing to sell at the moment. These taxes imposed by the Freeport Militia and the Coalition of Tradefolk take a heavy toll on us poor folk.");
-	elseif(e.message:findi("forge")) then
-		e.self:Say("You can find them all over Freeport. Inside and out of many of the buildings where weapons and armor are sold.");
-	elseif(e.message:findi("dismal knight boots")) then
-		e.self:Say("To assemble Dismal Knight Boots you will need to obtain two bricks of crude iron and smelt them in a [forge] with a Water Flask and this crude Boot Mold. Once that is done combine the Crude Iron Boots with two Ruined Cat Pelts, and two Large Leaf Scarab Tarsi in the Mail Assembly Kit.");
-		e.other:SummonCursorItem(19634); -- Item: Crude Boot Mold
-	elseif(e.message:findi("dismal knight bracer")) then
-		e.self:Say("To assemble a Dismal Knight Bracer you will need to obtain a brick of crude iron and smelt it in a [forge] with a Water Flask and this Crude Bracer Mold. Once that is done, combine the Crude Iron Bracer with a Ruined Cat Pelt and a Leaf Scarab Sternite in the Mail Assembly Kit.");
-		e.other:SummonCursorItem(19632); -- Item: Crude Bracer Mold
-	elseif(e.message:findi("dismal knight breastplate")) then
-		e.self:Say("To assemble a Dismal Knight Breastplate you will need to obtain four bricks of crude iron and smelt them in a [forge] with a Water Flask and this Crude Breastplate Mold. Once that is done combine the Crude Iron Breastplate with a Medium Quality Cat Pelt, a Giant Leaf Scarab Carapace, and two Giant Leaf Scarab Tergites in the Mail Assembly Kit.");
-		e.other:SummonCursorItem(19637); -- Item: Crude Breastplate Mold
-	elseif(e.message:findi("dismal knight gauntlets")) then
-		e.self:Say("To assemble Dismal Knight Gauntlets you will need to obtain two bricks of crude iron and smelt them in a [forge] with a Water Flask and this crude Gauntlet Mold. Once that is done combine the Crude Iron Gauntlets with a Ruined Cat Pelt and two Leaf Scarab Tarsi in the Mail Assembly Kit.");
-		e.other:SummonCursorItem(19633); -- Item: Crude Gauntlets Mold
-	elseif(e.message:findi("dismal knight greaves")) then
-		e.self:Say("To assemble Dismal Knight Greaves you will need to obtain two bricks of crude iron and smelt them in a [forge] with a Water Flask and this Crude Greaves Mold. Once that is done combine the Crude Iron Greaves with two Low Quality Cat Pelts and two Large Leaf Scarab Sternites in the Mail Assembly Kit.");
-		e.other:SummonCursorItem(19636); -- Item: Crude Greaves Mold
-	elseif(e.message:findi("dismal knight helm")) then
-		e.self:Say("To assemble a Dismal Knight Helm you will need to obtain two bricks of crude iron and smelt them in a [forge] with a Water Flask and this Crude Helm Mold. Once that is done combine the Crude Iron Helm with a Ruined Cat Pelt and two Large Leaf Scarab Eyes in the Mail Assembly Kit.");
-		e.other:SummonCursorItem(19631); -- Item: Crude Helm Mold
-	elseif(e.message:findi("dismal knight vambraces")) then
-		e.self:Say("To assemble Dismal Knight Vambraces you will need to obtain two bricks of crude iron and smelt them in a [forge] with a Water Flask and this Crude Vambrace Mold. Once that is done combine the Crude Iron Vambraces with a Low Quality Cat Pelt and two Large Leaf Scarab Patella in the Mail Assembly Kit.");
-		e.other:SummonCursorItem(19635); -- Item: Crude Vambrace Mold
+	if(eq.get_current_expansion() >= 4.0) then
+		if(e.message:findi("hail")) then
+			e.self:Say("Sorry friend. I have nothing to sell at the moment. These taxes imposed by the Freeport Militia and the Coalition of Tradefolk take a heavy toll on us poor folk.");
+		elseif(e.message:findi("forge")) then
+			e.self:Say("You can find them all over Freeport. Inside and out of many of the buildings where weapons and armor are sold.");
+		elseif(e.message:findi("dismal knight boots")) then
+			e.self:Say("To assemble Dismal Knight Boots you will need to obtain two bricks of crude iron and smelt them in a [forge] with a Water Flask and this crude Boot Mold. Once that is done combine the Crude Iron Boots with two Ruined Cat Pelts, and two Large Leaf Scarab Tarsi in the Mail Assembly Kit.");
+			e.other:SummonCursorItem(19634); -- Item: Crude Boot Mold
+		elseif(e.message:findi("dismal knight bracer")) then
+			e.self:Say("To assemble a Dismal Knight Bracer you will need to obtain a brick of crude iron and smelt it in a [forge] with a Water Flask and this Crude Bracer Mold. Once that is done, combine the Crude Iron Bracer with a Ruined Cat Pelt and a Leaf Scarab Sternite in the Mail Assembly Kit.");
+			e.other:SummonCursorItem(19632); -- Item: Crude Bracer Mold
+		elseif(e.message:findi("dismal knight breastplate")) then
+			e.self:Say("To assemble a Dismal Knight Breastplate you will need to obtain four bricks of crude iron and smelt them in a [forge] with a Water Flask and this Crude Breastplate Mold. Once that is done combine the Crude Iron Breastplate with a Medium Quality Cat Pelt, a Giant Leaf Scarab Carapace, and two Giant Leaf Scarab Tergites in the Mail Assembly Kit.");
+			e.other:SummonCursorItem(19637); -- Item: Crude Breastplate Mold
+		elseif(e.message:findi("dismal knight gauntlets")) then
+			e.self:Say("To assemble Dismal Knight Gauntlets you will need to obtain two bricks of crude iron and smelt them in a [forge] with a Water Flask and this crude Gauntlet Mold. Once that is done combine the Crude Iron Gauntlets with a Ruined Cat Pelt and two Leaf Scarab Tarsi in the Mail Assembly Kit.");
+			e.other:SummonCursorItem(19633); -- Item: Crude Gauntlets Mold
+		elseif(e.message:findi("dismal knight greaves")) then
+			e.self:Say("To assemble Dismal Knight Greaves you will need to obtain two bricks of crude iron and smelt them in a [forge] with a Water Flask and this Crude Greaves Mold. Once that is done combine the Crude Iron Greaves with two Low Quality Cat Pelts and two Large Leaf Scarab Sternites in the Mail Assembly Kit.");
+			e.other:SummonCursorItem(19636); -- Item: Crude Greaves Mold
+		elseif(e.message:findi("dismal knight helm")) then
+			e.self:Say("To assemble a Dismal Knight Helm you will need to obtain two bricks of crude iron and smelt them in a [forge] with a Water Flask and this Crude Helm Mold. Once that is done combine the Crude Iron Helm with a Ruined Cat Pelt and two Large Leaf Scarab Eyes in the Mail Assembly Kit.");
+			e.other:SummonCursorItem(19631); -- Item: Crude Helm Mold
+		elseif(e.message:findi("dismal knight vambraces")) then
+			e.self:Say("To assemble Dismal Knight Vambraces you will need to obtain two bricks of crude iron and smelt them in a [forge] with a Water Flask and this Crude Vambrace Mold. Once that is done combine the Crude Iron Vambraces with a Low Quality Cat Pelt and two Large Leaf Scarab Patella in the Mail Assembly Kit.");
+			e.other:SummonCursorItem(19635); -- Item: Crude Vambrace Mold
+		end
 	end
 end
 

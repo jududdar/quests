@@ -1,7 +1,7 @@
 function event_say(e)
-	if(e.message:findi("hail")) then
+	if(e.message:findi("hail")and eq.get_current_expansion() < 4.0) then
 		e.self:Say("Well met, "..e.other:GetName()..". I am Arianna Trueblade, Warlord of the Steel Warriors. I am personally in charge of all the training that our young warriors receive. I take pride in knowing that my teaching can help make the foundation of a Freeport Champion. If you are a [warrior] then we might just have something to talk about.");
-	elseif(e.other:Class() == "Warrior") then
+	elseif(e.other:Class() == "Warrior" and eq.get_current_expansion() >= 4.0) then
 		if(e.message:findi("warrior")) then
 			e.self:Say("So you think you have what it takes to become one of Freeports finest? I will warn you now that we expect every single warrior that is brought into our ranks to go through a series of exercises. Rest assured you will be rewarded for your hard work with a set of armor that I will walk you though the process of making. Are you [ready to begin your testing]?");
 		elseif(e.message:findi("ready to begin")) then
@@ -36,8 +36,9 @@ end
 
 function event_trade(e)
 	local item_lib = require("items");
+	local expansion_flag = eq.get_current_expansion();
 
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 9919,item2 = 9918,item3 = 9923})) then -- Pristine Giant Scarab Leg, Lion Paw, Vial of Smoke
+	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 9919,item2 = 9918,item3 = 9923}) and expansion_flag >= 4.0) then -- Pristine Giant Scarab Leg, Lion Paw, Vial of Smoke
 		e.self:Say("Your determination to further your training and knowledge never ceases to amaze me. I knew I could count on you to retrieve these items for me. Luck was also on my side because I was able to craft the blade we spoke of before. May it protect you in all of your battles that await you. Excellent work "..e.other:GetName()..".");
 		e.other:Faction(e.self,311,25); -- Steel Warriors
 		e.other:Faction(e.self,262,5); -- Guards of Qeynos

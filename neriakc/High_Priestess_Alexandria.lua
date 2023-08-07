@@ -1,7 +1,7 @@
 function event_say(e)
-	if(e.message:findi("hail")) then
+	if(e.message:findi("hail") and eq.get_current_expansion() < 4.0) then
 		e.self:Say("Greetings child, what business do you have here? I'm sorry but I will only deal with Clerics that are willing to prove their loyalty to Innoruuk. I cannot deal with every single heathen that feels it is necessary to bid me a good day. If you are a [Cleric of Innoruuk] I might be able to aid you in your training.");
-	elseif(e.other:GetClass() == 2 and e.other:GetRace() == 6) then
+	elseif(e.other:GetClass() == 2 and e.other:GetRace() == 6 and eq.get_current_expansion() >= 4.0) then
 		if(e.message:findi("cleric of innoruuk")) then
 			e.self:Say("Is that so " .. e.other:Race() .. " " .. e.other:GetCleanName() .. ". Well from the looks of you I wouldn't say you are much of anything yet. However, if you have the willingness and determination to serve your God then there might just be more hope for you then I would have thought. Obviously, to move forward in your training, you will need to shield yourself from your enemies and from the elements. I believe I have something that could help you if you are still [interested in proving yourself]");
 		elseif(e.message:findi("interested in proving myself")) then
@@ -44,8 +44,9 @@ end
 
 function event_trade(e)
 	local item_lib = require("items");
+	local expansion_flag = eq.get_current_expansion();
 	
-	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 22617, item2 = 22618, item3 = 22619})) then
+	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 22617, item2 = 22618, item3 = 22619}) and expansion_flag >= 4.0) then
 		e.self:Say("Your prowess both in the classroom and on the battlefield has certainly amazed me. Please take this relic that is only presented to the most dedicated initiates and carry it with pride. You have made your house very proud on this day.");
 		e.other:QuestReward(e.self,0,0,0,0,22698); --Mace of the Darkpriest
 	end

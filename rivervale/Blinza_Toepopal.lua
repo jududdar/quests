@@ -3,7 +3,7 @@ function event_spawn(e)
 end
 
 function event_timer(e)
-	if(e.timer == "jillin") then
+	if(timer == "jillin") then
 		e.self:Say("[Jillin]? Jillin? Where did he go? Hrumph!");
 	end
 end
