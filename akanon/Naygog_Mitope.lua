@@ -12,6 +12,10 @@ function event_say(e)
 		elseif(e.message:findi("armor")) then
 			e.self:Say("Armor? For a warrior? Oh yes. You'll need to speak with Windlebeck for that.");
 		end
+	else
+		if(e.message:findi("hail")) then
+			e.self:Say("Hail " .. e.other:GetCleanName() .. ". I train those young gnomes who wish to [serve as a warrior] in the service of the Dark Reflection and our patron. Bertoxxulous the Plaguelord. Decay and destruction are powerful forces that influence Norrath. It is the duty of the Warriors of the Dark Reflection to bring destruction to the weak and injury to the strong so that our fellow gnomes may be reminded of their own mortality and new strong individuals may rise to power before Bertoxxulous decides it is their time to decay and be replaced like countless before them.");
+		end
 	end
 end
 

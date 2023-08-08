@@ -37,7 +37,12 @@ function event_say(e)
 		elseif(e.message:findi("collect the items")) then
 			e.self:Say("I need 3 Flawless Harpy Claws and 1 Ebon Drake Backbone still to have all the items necessary to craft this new mace. Once I have these items I can make a Shortnobles Walking Staff. For your trouble I will offer you my first staff made should I be able to create one. I hope to see you soon!");
 		end
+	else
+		if(e.message:findi("hail")) then
+			e.self:Say("It is very nice to meet you " .. e.other:GetCleanName() .. ". I am Iony Gredlong Priestess of the Underfoot. I coordinate all the training for new clerics here in the Deep Musing.");
+		end		
 	end
+	
 end
 
 function event_trade(e)

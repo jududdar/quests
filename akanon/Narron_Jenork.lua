@@ -37,6 +37,10 @@ function event_say(e)
 		elseif(e.message:findi("few items")) then
 			e.self:Say("I will need for you to bring me 1 Clockwork Oil Extract, 1 Minotaur Tibia, 1 Young Ebon Drake Ribcage and 1 Renegade Clockwork Scrapmetal. Return to me after you have gathered this items and I will reward you with your weapon.");
 		end
+	else
+		if(e.message:findi("hail")) then
+			e.self:Say("Pleased to meet you, " .. e.other:GetCleanName() .. "! I am Narron Jenork, High Watchman of Ak'anon. I am one of the most skilled Watchmans in all of Ak'anon, and I pride myself on training the most promising young warriors that Ak'anon has to offer.");
+		end		
 	end
 end
 
