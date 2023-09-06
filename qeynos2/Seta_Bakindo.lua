@@ -6,7 +6,7 @@ function event_say(e)
 			e.self:Say("There have been numerous muggings lately in Qeynos by corrupt guards. These guards are sworn to protect, server and uphold law in the city but all the do is break the law ten fold themselves. These corrupt individuals must be stopped. I have a [Silent Fist clan member] that I feel may be in trouble.");
 		elseif(e.message:findi("silent fist clan member")) then
 			e.self:Say("Konem Matse is my friend and mentor, he resides in Qeynos Hills providing security for the Sayers there. Lately though I have heard reports of guards demanding he pay them tax or else. This tax they speak of does not exist. I need you to go to the hills and help Konem. Rid the lands of these corrupt guards and bring me their heads as proof. I will also need 1 High Quality Gnoll Fur for a tailoring project I have been working on. Return to me with these items and you will be rewarded for your troubles.");
-		elseif(e.message:findi("who is tomer")) then
+		elseif(e.message:findi("who.* tomer")) then
 			e.self:Say("Oh, Tomer? We haven't heard from him in days, I'm really starting to worry. . . We need to have someone go [find him].");
 		elseif(e.message:findi("find him")) then
 			if(e.other:GetFaction(e.self) <= 5) then -- requires indifferent faction
@@ -51,7 +51,7 @@ function event_say(e)
 			e.self:Say("There have been numerous muggings lately in Qeynos by corrupt guards. These guards are sworn to protect, server and uphold law in the city but all the do is break the law ten fold themselves. These corrupt individuals must be stopped. I have a [Silent Fist clan member] that I feel may be in trouble.");
 		elseif(e.message:findi("silent fist clan member")) then
 			e.self:Say("Konem Matse is my friend and mentor, he resides in Qeynos Hills providing security for the Sayers there. Lately though I have heard reports of guards demanding he pay them tax or else. This tax they speak of does not exist. I need you to go to the hills and help Konem. Rid the lands of these corrupt guards and bring me their heads as proof. I will also need 1 High Quality Gnoll Fur for a tailoring project I have been working on. Return to me with these items and you will be rewarded for your troubles.");
-		elseif(e.message:findi("who is tomer")) then
+		elseif(e.message:findi("who.* tomer")) then
 			e.self:Say("Oh, Tomer? We haven't heard from him in days, I'm really starting to worry. . . We need to have someone go [find him].");
 		elseif(e.message:findi("find him")) then
 			if(e.other:GetFaction(e.self) <= 5) then -- requires indifferent faction
