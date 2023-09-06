@@ -14,7 +14,7 @@ function event_say(e)
 			else
 				e.self:Say("Your previous actions disgust me. Our guild will have nothing to do with the likes of you. Now, please, leave us be!");
 			end
-		elseif(e.message:findi("found tomer")) then
+		elseif(e.message:findi("found tomer") or e.message:findi("brought tomer")) then
 			e.self:Say("Great work " .. e.other:GetCleanName() .. ", we thought that was the last we'd seen of young Tomer.");
 			eq.signal(2030,1);
 		end
@@ -59,7 +59,7 @@ function event_say(e)
 			else
 				e.self:Say("Your previous actions disgust me. Our guild will have nothing to do with the likes of you. Now, please, leave us be!");
 			end
-		elseif(e.message:findi("found tomer")) then
+			elseif(e.message:findi("found tomer") or e.message:findi("brought tomer")) then
 			e.self:Say("Great work " .. e.other:GetCleanName() .. ", we thought that was the last we'd seen of young Tomer.");
 			eq.signal(2030,1);
 		end
