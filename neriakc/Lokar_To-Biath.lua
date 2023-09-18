@@ -48,7 +48,7 @@ function event_trade(e)
 			e.other:Faction(e.self,370, 10);--Dreadguard Inner
 			e.other:Faction(e.self,334, 1);--Dreadguard Outer
 			e.other:Faction(e.self,236, 1);--Dark Bargainers
-			e.other:QuestReward(e.self,0,0,0,0,0,150);
+			e.other:QuestReward(e.self,0,0,0,0,0,10);
 			Red_Wine = Red_Wine - 1;
 		until Red_Wine == 0;
 	end

@@ -57,7 +57,7 @@ function event_trade(e)
 			e.other:Faction(e.self,230,-1); -- Corrupt Qeynos Guards
 			e.other:Faction(e.self,223,-1); -- Circle of Unseen Hands
 			e.other:Faction(e.self,291,1); -- Merchants of Qeynos
-			e.other:QuestReward(e.self,0,0,0,0,10070,4500);
+			e.other:QuestReward(e.self,0,0,0,0,10070,9000); -- Custom Quarm exp data
 			fang = fang - 1;
 		until fang == 0
 	end		

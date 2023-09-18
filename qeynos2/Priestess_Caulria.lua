@@ -34,7 +34,7 @@ function event_trade(e)
 		e.other:Faction(e.self,262,2,0);  -- Guards of Qeynos
 		e.other:Faction(e.self,221,-1,0); -- Bloodsabers
 		e.other:Faction(e.self,219,1,0);    -- Antonius Bayle
-		e.other:QuestReward(e.self,0,0,0,0,0,15000);
+		e.other:QuestReward(e.self,0,0,0,0,0,25000);
 	elseif(e.other:GetFactionValue(e.self) >= -100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13298})) then
 		e.self:Say("Oh dear. The disease has spread to the realm of the Treefolk. It must have been difficult to kill such a large and rabid beast. Here. Take one of my personal scrolls as thanks for such a brave act of devotion. I pray you can use it. If not, then perhaps one of your fellow adventurers can.");
 		e.self:CastSpell(96,e.other:GetID()); -- Spell: Counteract Disease
@@ -44,7 +44,7 @@ function event_trade(e)
 		e.other:Faction(e.self,262,10,0);  -- Guards of Qeynos
 		e.other:Faction(e.self,221,-5,0); -- Bloodsabers
 		e.other:Faction(e.self,219,3,0);    -- Antonius Bayle
-		e.other:QuestReward(e.self,0,0,math.random(10),1,15226,20000); -- Item: Spell: Endure Disease
+		e.other:QuestReward(e.self,0,0,math.random(10),1,15226,30000); -- Item: Spell: Endure Disease
 	elseif(e.other:GetFactionValue(e.self) >= -100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13950})) then
 		e.self:Say("This is odd. This could explain the increase in the number of beasts within the lands surrounding Qeynos. You must take this to Freeport. Here. You must speak with Lorme Tredore. Show him this pellet. You had best gear up for the trip. Freeport is very far away. Here is some gold. Outfit yourself at our expense.");
 		-- Confirmed Live Factions
@@ -53,7 +53,7 @@ function event_trade(e)
 		e.other:Faction(e.self,262,5,0);  -- Guards of Qeynos
 		e.other:Faction(e.self,221,-2,0); -- Bloodsabers
 		e.other:Faction(e.self,219,1,0);    -- Antonius Bayle
-		e.other:QuestReward(e.self,0,0,math.random(20),1,13951,20000); -- Item: Fleshy Orb
+		e.other:QuestReward(e.self,0,0,math.random(20),1,13951,30000); -- Item: Fleshy Orb
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

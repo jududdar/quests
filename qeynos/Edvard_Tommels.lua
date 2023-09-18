@@ -43,7 +43,7 @@ function event_trade(e)
 				e.other:QuestReward(e.self,{itemid = 12076});
 			end
 			e.other:Faction(e.self,121,2,0); -- Faction: Qeynos Citizens
-			e.other:QuestReward(e.self,math.random(0,15),math.random(0,8),math.random(0,8),math.random(0,2),0,5000);
+			e.other:QuestReward(e.self,math.random(0,15),math.random(0,8),math.random(0,8),math.random(0,2),0,18750);
 			scroll = scroll - 1;
 		until scroll == 0;
 	end

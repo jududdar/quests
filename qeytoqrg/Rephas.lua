@@ -25,7 +25,7 @@ function event_trade(e)
 		e.other:Faction(e.self,281,1); -- Knights of Truth
 		e.other:Faction(e.self,296,-1); -- Opal Dark Briar
 		e.other:Faction(e.self,330,-1); -- Freeport Militia
-		e.other:QuestReward(e.self,{itemid = 13719,exp = 100}); -- Item: Grilled Rat Ears
+		e.other:QuestReward(e.self,{itemid = 13719,exp = 10}); -- Item: Grilled Rat Ears
 	elseif(e.other:GetFactionValue(e.self) >= -100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13719})) then
 		e.self:Say("Wha?..   Ah, I guess it's a bit of an acquired taste..  Oh well, your loss..  Here, take this..  They ain't no ears, but it's the least I could do..   And if ya find any more rat ears, good ol' Rephas here will be glad to take 'em off your hands for ya!");
 		-- Confirmed Live Faction and Experience
@@ -33,7 +33,7 @@ function event_trade(e)
 		e.other:Faction(e.self,281,1); -- Knights of Truth
 		e.other:Faction(e.self,296,-1); -- Opal Dark Briar
 		e.other:Faction(e.self,330,-1); -- Freeport Militia
-		e.other:QuestReward(e.self,{itemid = eq.ChooseRandom(1038,13076,15041,15208,15205),exp = 100}); -- Item: Fish Scales, Tattered cloth sandals, Spell: Weaken, Spell: Lull, Spell: True North
+		e.other:QuestReward(e.self,{itemid = eq.ChooseRandom(1038,13076,15041,15208,15205),exp = 5}); -- Item: Fish Scales, Tattered cloth sandals, Spell: Weaken, Spell: Lull, Spell: True North
 	elseif(e.other:GetFactionValue(e.self) >= -100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13050,item2 = 13050,item3 = 13050},1,text)) then
 		e.self:Say("Wow!..  How big was the dang varmint that these come off of?!  Bigger'n a ol' grizzly, I bet!  You've earned this, my friend!  It's my own secret recipe for rat ear pie..  sure is tasty, easy to make, and keeps your belly full while you're running about in the hills and such.  Take care, and may Karana keep your path clear and our lakes full.");
 		-- Confirmed Live Faction and Experience
@@ -41,7 +41,7 @@ function event_trade(e)
 		e.other:Faction(e.self,281,1); -- Knights of Truth
 		e.other:Faction(e.self,296,-1); -- Opal Dark Briar
 		e.other:Faction(e.self,330,-1); -- Freeport Militia
-		e.other:QuestReward(e.self,{itemid = 18103,exp = 140}); -- Item: Rat Ear Pie
+		e.other:QuestReward(e.self,{itemid = 18103,exp = 10}); -- Item: Rat Ear Pie
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 27428,item2 = 27429,item3 = 27430})) then
 		e.self:Say("These were the exact pages I was missing. I have been compiling this research for Juegile. It is now finished so please bring this book to him. Thank you!");
 		-- Confirmed Live Faction and Experience

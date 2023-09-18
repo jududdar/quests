@@ -67,7 +67,7 @@ function event_trade(e)
 				e.other:Faction(e.self,331,2,0); -- Faction: Merchants of Highpass
 				e.other:Faction(e.self,230,2,0); -- Faction: Corrupt Qeynos Guards
 				e.other:Faction(e.self,330,2,0); -- Faction: The Freeport Militia
-				e.other:QuestReward(e.self,math.random(0,10),math.random(0,10),math.random(0,5),math.random(0,1),0,25); -- verified xp live data
+				e.other:QuestReward(e.self,math.random(0,10),math.random(0,10),math.random(0,5),math.random(0,1),0,29400); -- Quarm custom XP data
 				scalp = scalp - 1;
 			until scalp == 0
 		else

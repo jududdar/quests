@@ -16,7 +16,7 @@ function event_trade(e)
 	
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 13340, item2 = 13006},1,text)) then --Kiola Nut, Water Flask
 		e.self:Say("Here you go. One Tumpy Tonic. Don't drink that too fast now.");
-		e.other:QuestReward(e.self,0,0,0,0,12114,1000); --Tumpy Tonic
+		e.other:QuestReward(e.self,0,0,0,0,12114,10); --Tumpy Tonic
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

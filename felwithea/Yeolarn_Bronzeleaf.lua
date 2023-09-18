@@ -29,7 +29,7 @@ function event_trade(e)
 		e.other:Faction(e.self,226,2,0);  --Clerics of Tunare
 		e.other:Faction(e.self,279,2,0); --King Tearis Thex
 		e.other:Faction(e.self,5002,1,0);   --Anti-mage
-		e.other:QuestReward(e.self,0,0,0,0,15014,250); --Spell: Strike , Verified experience reward live data
+		e.other:QuestReward(e.self,0,0,0,0,15014,8100); --Spell: Strike , Verified experience reward live data
 	elseif(e.other:GetFactionValue(e.self) >= 0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 10199,item2 = 10199,item3 = 10199,item4 = 10199})) then --Putrescent Heart x 4
 		e.self:Say("Praise Tunare!! You have done well young Initiate. Here the symbol of your station within our faith. Return to me when you are ready to [slay the necromancer] that has been creating the undead.");
 		e.other:Faction(e.self,226,15,0);  --Clerics of Tunare

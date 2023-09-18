@@ -51,7 +51,7 @@ function event_trade(e)
 		e.other:Faction(e.self,222,-1);	-- Broken Skull Clan
 		e.other:Faction(e.self,235,1);	-- Da Bashers
 		-- Confirmed Live Experience
-		e.other:QuestReward(e.self,0,0,0,0,5023,250); -- Rusty Two Handed Sword
+		e.other:QuestReward(e.self,0,0,0,0,5023,8100); -- Rusty Two Handed Sword
 	elseif (e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 12201, item2 = 12202},1,text)) then -- Happy Love Bracers and Troll Head(Lumpin)
 		e.self:Say("Ha!! Ha!! Who have last laugh now!! You do good werk.  Now me give you extra helm of Hukulk. Now go away!!");
 		e.other:Faction(e.self,308,40);	-- Shadowknights of Night Keep

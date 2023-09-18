@@ -26,7 +26,7 @@ function event_trade(e)
 		e.other:Faction(e.self,262,50); -- Guards of Qeynos
 		e.other:Faction(e.self,221,-25); -- Bloodsabers
 		e.other:Faction(e.self,219,15); -- Antonius Bayle
-		e.other:QuestReward(e.self,0,0,math.random(20),0,eq.ChooseRandom(13297,13296),1000);
+		e.other:QuestReward(e.self,0,0,math.random(20),0,eq.ChooseRandom(13297,13296),4000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end
