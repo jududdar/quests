@@ -27,7 +27,7 @@ function event_trade(e)
 		e.other:Faction(e.self,228,2);   	-- Clurg
 		e.other:Faction(e.self,312,-1); 	-- Storm Guard
 		e.other:Faction(e.self,308,-1); 	-- Shadowknight of Night Keep
-		e.other:QuestReward(e.self,0,0,0,0,5023,500);
+		e.other:QuestReward(e.self,0,0,0,0,5023,8100);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end
