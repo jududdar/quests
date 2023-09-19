@@ -24,7 +24,7 @@ function event_trade(e)
 		e.other:Faction(e.self,246,1,0); -- Faction: Faydarks Champions
 		e.other:Faction(e.self,239,-1,0); -- Faction: The Dead
 		-- Confirmed Live Experience
-		e.other:QuestReward(e.self,{itemid = eq.ChooseRandom(15310,15310,15310,15310,15310,15310,15310,15310,15310,15332),exp = 10}); -- Item(s): Spell: Flare (15310), Spell: Shield of Fire (15332)
+		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(15310,15310,15310,15310,15310,15310,15310,15310,15310,15332),10); -- Item(s): Spell: Flare (15310), Spell: Shield of Fire (15332)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 18777},0)) then -- Enrollment Letter
 		e.self:Say("Welcome. I am Niola Impholder. Master Magician of the Keepers of the Art. Here is our guild tunic. You have much to learn, so let's get started.");
 		e.other:Faction(e.self,275,100,0); -- Keepers of the Art
