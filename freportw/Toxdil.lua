@@ -17,7 +17,7 @@ function event_trade(e)
 		e.other:QuestReward(e.self,0,0,0,0,12351,15000); -- A Tiny Key
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 14017,item2 = 14017,gold = 20}, 1, text)) then
 		e.self:Say("Here is your snake venom. May you... shall we say... apply it to good use.");
-		e.other:QuestReward(e.self,0,0,0,0,14016,100); -- Snake Venom
+		e.other:QuestReward(e.self,0,0,0,0,14016,4400); -- Snake Venom
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

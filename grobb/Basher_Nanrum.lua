@@ -38,7 +38,7 @@ function event_trade(e)
 		e.self:Say("Heh heh. All da eyeballses! I didn't think ya could do it but ya did. Here is da shiny. If you gets more I always have more shinies.");
 		e.other:Faction(e.self,235, 1); -- Da Bashers
 		e.other:Faction(e.self,222, -1); -- Broken Skull Clan
-		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(10351, 10026, 10060, 10018, 10006, 10017),100);
+		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(10351, 10026, 10060, 10018, 10006, 10017),8100);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end
