@@ -19,7 +19,7 @@ function event_say(e)
 			eq.signal(2030,1);
 		end
 	else
-		if(e.message:findi("hail"))
+		if(e.message:findi("hail")) then
 			e.self:Say("Ah... Welcome friend. I am Master Seta, of the Silent Fist Clan. We know that true strength lies inside your soul. Once you have found and mastered it, your fists will be deadlier than any blade.  I am also currently in charge of training our new recruits. If you are new monk of the Silent Fist I have some [tests] for you to complete.");
 		elseif(e.message:findi("what test")) then
 			e.self:Say("I pride myself on passing some of the finest monks in all of the lands through my testing halls. I mainly attribute this fact to my training program that all young monks must undergo. When you are [ready to begin the tests] I will present you with your Silent Fist Assembly Kit and explain to you how the tests work.");
