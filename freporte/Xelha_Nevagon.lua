@@ -27,14 +27,14 @@ function event_trade(e)
 		e.other:Faction(e.self,271,10); -- Dismal Rage
 		e.other:Faction(e.self,281,-1); -- Knights of Truth
 		e.other:Faction(e.self,296,2); -- Opal Dark Briar
-		e.other:QuestReward(e.self,math.random(9),math.random(7),0,0,12247,8100); -- Xelha's Sparkler
+		e.other:QuestReward(e.self,math.random(9),math.random(7),0,0,12247,2500); -- Xelha's Sparkler
 	elseif(e.other:GetFactionValue(e.self) >= 0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 10307, item2 = 10307, item3 = 10307, item4 = 10307},1,text1)) then -- Fire Beetle Eye
 		e.self:Say("This is a good sight. I needed these to complete the current mixture. Bah!! I shall reward you for this small, very small, deed!! I pass on to you the knowledge of summoning. The more you serve, the more your faith in Innoruuk grows.");
 		-- HK confirmed live factions
 		e.other:Faction(e.self,271,10); -- Dismal Rage
 		e.other:Faction(e.self,281,-1); -- Knights of Truth
 		e.other:Faction(e.self,296,2); -- Opal Dark Briar
-		e.other:QuestReward(e.self,math.random(9),math.random(7),0,0,eq.ChooseRandom(15338,15331),8100); -- Spell: Cavorting Bones, Spell: Reclaim Energy
+		e.other:QuestReward(e.self,math.random(9),math.random(7),0,0,eq.ChooseRandom(15338,15331),2500); -- Spell: Cavorting Bones, Spell: Reclaim Energy
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 13073, item2 = 13073, item3 = 13073, item4 = 13073})) then -- Bone Chips -- worked at appre
 		e.self:Say("Excellent work! You are quite the little helper. Here you go, then. A little something for your little work. Your service to me has caused Innoruuk to look upon you favorably. Your faith in our group has grown. Continue the work.");
 		-- HK confirmed live factions
@@ -42,7 +42,7 @@ function event_trade(e)
 		e.other:Faction(e.self,281,-1); -- Knights of Truth
 		e.other:Faction(e.self,296,1); -- Opal Dark Briar
 		-- Confirmed Live Experience
-		e.other:QuestReward(e.self,math.random(9),0,0,0,0,8100);		
+		e.other:QuestReward(e.self,math.random(9),0,0,0,0,2500);		
 	elseif(e.other:GetFactionValue(e.self) >= 500 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13927})) then -- Cyclops Eye
 		e.self:Say("A cyclops eye!! You are stronger than I believed. You will rise in the ranks of the Dismal Rage quickly with acts such as this!! I am most appreciative! Here, take this. It was lying around my shelves, just gettingg all dusty. I hope you can use it. And watch yourself in your journeys, the aura of your faith in Innoruuk surrounds you like a shroud. Our enemies will surely see you for what you are.");
 		-- HK confirmed live factions

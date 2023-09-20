@@ -25,7 +25,7 @@ function event_trade(e)
 		e.self:Say("You is berry slow. Me too hungry. Me shood eats you for being slow. Gib me dat stuff. Here, take dis and git more stuff fer us. You much kllin, come backs sees me. I teeches ya hows ta kill bedder. Now git and kill stuff. We be Da Bashers fer a reesun.");
 		e.other:Faction(e.self,235,5,0);  	-- Da Basher
 		e.other:Faction(e.self,222,-1,0);  -- Broken Skull Clan		
-		e.other:QuestReward(e.self,0,0,0,0,5025,8100); -- Rusty Battle Axe
+		e.other:QuestReward(e.self,0,0,0,0,5025,1000); -- Rusty Battle Axe
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

@@ -28,14 +28,14 @@ function event_trade(e)
 		e.other:Faction(e.self,242,5,0); -- Faction: Deepwater Knights
 		e.other:Faction(e.self,266,1,0); -- Faction: High Council of Erudin
 		e.other:Faction(e.self,265,-1,0); -- Faction: Heretics
-		e.other:QuestReward(e.self,0,math.random(20),math.random(10),0,eq.ChooseRandom(2144,2146,2147,17005),8100); -- Item(s): Raw-hide Sleeves (2144), Raw-hide Gloves (2146), Raw-hide Leggings (2147), Backpack (17005)
+		e.other:QuestReward(e.self,0,math.random(20),math.random(10),0,eq.ChooseRandom(2144,2146,2147,17005),4000); -- Item(s): Raw-hide Sleeves (2144), Raw-hide Gloves (2146), Raw-hide Leggings (2147), Backpack (17005)
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13880})) then -- requires amiably
 		e.self:Say("Peeuww!! That most certainly is zombie flesh!! Here is your reward. You have done a fine service in the name of Prexus. Soon you shall advance and we may tell you of greater dangers lurking in the depths.");
 		-- Confirmed Live Factions
 		e.other:Faction(e.self,242,10,0); -- Faction: Deepwater Knights
 		e.other:Faction(e.self,266,1,0); -- Faction: High Council of Erudin
 		e.other:Faction(e.self,265,-1,0); -- Faction: Heretics
-		e.other:QuestReward(e.self,0,math.random(20),math.random(10),0,eq.ChooseRandom(2144,2146,2147,17005,15205,15203,15207,15201,15208,15209),9100); -- Item(s): Raw-hide Sleeves (2144), Raw-hide Gloves (2146), Raw-hide Leggings (2147), Backpack (17005), Spells: Cure Poison, Lull, True North, Spook the Dead, Flash of Light, Divine Aura
+		e.other:QuestReward(e.self,0,math.random(20),math.random(10),0,eq.ChooseRandom(2144,2146,2147,17005,15205,15203,15207,15201,15208,15209),4000); -- Item(s): Raw-hide Sleeves (2144), Raw-hide Gloves (2146), Raw-hide Leggings (2147), Backpack (17005), Spells: Cure Poison, Lull, True North, Spook the Dead, Flash of Light, Divine Aura
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end

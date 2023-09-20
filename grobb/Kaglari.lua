@@ -20,7 +20,7 @@ function event_trade(e)
 		e.other:Faction(e.self,237,5);  -- +Dark Ones
 		e.other:Faction(e.self,308,1);  -- +Shadowknights of Night Keep
 		e.other:Faction(e.self,251,-1); -- -Frogloks of Guk
-		e.other:QuestReward(e.self,0,0,0,0,15093,8100); -- Item: Spell: Burst of Flame
+		e.other:QuestReward(e.self,0,0,0,0,15093,1000); -- Item: Spell: Burst of Flame
 	elseif (item_lib.check_turn_in(e.self, e.trade, {item1 = 18791})) then -- Tattered Note
 		e.self:Say("Good.. Kaglari need you help.. Kaglari teach you majik now.");
 		e.other:Faction(e.self,237,100);  -- +Dark Ones

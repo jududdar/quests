@@ -27,7 +27,7 @@ function event_trade(e)
 		e.other:Faction(e.self,226,5); -- Clerics of Tunare
 		e.other:Faction(e.self,310,5); -- Soldiers of Tunare
 		e.other:Faction(e.self,234,-5); -- Crushbone Orcs
-		e.other:QuestReward(e.self,math.random(10),math.random(10),0,0,eq.ChooseRandom(2111,2112,2104,2108,2106,2143,2148,2142,2146,2139,2147,2138,2141,2137,2144,2140,2145),8100); -- Patchwork Pants, Patchwork Boots, Patchwork Tunic, Patchwork Sleeves, Patchwork Cloak, Raw-hide Belt, Raw-hide Boots, Raw-hide Cloak, Raw-hide Gloves, Raw-Hide Gorget, Raw-hide Leggings, Raw-hide Mask, Raw-hide Shoulderpads, Raw-hide Skullcap, Raw-hide Sleeves, Raw-hide Tunic, Raw-hide Wristbands  
+		e.other:QuestReward(e.self,math.random(10),math.random(10),0,0,eq.ChooseRandom(2111,2112,2104,2108,2106,2143,2148,2142,2146,2139,2147,2138,2141,2137,2144,2140,2145),1000); -- Patchwork Pants, Patchwork Boots, Patchwork Tunic, Patchwork Sleeves, Patchwork Cloak, Raw-hide Belt, Raw-hide Boots, Raw-hide Cloak, Raw-hide Gloves, Raw-Hide Gorget, Raw-hide Leggings, Raw-hide Mask, Raw-hide Shoulderpads, Raw-hide Skullcap, Raw-hide Sleeves, Raw-hide Tunic, Raw-hide Wristbands  
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end

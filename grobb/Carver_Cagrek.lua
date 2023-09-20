@@ -21,12 +21,12 @@ function event_trade(e)
 		e.self:Say("Gud werk! Me already made, err, founds dung part of meal. Here we go. One fungus dung pie! Enjoys.");
 		e.other:Faction(e.self,235,5); --Da Bashers
 		e.other:Faction(e.self,222,-1); --Broken Skull Clan
-		e.other:QuestReward(e.self,0,0,0,0,12210,8100); -- Fungus Spore Pie
+		e.other:QuestReward(e.self,0,0,0,0,12210,1000); -- Fungus Spore Pie
 	elseif (item_lib.check_turn_in(e.self, e.trade, {item1 = 13409, item2 = 13409, item3 = 13409, gold = 10},1,text2)) then
 		e.self:Say("Bouts time you gets everyting! Here is you Grobb oven mittens. Dey good to keep you from hot stuff.");
 		e.other:Faction(e.self,235,2); --Da Bashers
 		e.other:Faction(e.self,222,-1); --Broken Skull Clan
-		e.other:QuestReward(e.self,0,0,0,0,12211,8100); -- Grobb Oven Mittens
+		e.other:QuestReward(e.self,0,0,0,0,12211,1000); -- Grobb Oven Mittens
 	elseif (item_lib.check_turn_in(e.self, e.trade, {item1 = 13368, item2 = 13368, item3 = 13368, item4 = 18940},1,text1)) then
 		e.self:Say("Finally!! What takes yous so long? Now carver Cagrek try and makes meat and feeds to trolls. Yous getting to be deputy carver. Mes give you Grobb cleaver!! Make strong and smarts on you it will. Just like carver Cagrek.");
 		-- Confirmed Live Factions

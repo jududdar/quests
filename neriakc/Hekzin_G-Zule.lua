@@ -22,7 +22,7 @@ function event_trade(e)
 		e.other:Faction(e.self,244, 10); -- Faction: Ebon Mask
 		e.other:Faction(e.self,263,-1); -- Faction: Guardians of the Vale
 		e.other:Faction(e.self,329,-2); -- Faction: Carson McCabe
-		e.other:QuestReward(e.self,0,math.random(9),0,0,12258,8100);
+		e.other:QuestReward(e.self,0,math.random(9),0,0,12258,1000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

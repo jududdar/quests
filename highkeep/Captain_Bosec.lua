@@ -70,7 +70,7 @@ function event_trade(e)
 				-- This doesn't give xp for level 15 or below.
 				--But on Quarm, it does.
 				--if(e.other:GetLevel() > 15) then
-					e.other:QuestReward(e.self,math.random(0,5),math.random(0,5),math.random(0,5),0,0,34600); -- Quarm custom exp data
+					e.other:QuestReward(e.self,math.random(0,5),math.random(0,5),math.random(0,5),0,0,2500); -- Quarm custom exp data
 				--else
 					-- e.other:QuestReward(e.self,math.random(0,5),math.random(0,5),math.random(0,5),0);
 				--end

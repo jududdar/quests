@@ -21,7 +21,7 @@ function event_trade(e)
 		e.other:Faction(e.self,230,-1,0); -- Corrupt Qeynos Guards
 		e.other:Faction(e.self,223,-2,0); -- Circle Of Unseen Hands
 		e.other:Faction(e.self,291,1,0); -- Merchants of Qeynos 
-		e.other:QuestReward(e.self,math.random(20),0,math.random(10),0,eq.ChooseRandom(5369,9002,4209,5028,5034,2248,5310,9003,7350,5350),14000); -- Bunker Battle Blade , Round Shield, Bronze Bracers, Bronze Battle Axe, Bronze Scimitar, Reinforced Boots, Tentacle Whip, Targ Shield, Fine Steel Dagger, Fine Steel Long Sword
+		e.other:QuestReward(e.self,math.random(20),0,math.random(10),0,eq.ChooseRandom(5369,9002,4209,5028,5034,2248,5310,9003,7350,5350),3000); -- Bunker Battle Blade , Round Shield, Bronze Bracers, Bronze Battle Axe, Bronze Scimitar, Reinforced Boots, Tentacle Whip, Targ Shield, Fine Steel Dagger, Fine Steel Long Sword
 		e.other:GiveCash(math.random(20),0,math.random(10),0);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 13304})) then -- Loyal Guards Bracelet (Guard Bracelet - 13304)
 		e.self:Say("You fool! You have killed a fine and outstanding guard. You shall pay dearly for this!");
