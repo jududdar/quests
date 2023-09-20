@@ -1,6 +1,6 @@
 function event_say(e)
 	if(eq.get_current_expansion() < 4.0) then
-		if(e.message:findi("hail") then
+		if(e.message:findi("hail")) then
 			e.self:Say("Ah... Welcome friend. I am Master Seta, of the Silent Fist Clan. We know that true strength lies inside your soul. Once you have found and mastered it, your fists will be deadlier than any blade.");
 		elseif(e.message:findi("problem")) then
 			e.self:Say("There have been numerous muggings lately in Qeynos by corrupt guards. These guards are sworn to protect, server and uphold law in the city but all the do is break the law ten fold themselves. These corrupt individuals must be stopped. I have a [Silent Fist clan member] that I feel may be in trouble.");
