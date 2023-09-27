@@ -43,8 +43,8 @@ function event_trade(e)
 		e.other:Faction(e.self,226,25); -- Faction: Clerics of Tunare
 		e.other:Faction(e.self,279,25); -- Faction: King Tearis Thex
 		e.other:Faction(e.self, 5002, 15002); -- Faction: Anti-mage
-		e.other:QuestReward(e.self,0,0,0,0,13109,2000); -- Item: Silent Watch Shield
-					eq.unique_spawn(154017,0,0,-796,-161,-9,111); -- Escaped
+		e.other:QuestReward(e.self,0,0,0,0,13109,2000); -- Item: Thex Amulet
+		eq.unique_spawn(6573,0,0,-796,-161,-9,111); -- Princess
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end
