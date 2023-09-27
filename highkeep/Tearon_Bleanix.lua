@@ -44,7 +44,7 @@ function event_trade(e)
 		e.other:Faction(e.self,279,25); -- Faction: King Tearis Thex
 		e.other:Faction(e.self, 5002, 15002); -- Faction: Anti-mage
 		e.other:QuestReward(e.self,0,0,0,0,13109,2000); -- Item: Thex Amulet
-		eq.unique_spawn(6573,0,0,54,-2,3.70,190); -- Princess
+		eq.unique_spawn(6573,0,0,52.0,13.0,3.70,161); -- Princess
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end
