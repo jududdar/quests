@@ -5,7 +5,7 @@ function event_say(e)
 		e.self:Say("Hello sir. Are you a citizen of Highpass?");
 	elseif(e.message:findi("I am not a citizen")) then
 		e.self:Say("Nor am I. I find this city's love of greed appalling. Do not you?");
-	elseif(e.message:findi("appalling") then
+	elseif(e.message:findi("appalling")) then
 		e.self:Say("Yes. This city of vices is second only to Neriak. And it is trouble with Neriak that has sent me here, in search of my people's princess.");
 	elseif(e.message:findi("princess")) then
 		e.self:Say("The Princess Lenya Thex is the daughter of His Royal Majesty, King Tearis Thex of Felwithe. She was on her way to Qeynos when we believe she was kidnapped by Carson McCabe, the governor of this vile city. I await the paladin from Felwithe.");
