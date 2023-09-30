@@ -33,8 +33,6 @@ function event_say(e)
 		
 		if(is_special_flag_response) then
 			e.other:ClearPlayerInfoAndGrantStartingItems();
-			e.other:WorldKick();
-			e.other:Kick();
 		end
 	else
 		if(e.message:findi("rulesets")) then
