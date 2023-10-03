@@ -23,7 +23,7 @@ function event_trade(e)
 		e.other:Faction(e.self,286,1,0); -- Faction: Mayor Gubbin
 		e.other:Faction(e.self,292,1,0); -- Faction: Merchants of Rivervale
 		e.other:Faction(e.self,324,-1,0); -- Faction: Unkempt Druids
-		e.other:QuestReward(e.self,math.random(10),math.random(3),0,0,eq.ChooseRandom(13977,13100,14014,13083),100); -- Item(s): Carrot (13977), Fishing Pole (13100), Potion of Wisdom (14014), Pine Needles (13083)
+		e.other:QuestReward(e.self,math.random(1,6),0,0,0,eq.ChooseRandom(13977,13100,14014,13083),10); -- Item(s): Carrot (13977), Fishing Pole (13100), Potion of Wisdom (14014), Pine Needles (13083)
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

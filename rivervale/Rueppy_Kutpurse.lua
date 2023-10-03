@@ -21,7 +21,7 @@ function event_trade(e)
 
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 13032})) then -- Short Beer
 		e.self:Say("Oh, thank you.  AH! That sure is good. Not as good as a [Blackburrow stout], but what is?");
-		e.other:QuestReward(e.self,0,0,0,0,0,100);		
+		e.other:QuestReward(e.self,math.random(1,6),0,0,0,0,10);		
 	elseif(e.other:GetFaction(e.self) < 5 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13131})) then -- Case of Blackburrow Stout
 		e.self:Say("Heh heh! You did it! I thought the deputies would get you for sure! I mean... You did it! Heh! Here buy yourself a drink on me.");
 		e.other:Faction(e.self,241,10,0); -- Deeppockets
@@ -29,7 +29,7 @@ function event_trade(e)
 		e.other:Faction(e.self,292,-1,0); -- Merchants of Rivervale
 		e.other:Faction(e.self,336,1,0); -- Coalition of Tradefolk Underground
 		e.other:Faction(e.self,329,1,0); -- Carson McCabe
-		e.other:QuestReward(e.self,math.random(0,5),math.random(0,5),math.random(0,5),math.random(0,2),0,5000);
+		e.other:QuestReward(e.self,math.random(0,5),0,0,0,0,10);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

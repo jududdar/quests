@@ -65,11 +65,11 @@ function ControllerSignal(e)
 			eq.debug("Sleeper NPC is missing; aborting");
 			return;
 		end
-		local rng = math.random(33); -- 3% chance to wake
-		if ( rng > 1 ) then
-			eq.debug("All warders killed and Sleeper roll failed. ("..rng..")");
-			return;
-		end
+		-- local rng = math.random(33); -- 3% chance to wake
+		--if ( rng > 1 ) then
+		--	eq.debug("All warders killed and Sleeper roll failed. ("..rng..")");
+		--	return;
+		-- end
 
 		local kerafyrm = eq.spawn2(SLEEPER_TYPE, 0, 0, sleeper:GetX(), sleeper:GetY(), sleeper:GetZ(), sleeper:GetHeading(), "Kerafyrm"):CastToNPC();
 		sleeper:Depop();
