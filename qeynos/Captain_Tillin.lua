@@ -32,7 +32,7 @@ function event_trade(e)
 		e.other:Faction(e.self,230,-6,0); -- Corrupt Qeynos Guards
 		e.other:Faction(e.self,223,-10,0); -- Circle of Unseen Hands
 		e.other:Faction(e.self,291,4,0); -- Merchants of Qeynos
-		e.other:QuestReward(e.self,math.random(10),math.random(9),math.random(5),0,13305,500);
+		e.other:QuestReward(e.self,0,0,0,0,13305,10);
 		eq.spawn2(1202,62,0,-412,75,-24,0); -- NPC: Executioner
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 18912}, 0)) then
 		e.self:Say("So, an assassin has been sent to Qeynos! I shall have my guards keep an eye out for any suspicious looking visitors. As for you... you should speak with the Surefall Glade ambassador. Ambassador Gash is staying at the Lion's Mane Inn here in South Qeynos. Inform him that [an assassin has been sent to kill] him. Do not let the assassin near him!");
@@ -42,7 +42,7 @@ function event_trade(e)
 		e.other:Faction(e.self,230,-1,0); -- Corrupt Qeynos Guards
 		e.other:Faction(e.self,223,-1,0); -- Circle of Unseen Hands
 		e.other:Faction(e.self,291,1,0); -- Merchants of Qeynos
-		e.other:QuestReward(e.self,math.random(10),math.random(9),math.random(5),0,0,500);
+		e.other:QuestReward(e.self,0,0,0,0,0,10);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 8280}, 0)) then
 		e.self:Emote("scans the report with a furrowed brow. 'So the threat is worse then we had anticipated. The intelligence we have gathere is true. We have little time, return to Sergeant Caelin and give him these orders. Time is of the essence. Hurry now, these people are in grave danger and something must be done to stop this!");
 		e.other:QuestReward(e.self,0,0,0,0,8287);

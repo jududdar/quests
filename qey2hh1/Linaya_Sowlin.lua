@@ -30,7 +30,7 @@ function event_trade(e)
 		e.other:Faction(e.self,343,1,0); -- QRG Protected Animals
 		e.other:Faction(e.self,324,-2,0); -- Unkempt Druids
 		e.other:Faction(e.self,262,1,0); -- Guards of Qeynos
-		e.other:QuestReward(e.self,math.random(10),math.random(10),math.random(5),0,0,2000);
+		e.other:QuestReward(e.self,0,0,0,0,0,10);
 		eq.unique_spawn(12181,0,0,-8000,-3400,23,102.9); -- NPC: Draze_Slashyn
 	end
 	item_lib.return_items(e.self, e.other, e.trade)

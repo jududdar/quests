@@ -50,7 +50,7 @@ function event_trade(e)
 		e.other:Faction(e.self,343,2,0); -- QRG Protected Animals
 		e.other:Faction(e.self,324,-3,0); -- Unkempt Druids
 		e.other:Faction(e.self,262,2,0); -- Guards of Qeynos
-		e.other:QuestReward(e.self,0,math.random(10),math.random(10),0,18912,1000);
+		e.other:QuestReward(e.self,0,math.random(10),math.random(10),0,18912,10);
 	elseif(e.other:GetFactionValue(e.self) >= -500 and item_lib.check_turn_in(e.self, e.trade, {item1 = 12141})) then -- hand in worked at apprehensive, contrary to quest text being rejected at indifferent, didn't work at threatening so it's between -100 and -500
 		e.self:Say("So the Unkempt Druids are alive and well.  We shall keep a watchful eye out as should you.  Take this for your bravery and defense of the Jaggedpine.");
 		e.other:Faction(e.self,302,20,0); -- confirmed live factions
@@ -58,7 +58,7 @@ function event_trade(e)
 		e.other:Faction(e.self,343,3,0); -- Faction: QRG Protected Animals
 		e.other:Faction(e.self,324,-5,0); -- Faction: Unkempt Druids
 		e.other:Faction(e.self,262,3,0); -- Faction: Guards of Qeynos
-		e.other:QuestReward(e.self,0,math.random(10),math.random(15),0,eq.ChooseRandom(6018,15240,9006,2147,15239,15213,15237,2006,15252,15248,9002,2171),20000);
+		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(5013,5014,5015,5016,5017,5018,5019,5020,5021,5022,5023,5024),10);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end
