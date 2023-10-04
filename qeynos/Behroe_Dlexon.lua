@@ -36,7 +36,7 @@ function event_trade(e)
 		e.other:Faction(e.self,262,1,0); -- Faction: Guards of Qeynos
 		e.other:Faction(e.self,304,-1,0); -- Faction: Ring of Scale
 		e.other:Faction(e.self,285,-1,0); -- Faction: Mayong Mistmoore
-		e.other:QuestReward(e.self,0,0,0,0,1055,250) -- Shawl of the Wind Spirit
+		e.other:QuestReward(e.self,0,0,0,0,1055,50) -- Shawl of the Wind Spirit
 	elseif(e.other:GetFactionValue(e.self) >= 50 and item_lib.check_turn_in(e.self, e.trade, {item1 = 18021})) then
 		e.self:Emote("yawns and says, 'Oh, report time already again?  Yeah, here ya go, " .. e.other:GetCleanName() .. ".  Be careful around here at night, I've been seeing some rough looking characters lurking about.");
 		-- confirmed live factions
@@ -45,7 +45,7 @@ function event_trade(e)
 		e.other:Faction(e.self,262,1,0); -- Faction: Guards of Qeynos
 		e.other:Faction(e.self,304,-1,0); -- Faction: Ring of Scale
 		e.other:Faction(e.self,285,-1,0); -- Faction: Mayong Mistmoore
-		e.other:QuestReward(e.self,0,0,0,0,18023,250); -- Item: Behroes Report
+		e.other:QuestReward(e.self,0,0,0,0,18023,50); -- Item: Behroes Report
 	end
 	item_lib.return_items(e.self, e.other, e.trade, e.text)
 end

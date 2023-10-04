@@ -21,7 +21,7 @@ function event_trade(e)
 		e.other:Faction(e.self,309,5,0); -- Silent Fist Clan
 		e.other:Faction(e.self,262,1,0); -- Guards of Qeynos
 		e.other:Faction(e.self,361,1,0); -- Ashen Order
-		e.other:QuestReward(e.self,0,0,0,0,18922,1500); -- Grathin's Invoice
+		e.other:QuestReward(e.self,0,0,0,0,18922,50); -- Grathin's Invoice
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end
