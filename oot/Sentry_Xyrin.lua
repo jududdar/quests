@@ -19,8 +19,6 @@ function event_say(e)
 	elseif(e.message:findi("potion of marr")) then
 		if(e.other:GetFactionValue(e.self) >= 0) then
 			e.self:Say("The Potion of Marr was created for the Sentries of Passion. It makes us alert and energetic. It will work only on sentries such as myself. It is distributed by Serna Tasknon of the Temple of Marr in Freeport.");
-			eq.start(62);
-			e.self:SetRunning(true);
 		else
 			e.self:Say("The passion of the Queen of Love does not favor you. Begone from my sight!");
 		end
@@ -31,19 +29,20 @@ function event_trade(e)
 	local item_lib = require("items");
 
 	if(e.other:GetFactionValue(e.self) >= 0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 12134})) then
-		e.self:Say("I thank you. I cannot do battle at this moment. I am summoned elsewhere. May Marr guide you from this isle.");
+		e.self:Say("Ahhhh! I am energized! Come! Let us show these undead the greatness of Erollisi Marr!");
+		eq.start(62);
+		e.self:SetRunning(true);
 		e.other:Faction(e.self,362,20,0); -- Faction: Priests of Marr
 		e.other:Faction(e.self,330,-3,0); -- Faction: The Freeport Militia
 		e.other:Faction(e.self,281,3,0); -- Faction: Knights of Truth
 		e.other:QuestReward(e.self,0,0,0,0,12135); -- Item: Empty Potion of Marr
-		eq.depop();
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end
 
 function event_waypoint_arrive(e)
 	if(e.wp == 4) then
-		e.self:Shout("Long live Marr !!");
+		e.self:Say("Let the fury of passion smite thee!");
 	elseif(e.wp == 5) then
 		e.self:Say("Many thanks to all who aided in this battle. I offer you this, a weapon I found on a slain Erudite paladin. May Marr watch over his soul and may Marr guide yours. Now I must go.");
 		eq.create_ground_object(5414,-6963,-886,139,0,1800000); -- deepwater harpoon
