@@ -52,7 +52,7 @@ function event_trade(e)
 		e.other:Faction(e.self,230,18,0); -- Corrupt Qeynos Guards
 		e.other:Faction(e.self,262,-18,0); -- Guards of Qeynos
 		e.other:Faction(e.self,273,12,0); -- Kane Bayle
-		e.other:QuestReward(e.self,0,6,3,2,1048,10000); -- Item: Black Leather Cloak
+		e.other:QuestReward(e.self,0,6,3,2,1048,0); -- Item: Black Leather Cloak
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

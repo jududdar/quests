@@ -35,7 +35,7 @@ function event_trade(e)
 		e.other:Faction(e.self,304,-12); -- Ring of Scale
 		e.other:Faction(e.self,332,50); -- Highpass Guards
 		e.other:Faction(e.self,331,50); -- Merchants of Highpass
-		e.other:QuestReward(e.self,0,0,0,0,18028,500); -- Item: Message to Zannsin
+		e.other:QuestReward(e.self,0,0,0,0,18028,0); -- Item: Message to Zannsin
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

@@ -46,7 +46,7 @@ function event_trade(e)
 		e.other:Faction(e.self,230,30,0); -- Corrupt Qeynos Guards
 		e.other:Faction(e.self,262,-30,0); -- Guards of Qeynos
 		e.other:Faction(e.self,273,20,0); -- Kane Bayle
-		e.other:QuestReward(e.self,0,0,0,0,7501,50000); -- Item: Fanged Skull Stiletto
+		e.other:QuestReward(e.self,0,0,0,0,7501,0); -- Item: Fanged Skull Stiletto
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end
