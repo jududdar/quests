@@ -23,9 +23,10 @@ end
 
 function event_trade(e)
 	local item_lib = require("items");
+	local text1 = "I requested four Ghast hearts!";
 
 	if(e.other:GetFactionValue(e.self) >= 0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13073,item2 = 13073,item3 = 13073,item4 = 13073})) then --Bone Chips x 4
-		e.self:Say("Praise Tunare! I knew you would be victorious. I reward you with this spell, and pray that it will help you in your fight against the unholy forces of Innoruk. When you are ready you will make a fine [Initiate of Tunare].");
+		e.self:Say("Praise Tunare! I knew you would be victorious. I reward you with this spell, and pray that it will help you in your fight against the unholy forces of Innoruuk. When you are ready you will make a fine [Initiate of Tunare].");
 		e.other:Faction(e.self,226,2,0);  --Clerics of Tunare
 		e.other:Faction(e.self,279,2,0); --King Tearis Thex
 		e.other:Faction(e.self,5002,1,0);   --Anti-mage
@@ -37,7 +38,7 @@ function event_trade(e)
 		e.other:Faction(e.self,5002,11,0);   --Anti-mage
 		e.other:QuestReward(e.self,0,0,0,0,1570,3250); --Initiate Symbol of Tunare
 	elseif(e.other:GetFactionValue(e.self) >= 0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 1570,item2 = 12514,item3 = 19065,item4 = 12513})) then --Initiate Symbol of Tunare, Larik Z`Vole's Head, Teir`Dal Couriers Head, Teir`Dal Crate
-		e.self:Say("Praise Tunare! The Mother smiles on you this day Disciple Angelsyn! I present you with the symbol of your new station among the Priests of Tunare. Return to me when you are ready to become a [Warden of Tunare]?");
+		e.self:Say("Praise Tunare! The Mother smiles on you this day Disciple " .. e.other:GetCleanName() .. "! I present you with the symbol of your new station among the Priests of Tunare. Return to me when you are ready to become a [Warden of Tunare]?");
 		e.other:Faction(e.self,226,30,0);  --Clerics of Tunare
 		e.other:Faction(e.self,279,30,0); --King Tearis Thex
 		e.other:Faction(e.self,5002,22,0);   --Anti-mage
