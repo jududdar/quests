@@ -31,7 +31,7 @@ function event_trade(e)
 		e.other:Faction(e.self,230,-1,0); -- Faction: Corrupt Qeynos Guards
 		e.other:Faction(e.self,330,-1,0); -- Faction: The Freeport Militia
 		e.other:Faction(e.self,281,2,0); -- Faction: Knights of Truth
-		e.other:QuestReward(e.self,0,0,0,0,13302,2000); -- Monogrammed Cloth
+		e.other:QuestReward(e.self,0,0,0,0,13302,500); -- Monogrammed Cloth
 		eq.unique_spawn(15193,11,0,-5521,-1870,3,226); -- NPC: #Guard_Elias
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 18934})) then -- sealed letter', filename='LoveToMilea'
 		e.self:Say("Oh great!! I thought I'd saw that last of Plagus, or as all the women in the Steel Warriors called him, the Plague. Please do not tell him where I am. It must have been a long journey for you. Here. A little something for your wasted trip. I found it on the ground. Have fun going back to Freeport.");
@@ -41,7 +41,7 @@ function event_trade(e)
 		e.other:Faction(e.self,230,-1,0); -- Faction: Corrupt Qeynos Guards
 		e.other:Faction(e.self,330,-1,0); -- Faction: The Freeport Militia
 		e.other:Faction(e.self,281,1,0); -- Faction: Knights of Truth
-		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(3040,1037,17005,13003,10008,1005,8791,1331,2910),2000); -- Item(s): Blackened Iron Coif (3040), Fur Lined Shoes (1037), Backpack (17005), Small Lantern (13003), Gold Ring (10008), Cloth Shawl (1005), Ruined Rawhide Leggings (8791), Damask Cap (1331), Grizzly Hide Cloak (2910)
+		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(1005,17005,13003),500); -- Item(s): Backpack (17005), Small Lantern (13003), Gold Ring (10008), Cloth Shawl (1005)
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end
