@@ -29,7 +29,7 @@ function event_trade(e)
 		e.other:Faction(e.self,255,-1,0); -- gem choppers
 		e.other:Faction(e.self,240,-1,0); 	-- Deepmuses
 		e.other:QuestReward(e.self,0,0,0,0,10995,100);	-- Dull Dark Reflection Axe
-	elseif (expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 18759})) then -- Stained Parchment
+	elseif (item_lib.check_turn_in(e.self, e.trade, {item1 = 18759})) then -- Stained Parchment
 		e.self:Say("This is fabulous news!! You have done well, young one. Here, then, is your reward for a job well done.");
 		e.other:Faction(e.self,238,100,0); 	-- Dark reflection
 		e.other:Faction(e.self,245,-10,0); 	-- eldritch collective
