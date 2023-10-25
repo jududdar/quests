@@ -36,8 +36,8 @@ function event_trade(e)
 	
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 2662})) then -- Arterial Blood
 		e.self:Emote("holds up a staff and applies the blood to the top of the weapon, turning it dark red. 'Thank you! I hope it wasn't too much trouble to finish off. This weapon should prove most effective against other lycanthropes and magical creatures that you may run across. Good luck!");
-		e.other:QuestReward(e.self,0,0,0,0,6048,10000); -- Item: Darkwood Staff
-		e.other:Faction(e.self,361,2,0); -- Faction: Oakwynd Twins
+		e.other:QuestReward(e.self,0,0,0,0,6048,5000); -- Item: Darkwood Staff
+		e.other:Faction(e.self,20000,50,0); -- Faction: Oakwynd Twins
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end
