@@ -3,7 +3,7 @@ function event_spawn(e)
 end
 
 function event_timer(e)
-	eq.unique_spawn(4209,0,0,1081,2806,-33.3,28); -- NPC: Giant Werewolf -- Halloween Event
+	eq.unique_spawn(33246,0,0,-806,1045,18.4,123); -- NPC: Giant Werewolf -- Halloween Event
 	eq.zone_emote(15,"a loud roar is heard in the distance, everything goes eerily silent...");
 end
 
