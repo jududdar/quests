@@ -34,11 +34,20 @@ function event_say(e)
 			e.self:Say("The entrance to the Citadel can be found on the northern edge of the Greater Faydark. Once within the citadel seek out the Orc Thaumaturgist and obtain his book of spells. Once you are in possession of the Orc Thaumaturgists Spell Book return it to me so that the masters of the Keepers of the Art may study its contents.");
 		end
 	end
+	
+	if(e.message:findi("enchantments")) then
+		-- TODO: Include more dialogue once gold bars and other bars are supported
+		e.self:Say("You wish to explore the deeper mysteries of metallurgy and magic? A noble path. The enchantment of metal bars is a delicate art. Present me with 5 platinum pieces, and your silver bar, and we shall begin the process of its transformation.");
+	end
 end
 
 function event_trade(e)
 	local item_lib = require("items");
 	local expansion_flag = eq.get_current_expansion();
+	local is_self_found = e.other:IsSelfFound() == 1 or e.other:IsSoloOnly() == 1;
+	local num_bars = 0;
+	local bar_id = 16500;
+	local plat_cost = 5;
 
 	if(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 20293})) then -- Orc Thaumaturgists Spell Book
 		e.self:Say("Well done young Art Keeper. Take this Rough Art Keepers Initiate Staff and go forth and gather a Pristine Forest Drakeling Scales and an Arborean Amber. When you have acquired those two items return them to me with the Rough Art Keepers Initiate Staff and I will put the final touches on the staff.");
@@ -55,6 +64,30 @@ function event_trade(e)
 		e.other:Faction(e.self,246,1); -- Faydark's Champions
 		e.other:Faction(e.self,239,-1); -- The Dead
 		e.other:QuestReward(e.self,0,0,0,0,20332,250); -- Art Keepers Initiate Staff
+	
 	end
+	
+	if(is_self_found) then
+		-- Handin: Silver bar
+		if(item_lib.check_turn_in(e.self, e.trade, {item1 = bar_id, item2 = bar_id, item3 = bar_id, item4 = bar_id, platinum = plat_cost * 4}, 0)) then
+			num_bars = 4;
+		elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = bar_id, item2 = bar_id, item3 = bar_id, platinum = plat_cost * 3}, 0)) then	
+			num_bars = 3;
+		elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = bar_id, item2 = bar_id, platinum = plat_cost * 2}, 0)) then
+			num_bars = 2;
+		elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = bar_id, platinum = plat_cost}, 0)) then
+			num_bars = 1;
+		end
+		
+		if(num_bars > 0) then
+			repeat
+				e.other:QuestReward(e.self,0,0,0,0,16504,0); -- Enchanted Silver Bar
+				num_bars = num_bars - 1;
+			until num_bars == 0
+			e.self:Say("Your silver bar has been successfully imbued with the mystical energies you seek. Behold, its transformation is complete. May this enchanted metal serve as a testament to your growing intellect and mastery over the arcane. Use it with keen insight on your journey.");
+			e.self:CastSpell(667,e.self:GetID()); -- Spell: Enchant Silver
+		end		
+	end
+
 	item_lib.return_items(e.self, e.other, e.trade);
 end
