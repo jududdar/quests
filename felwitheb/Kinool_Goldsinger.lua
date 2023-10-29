@@ -14,6 +14,18 @@ function event_say(e)
 	elseif(e.message:findi("remaining component")) then
   		e.self:Say("The remaining components are the Trueshot longbow and a treant heart. There will also be the guild donation in the amount of 3000 gold coins. These and the [fairie gold dust] will merit a ranger the Rain Caller enchanted bow.");
 	end
+
+	local is_self_found = e.other:IsSelfFound() == 1 or e.other:IsSoloOnly() == 1;
+	if(is_self_found) then
+		if(e.message:findi("enchantments")) then
+			if (e.other:GetLevel() >= 8) then
+				-- TODO: Include more dialogue once gold bars and other bars are supported
+				e.self:Say("You wish to explore the deeper mysteries of metallurgy and magic? A noble path. The enchantment of metal bars is a delicate art. Present me with 5 platinum pieces, and your silver bar, and we shall begin the process of its transformation.");
+			else
+				e.self:Say("You are a bit too inexperienced to be dabbling in such magic, aren't you?");
+			end
+		end
+	end
 end
 
 function event_trade(e)
@@ -35,6 +47,36 @@ function event_trade(e)
 		e.other:Faction(e.self,239,-6,0); -- The Dead
   		e.other:QuestReward(e.self,0,0,0,0,8402,5000); -- Item: Rain Caller
 	end
+
+	local is_self_found = e.other:IsSelfFound() == 1 or e.other:IsSoloOnly() == 1;
+	local num_bars = 0;
+	local bar_id = 16500;
+	local plat_cost = 5;
+
+	if(is_self_found) then
+		if (e.other:GetLevel() >= 8) then
+			-- Handin: Silver bar
+			if(item_lib.check_turn_in(e.self, e.trade, {item1 = bar_id, item2 = bar_id, item3 = bar_id, item4 = bar_id, platinum = plat_cost * 4}, 0)) then
+				num_bars = 4;
+			elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = bar_id, item2 = bar_id, item3 = bar_id, platinum = plat_cost * 3}, 0)) then	
+				num_bars = 3;
+			elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = bar_id, item2 = bar_id, platinum = plat_cost * 2}, 0)) then
+				num_bars = 2;
+			elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = bar_id, platinum = plat_cost}, 0)) then
+				num_bars = 1;
+			end
+			
+			if(num_bars > 0) then
+				repeat
+					e.other:SummonCursorItem(16504, 1); -- Enchanted Silver Bar
+					num_bars = num_bars - 1;
+				until num_bars == 0
+				e.self:Say("Your silver bar has been successfully imbued with the mystical energies you seek. Behold, its transformation is complete. May this enchanted metal serve as a testament to your growing intellect and mastery over the arcane. Use it with keen insight on your journey.");
+				e.self:CastSpell(667,e.self:GetID()); -- Spell: Enchant Silver
+			end	
+		end	
+	end
+
 	item_lib.return_items(e.self, e.other, e.trade);
 end
 
