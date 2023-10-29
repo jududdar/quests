@@ -24,7 +24,7 @@ function event_trade(e)
 			e.other:Faction(e.self,330,-1); -- Faction: The Freeport Militia
 			e.other:Faction(e.self,311,1); -- Faction: Steel Warriors
 			e.other:Faction(e.self,362,1); -- Faction: Priests of Marr
-			e.other:QuestReward(e.self,0,0,0,0,0,1000);
+			e.other:QuestReward(e.self,0,0,0,0,0,1);
 			milk = milk - 1;
 		until milk == 0;
 
