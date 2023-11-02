@@ -2,6 +2,8 @@ function event_say(e)
 	if(e.message:findi("hail")) then
 		e.self:Say("Greetings!  I am the mighty Konious Eranon, Master Enchanter, devoted follower of Innoruuk, and loyal assistant to the all-powerful Nexvok.");
 	end
+	local enchant_bars_lib = require("self_found_enchant_bars");
+	enchant_bars_lib.check_bars_quest_dialogue(e.self, e.other, e.message);
 end
 
 function event_trade(e)
@@ -14,6 +16,10 @@ function event_trade(e)
 		e.other:Faction(e.self,296,20,0); -- Opal Dark Briar
 		e.other:QuestReward(e.self,0,0,0,0,13566,20); -- Blood Spotted Robe*
 	end
+
+	local enchant_bars_lib = require("self_found_enchant_bars");
+	enchant_bars_lib.check_for_bars_to_enchant(item_lib, e.self, e.other, e.trade);
+
 	item_lib.return_items(e.self, e.other, e.trade)
 end
 
