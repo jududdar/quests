@@ -22,43 +22,6 @@ function event_enter(e)
 	end
 end
 
-function event_combat(e)
-	if(e.joined) then
-		eq.set_timer("1",1000); --a 1 second leash timer.
-	else
-		eq.stop_timer("1");
-		e.self:GMMove(SpawnX,SpawnY,SpawnZ,SpawnH);
-	end
-end
-
-function event_timer(e)
-	if(e.timer == "1") then
-		if(e.self:GetX() < -431 or e.self:GetX() > -85 or e.self:GetY() < 770 or e.self:GetY() > 1090 or e.self:GetZ()  < -50) then
-			e.self:GMMove(SpawnX,SpawnY,SpawnZ,SpawnH);
-		elseif(e.self:CountHateList() > 0) then
-			e.self:ForeachHateList(
-				function(ent, hate, damage, frenzy)
-					if(ent:IsClient()) then
-						ent:CastToClient():Message(4,"I will not fight you, but I shall banish you!");
-						if(ent:CastToClient():GetBindZoneID() == 73) then
-							ent:CastToClient():SetBindPoint(30,-7024,2020,-60);
-						end
-						ent:CastToClient():MovePC(30,-7024,2020,-60.7,0);
-					end
-				end,
-				function(ent, hate, damage, frenzy)
-					if(ent:IsClient()) then
-						if(ent:CastToClient():GetLevel() > 52) then
-							return true;
-						end
-					end
-					return false;
-				end
-			);
-		end
-	end
-end
-
 function event_signal(e)
 	if ( e.signal == 1 ) then
 		e.self:Shout("The Sleeper stirs!  A glorious new age for Norrath is about to begin, and my exile is about to end!");
