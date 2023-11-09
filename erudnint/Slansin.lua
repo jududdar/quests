@@ -1,3 +1,4 @@
+
 -- Inert Potion
 
 function event_say(e)
@@ -17,16 +18,16 @@ function event_trade(e)
 			e.other:Faction(e.self,266,-1); -- Faction: High Council of Erudin
 			e.other:Faction(e.self,265,1); -- Faction: Heretics
 			e.other:Faction(e.self,267,-1); -- Faction: High Guard of Erudin
-			e.other:QuestReward(e.self,0,math.random(5),0,0,0,300);
+			e.other:QuestReward(e.self,0,0,0,0,0,1);
 			eq.depop();
 		elseif(e.self:GetClass() == 14) then
 			e.self:Say("Ha!! What a fool!! I have stolen another potion to add to the crate. I shall make a fortune!! The real Slansin is in back. Now it is time for me to leave.");
-			e.other:Faction(e.self,336,2); -- +Coalition of Tradefolk Underground
-			e.other:Faction(e.self,229,2); -- +Coalition of Tradefolk
-			e.other:Faction(e.self,329,1); -- +Carson McCabe
-			e.other:Faction(e.self,230,1); -- +Corrupt Qeynos Guards
-			e.other:Faction(e.self,330,1); -- +Freeport Militia
-			e.other:QuestReward(e.self,0,0,0,0,0,300);
+			e.other:Faction(e.self,336,10); -- +Coalition of Tradefolk Underground
+			e.other:Faction(e.self,229,10); -- +Coalition of Tradefolk
+			e.other:Faction(e.self,329,5); -- +Carson McCabe
+			e.other:Faction(e.self,230,5); -- +Corrupt Qeynos Guards
+			e.other:Faction(e.self,330,5); -- +Freeport Militia
+			e.other:QuestReward(e.self,0,0,0,0,0,1);
 		end
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
