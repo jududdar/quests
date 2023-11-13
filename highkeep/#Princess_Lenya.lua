@@ -21,7 +21,7 @@ function event_trade(e)
 		e.self:Say("The Royal Amulet of Thex!! I missed it so. I am sorry I escaped so quickly. I am glad you did not run into the Teir'Dal torturers. They are quite formidable. I shall be continuing on to Qeynos. Here. Take this as proof that you have rescued me. My father should be quite happy with your deed. Such beauty as mine should never be locked up. If you cannot find my father then search for Tolon Nurbyte. He is usually at the Traveler's Inn. Good bye.");
 		e.other:Faction(e.self,226,25); -- Faction: Clerics of Tunare
 		e.other:Faction(e.self,279,25); -- Faction: King Tearis Thex
-		e.other:Faction(e.self, 5002, 15002); -- Faction: Anti-mage
+		e.other:Faction(e.self, 5002, 25); -- Faction: Anti-mage
 		e.other:QuestReward(e.self,0,0,0,0,18841,2000); -- Item: Sealed Letter
 	end
 	item_lib.return_items(e.self, e.other, e.trade)

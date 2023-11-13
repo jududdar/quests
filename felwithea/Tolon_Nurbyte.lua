@@ -47,7 +47,7 @@ function event_trade(e)
 		e.self:Say("So I see you completed your mission. Good work. You just may be a member of the Silent Watch someday. Well my friend. I will be keeping my eye on you. No doubt we will meet again. Oh, I almost forgot. The Princess wanted you to have this. Now show yourself the door.");
 		e.other:Faction(e.self,226,25); -- Faction: Clerics of Tunare
 		e.other:Faction(e.self,279,25); -- Faction: King Tearis Thex
-		e.other:Faction(e.self, 5002, 15002); -- Faction: Anti-mage
+		e.other:Faction(e.self, 5002, 25); -- Faction: Anti-mage
 		e.other:QuestReward(e.self,0,0,0,0,13353,2000); -- Item: Thex Dagger
 		eq.depop_with_timer();
 	end

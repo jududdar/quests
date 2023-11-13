@@ -19,7 +19,7 @@ function event_trade(e)
 		e.self:Say("So you are a member of the Silent Watch!! They are accepting anyone these days. I shall leave then. Here is your bracer back. Thank you for unlocking the door. ");
 		e.other:Faction(e.self,226,25); -- Faction: Clerics of Tunare
 		e.other:Faction(e.self,279,25); -- Faction: King Tearis Thex
-		e.other:Faction(e.self, 5002, 15002); -- Faction: Anti-mage
+		e.other:Faction(e.self, 5002, 25); -- Faction: Anti-mage
 		e.other:QuestReward(e.self,0,0,0,0,13112,2000); -- Item: Silent Watch Shield
 		eq.set_timer("lenyadepop",150000);
 	end

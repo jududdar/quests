@@ -43,7 +43,7 @@ function event_trade(e)
 		e.self:Say("King Tearis Thex thanks you my friend. Could you please hand the princess this amulet. It is hers. I pryed it from the hands of some beggar.");
 		e.other:Faction(e.self,226,25); -- Faction: Clerics of Tunare
 		e.other:Faction(e.self,279,25); -- Faction: King Tearis Thex
-		e.other:Faction(e.self, 5002, 15002); -- Faction: Anti-mage
+		e.other:Faction(e.self, 5002, 25); -- Faction: Anti-mage
 		e.other:QuestReward(e.self,0,0,0,0,13109,2000); -- Item: Thex Amulet
 		eq.unique_spawn(6573,0,0,52.0,13.0,3.70,161); -- Princess
 	end
