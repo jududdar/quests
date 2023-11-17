@@ -29,7 +29,9 @@ function event_trade(e)
 		until milk == 0;
 
 		eq.unique_spawn(21136,8,0,2720,-520,-51,0); -- NPC: Duggin_Scumber
-		eq.start(eq.ChooseRandom(9,10));
+		if (e.self:GetGrid() == 0) then
+			eq.start(eq.ChooseRandom(9,10));
+		end
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

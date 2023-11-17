@@ -1,7 +1,7 @@
 function event_say(e)
 	if(eq.get_current_expansion() >= 4.0) then
 		if(e.message:findi("hail")) then
-			e.self:Say("Its nice to meet you " .. e.other:GetCleanName() .. ". Allow me to introduce myself. I am Lendel Deeppockets master Assassin of Rivervale. I am personally in charge of all [training] we have the new recruits go through before they are sent out on specific missions.");
+			e.self:Say("It's nice to meet you " .. e.other:GetCleanName() .. ". Allow me to introduce myself. I am Lendel Deeppockets master Assassin of Rivervale. I am personally in charge of all [training] we have the new recruits go through before they are sent out on specific missions.");
 		elseif(e.message:findi("stanos")) then
 			e.self:Say("Stanos is an old... <cough>... buddy of mine.  If yer looking for work, ya could take a message from me to him.  Just tell him I sent ya, and see what he wants.  But I gotta warn ya, he has more than a few fellers what want him dead, and anyone around him, too.  Other side of the coin, he pays well and is fair, and looks after his own.  Yer choice, you want the job or not?");
 		elseif(e.message:findi("want.* job")) then
