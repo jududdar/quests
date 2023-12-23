@@ -1,5 +1,6 @@
 function event_death_complete(e)
-	eq.spawn2(71072,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading()); --Bazzt Zzzt
+	--Quarm: This will be a static spawn with the bees.
+	--eq.spawn2(71072,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading()); --Bazzt Zzzt
 end
 
 -------------------------------------------------------------------------------------------------
