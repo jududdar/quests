@@ -12,7 +12,9 @@ function event_say(e)
 end
 
 function event_death_complete(e)
-	eq.set_global("sirran","3",3,"M20");
+	local sirranName = "sirran";
+	sirranName = sirranName .. eq.get_zone_guild_id();
+	eq.set_global(sirranName,"3",3,"M20");
 	eq.spawn2(71058,0,0,320,540,-54,128); -- NPC: Sirran_the_Lunatic
 end
 
