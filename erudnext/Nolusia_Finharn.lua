@@ -30,8 +30,8 @@ function event_trade(e)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 13123})) then
 		e.self:Say("Fantastic. Now I can rest assured that my brother stands a better chance of finding the right path without that manipulating little man around. Master Lanken can rest assured that the waters are safe from abuse.");
 		-- Confirmed Live Faction
-		e.other:Faction(e.self,231,30,0); -- Craftkeepers
-		e.other:Faction(e.self,266,3,0); -- High Council of Erudin
+		e.other:Faction(e.self,231,30); -- Craftkeepers
+		e.other:Faction(e.self,266,3); -- High Council of Erudin
 		e.other:Faction(e.self,265,-4); -- Heretics
 		e.other:Faction(e.self,267,4,0); -- High Guard of Erudin
 		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(13122,5019,6017,5021,5013),0);

@@ -39,7 +39,8 @@ function event_trade(e)
 			e.other:QuestReward(e.self,0,0,0,0,17504,10000); -- Item: Concordance of Research
 			gls = gls - 1;
 		until gls == 0
-	end
+	end	
+
 	item_lib.return_items(e.self, e.other, e.trade)
 end
 
