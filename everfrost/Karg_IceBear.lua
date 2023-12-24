@@ -32,11 +32,11 @@ function event_trade(e)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 13714,platinum = 100},1,text)) then -- Werewolf Pelt and 100 plat
 		e.self:Say("It has been a long time since I crafted items from werewolves. I hope this aids you in your journeys. Farewell, friend, until we meet again.");	
 		e.other:QuestReward(e.self,0,0,0,0,2401); -- Werewolf Skin Cloak
-		eq.depop_with_timer();
+		--eq.depop_with_timer(); -- Comment this: quarm custom
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 13715,platinum = 75},1,text)) then -- Werewolf Claws and 75 plat
 		e.self:Say("It has been a long time since I crafted items from werewolves. I hope this aids you in your journeys. Farewell, friend, until we meet again.");
 		e.other:QuestReward(e.self,0,0,0,0,2402); -- Lupine Claw Gauntlets
-		eq.depop_with_timer();
+		--eq.depop_with_timer(); -- Comment this: quarm custom
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end
