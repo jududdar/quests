@@ -55,7 +55,7 @@ function event_trade(e)
 		e.other:Faction(e.self,226,25); -- Faction: Clerics of Tunare
 		e.other:Faction(e.self,279,25); -- Faction: King Tearis Thex
 		e.other:Faction(e.self, 5002, 25); -- Faction: Anti-mage
-		e.other:QuestReward(e.self,0,0,0,0,13353,2000); -- Item: Thex Dagger
+		e.other:QuestReward(e.self,0,0,0,0,13362,2000); -- Item: Thexian Shiv
 		eq.depop_with_timer();
 	end
 end
