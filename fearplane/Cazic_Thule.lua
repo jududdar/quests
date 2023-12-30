@@ -69,7 +69,9 @@ function call_zone_to_assist(e_self,e_other)
 			if (exclude_npc_list[npc:GetNPCTypeID()] == nil) then
 				-- npc.valid will be true if the NPC is actually spawned
 				if (npc.valid) then
-					if(npc:GetNPCTypeID() == 72000 or npc:GetNPCTypeID() == 72004 or npc:GetNPCTypeID() == 72002 or npc:GetNPCTypeID() == 72090) then
+					if(npc:GetNPCTypeID() == 72000 or npc:GetNPCTypeID() == 72004 or npc:GetNPCTypeID() == 72002 or npc:GetNPCTypeID() == 72090 or 
+					npc:GetNPCTypeID() == 72590 or npc:GetNPCTypeID() == 72600 or npc:GetNPCTypeID() == 72601 or npc:GetNPCTypeID() == 72602 or
+					npc:GetNPCTypeID() == 72604 or npc:GetNPCTypeID() == 72690) then
 						npc:CastToNPC():GMMove(e_self:GetX(),e_self:GetY(),e_self:GetZ(),0,true);
 						npc:CastToNPC():SaveGuardSpot();
 					else
