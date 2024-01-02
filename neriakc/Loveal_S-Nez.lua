@@ -76,9 +76,6 @@ function event_trade(e)
 		e.other:Faction(e.self,245,-15); --Eldritch Collective
 		e.other:Faction(e.self,1522,-200); --Primordial Malice
 		
-		if(expansion_flag >= 1.3) then
-			item_awarded = 5374;
-		end
 		
 		e.other:QuestReward(e.self,0,0,0,0,item_awarded,33750); --Reaper of the Dead
 	end
