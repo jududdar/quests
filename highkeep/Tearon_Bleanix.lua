@@ -18,7 +18,7 @@ function event_say(e)
 		else
 			e.self:Say("You have some nerve to approach a loyal member of the Paladins of Tunare! Run, while you can!");		
 		end
-	elseif(e.message:findi("become a hero") and expansion_flag < 1.3) then
+	elseif(e.message:findi("become a hero")) then
 		if(fac < 4) then
 			e.self:Say("Well let's get started on making you a hero. You must take the Elite Guard Bracer. Look for Princess Lenya. When you find her give her the bracer to prove you are with the Koada'dal. She should trust you then. Then return to me with Princess Lenya and return my bracer. Be safe my friend.");
 			e.other:SummonCursorItem(13108); -- Item: Tearons Bracer
