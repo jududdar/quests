@@ -1,13 +1,3 @@
-function event_spawn(e)
-	eq.set_timer("depop",4800000);
-end
-
-function event_timer(e)
-	if(e.timer == "depop") then
-		eq.depop();
-	end
-end
-
 function event_death_complete(e)
 	local sirranName = "sirran";
 	sirranName = sirranName .. eq.get_zone_guild_id();
