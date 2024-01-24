@@ -36,7 +36,7 @@ function event_trade(e)
 		e.other:Faction(e.self,226,25); -- Faction: Clerics of Tunare
 		e.other:Faction(e.self,279,25); -- Faction: King Tearis Thex
 		e.other:Faction(e.self,5002,18); -- Faction: Anti-mage
-		e.other:QuestReward(e.self,0,0,0,0,9312,2000); -- Item: Silent Watch Shield
+		e.other:QuestReward(e.self,0,0,0,0,9312,0); -- Item: Silent Watch Shield
 		eq.depop_with_timer();
 	end
 		if(item_lib.check_turn_in(e.self, e.trade, {item1 = 13112})) then
@@ -44,7 +44,7 @@ function event_trade(e)
 		e.other:Faction(e.self,226,25); -- Faction: Clerics of Tunare
 		e.other:Faction(e.self,279,25); -- Faction: King Tearis Thex
 		e.other:Faction(e.self, 5002, 25); -- Faction: Anti-mage
-		e.other:QuestReward(e.self,0,0,0,0,13109,2000); -- Item: Thex Amulet
+		e.other:QuestReward(e.self,0,0,0,0,13109,0); -- Item: Thex Amulet
 		eq.unique_spawn(6573,0,0,52.0,13.0,3.70,161); -- Princess
 	end
 	item_lib.return_items(e.self, e.other, e.trade)

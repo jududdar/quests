@@ -20,7 +20,7 @@ function event_trade(e)
 		e.other:Faction(e.self,226,25); -- Faction: Clerics of Tunare
 		e.other:Faction(e.self,279,25); -- Faction: King Tearis Thex
 		e.other:Faction(e.self, 5002, 25); -- Faction: Anti-mage
-		e.other:QuestReward(e.self,0,0,0,0,13112,2000); -- Item: Silent Watch Shield
+		e.other:QuestReward(e.self,0,0,0,0,13112,0); -- Item: Silent Watch Shield
 		eq.set_timer("lenyadepop",150000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)

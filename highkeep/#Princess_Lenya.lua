@@ -22,7 +22,7 @@ function event_trade(e)
 		e.other:Faction(e.self,226,25); -- Faction: Clerics of Tunare
 		e.other:Faction(e.self,279,25); -- Faction: King Tearis Thex
 		e.other:Faction(e.self, 5002, 25); -- Faction: Anti-mage
-		e.other:QuestReward(e.self,0,0,0,0,18841,2000); -- Item: Sealed Letter
+		e.other:QuestReward(e.self,0,0,0,0,18841,0); -- Item: Sealed Letter
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end
