@@ -20,7 +20,7 @@ function event_timer(e)
 	end
 	
 	if ( not eq.get_entity_list():IsMobSpawnedByNpcTypeID(71012) ) then -- The_Spiroc_Lord
-		eq.update_spawn_timer(364318, 1000);
+		eq.update_spawn_timer(11450095, 1000);
 	end
 	eq.stop_timer(e.timer);
 end
