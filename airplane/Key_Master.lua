@@ -21,6 +21,8 @@ end
 function event_say(e)
 	if(e.message:findi("hail")) then
 		e.self:Say("Hello there, brave traveller. I sell keys that take you to other islands in this here Plane of Sky. My prices are the best around. Heh, heh.");
+	elseif(e.message:findi("what.* key")) then
+		e.self:Say("The keys? Heh, heh... Well, let's just say between you and me, them there faeries ain't much of the fightin' type. At least they ain't as strong as lotsa other stuff that's up on these here islands that we be standin' on now.");
 	end
 end
 
