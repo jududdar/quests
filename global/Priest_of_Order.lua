@@ -8,10 +8,12 @@ function event_say(e)
 		e.self:Say("Very well. Your surname has been reset.");
 		e.other:SetTemporaryLastName("");
 	else
-		if(e.other:HasTemporaryLastName() == true) then
+		if(e.other:HasTemporaryLastName() == true and e.other:IsMarried() == false) then
 			e.other:SetMarried(e.message);
-		else
+		elseif(e.other:IsMarried() == false) then
 			e.other:SetTemporaryLastName(e.message);
+		elseif(e.other:IsMarried() == true) then
+			e.self:Say("You're already married. I hope your love is eternal!");
 		end
 	end
 end
