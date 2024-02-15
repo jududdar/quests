@@ -28,7 +28,7 @@ function event_say(e)
 		if(eq.get_entity_list():IsMobSpawnedByNpcTypeID(71076) == false) then
 			eq.spawn2(71076,0,0,-929,-1035,1093,64); 							--used Magelo to get the closest loc as possible.
 		end
-	elseif(e.message:findi("plane") and qglobals["sirran"] == "1")
+	elseif(e.message:findi("plane") and qglobals[sirranName] == "1") then
 		e.self:Say("Ahah! Wise you are and tell you I will. Hrm? Don't have wings, do you? Fairies have swords! Fairies stole my lucky feet! Hand me them, one by one, and be in for a treat! Haha!");
 	end
 end
