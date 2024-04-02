@@ -18,7 +18,7 @@ function event_trade(e)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 20830})) then
 		e.self:Say("Excellent. Please accept this Polished Efreeti Horn in return.");
 		e.other:SummonCursorItem(30773);
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 20763})) then
+	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 20817})) then
 		e.self:Say("Excellent. Please accept this Sharpened Efreeti Standard in return.");
 		e.other:SummonCursorItem(30772);
 	end
