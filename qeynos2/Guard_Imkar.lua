@@ -2,7 +2,7 @@ function event_say(e)
 	if(e.message:findi("hail")) then
 		e.self:Say("Hello, " .. e.other:GetCleanName() .. ".  My name is Imkar and I am kind of new at this job but I can give you some advice.  Be careful here in Qeynos.  There are many [dark forces] at work here that are best left undisturbed.");
 	elseif(e.message:findi("dark force")) then
-		e.self:Say("I really don't know yet.  I just know that chills shoot up and down my spine when I pass certain places on my patrol.  My mother was a gypsy and told me I had the 'gift of sense.'  I think the chills are part of that gift.  Just be careful.  Especially near the entrances to the aqueducts below the city.");
+		e.self:Say("I really don't know yet.  I just know that chills shoot up and down my spine when I pass certain places on my patrol.  My mother was of the consortium and told me I had the 'gift of sense.'  I think the chills are part of that gift.  Just be careful.  Especially near the entrances to the aqueducts below the city.");
 	elseif(e.message:findi("gnoll")) then
 		e.self:Say("Blast those dogs!  The Sabertooths is what they call themselves around here.  They have a nest, or whatever you call it, up there east of Surefall Glade.  We can always use help here, keeping those dirty gnolls away from our fine city.  Talk to Captain Tillin in South Qeynos and tell him you want to join the fight.");
 	elseif(e.message:findi("weapon")) then

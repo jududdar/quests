@@ -6,7 +6,7 @@ function event_say(e)
 	elseif(e.message:findi("ingots and icons")) then
 		e.self:Say("The ingots and icons are all named after the virtues of the cleric who held them. The virtues I require are those of the [reverent], the [constant], and the [devout].");
 	elseif(e.message:findi("reverent")) then
-		e.self:Say("Regis the Reverent fell in love with a gypsy girl named Lianna Ferasa who lives in the Rathe Mountains. Ask her what has become of him. Bring me the ingot of the Reverent, the icon of the Reverent, and two enchanted platinum bars and I will forge them into a reward for you.");
+		e.self:Say("Regis the Reverent fell in love with a consortium woman named Lianna Ferasa who lives in the Rathe Mountains. Ask her what has become of him. Bring me the ingot of the Reverent, the icon of the Reverent, and two enchanted platinum bars and I will forge them into a reward for you.");
 	elseif(e.message:findi("constant")) then
 		e.self:Say("Althuryn the Constant was brutally slain by two aqua goblins. The one called Sludge fled to Runnyeye. The one called Dwigus lives in Dagnor's Cauldron. Bring me the ingot of the Constant, the icon of the Constant, and two galvanized platinum bars and I will forge them into a reward for you.");
 	elseif(e.message:findi("devout")) then
