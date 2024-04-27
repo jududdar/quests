@@ -11,7 +11,7 @@ function event_say(e)
 		elseif(e.message:findi("bracers")) then
 			e.self:Say("Alright, I will be needing some items. Return to me with them and I will craft your bracers. I will be needing a Dark Boned Bracelet, a Griffenne Charm, and a Lambent Fire Opal.");
 		elseif(e.message:findi("breastplate")) then
-			e.self:Say("This is the most difficult piece to make. In order for me to craft it I will be needing a Basalt Carapace, a Consortium Lute, and a Lambent Ruby. Return to me with these and I will craft your breastplate.");
+			e.self:Say("This is the most difficult piece to make. In order for me to craft it I will be needing a Basalt Carapace, a Gypsy Lute, and a Lambent Ruby. Return to me with these and I will craft your breastplate.");
 		elseif(e.message:findi("helm")) then
 			e.self:Say("In order to craft the helm, I will be needing a Mudwater Rune, an Opoline Helm, and a Lambent Star Ruby. Give these items to me and I will craft your helm");
 		elseif(e.message:findi("vambraces")) then

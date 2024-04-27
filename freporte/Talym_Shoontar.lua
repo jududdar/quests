@@ -8,7 +8,7 @@ function event_say(e)
 	elseif(e.message:findi("poach")) then
 		e.self:Say("Excuse me! I am a HUNTER. A hunter of profit, not glory. Have you come to [collect the bounty] on my head? For your sake, the answer had better be [no].");
 	elseif(e.message:findi("collect")) then
-		e.self:Say("Then do your best, whelp! I need the practice. I hope for your sake that my consortium friends are not nearby.");
+		e.self:Say("Then do your best, whelp! I need the practice. I hope for your sake that my gypsy friends are not nearby.");
 	elseif(e.message:findi("no")) then
 		e.self:Say("Too bad. I heard there is a new market for skins of your kind.");
 	end
