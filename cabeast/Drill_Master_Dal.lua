@@ -39,7 +39,7 @@ function event_trade(e)
 		e.other:Faction(e.self, 445,1); -- Faction: Scaled Mystics
 		e.other:Faction(e.self, 442,1); -- Faction: Crusaders of Greenmist
 		e.other:Faction(e.self, 444,1); -- Faction: Swift Tails
-		e.other:QuestReward(e.self,0,math.random(15),0,0,eq.ChooseRandom(12917,12918,12919,12920,12921),1000); -- Item(s): Leech Husk Tunic (12917), Leech Husk Leggings (12918), Leech Husk Gloves (12919), Leech Husk Wrist Bands (12920), Leech Husk Boots (12921)
+		e.other:QuestReward(e.self,0,math.random(1,15),0,0,eq.ChooseRandom(12917,12918,12919,12920,12921),1000); -- Item(s): Leech Husk Tunic (12917), Leech Husk Leggings (12918), Leech Husk Gloves (12919), Leech Husk Wrist Bands (12920), Leech Husk Boots (12921)
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 12673})) then
 		e.self:Say("Fantastic work, Partisan " .. e.other:GetCleanName() .. ". Here is your reward. You may continue to perform this task as the baron has found it aids in our defense. I shall always pay for a good day's work. Just let me know if you are still [ready for the task]. As for the curskin shield, you may only have one. Perhaps soon you will prove yourself a formidable fighter and you can earn a militia pike from Drill Master Vygan.");
 		e.other:Faction(e.self, 441,5); -- Faction: Legion of Cabilis
@@ -47,7 +47,7 @@ function event_trade(e)
 		e.other:Faction(e.self, 445,1); -- Faction: Scaled Mystics
 		e.other:Faction(e.self, 442,1); -- Faction: Crusaders of Greenmist
 		e.other:Faction(e.self, 444,1); -- Faction: Swift Tails
-		e.other:QuestReward(e.self,0,math.random(15),0,0,12674,250); -- Item: Curscale Buckler
+		e.other:QuestReward(e.self,0,math.random(1,15),0,0,12674,250); -- Item: Curscale Buckler
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

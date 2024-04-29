@@ -20,7 +20,7 @@ function event_trade(e)
 	-- Confirmed Live Experience
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 29295,item2 = 29302}, 1, text)) then -- Vial of Opaque Fluid, Purified Bubonian Bile
 		e.self:Say("You've done it! Praise the Tranquil! I can already see Phanti's condition improving. Take these, Phanti is not going to be doing any planar exploration any time soon. She was planning on using them to bring her research party into Torment, make good use of them, and stay safe. Thank you again for your help.");
-		e.other:QuestReward(e.self,{itemid = 29213,exp = 6250});
+		e.other:QuestReward(e.self,0,0,0,0,29213,6250);
 		
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 29315}, 0)) then
 		e.self:Emote("pours the bile into a small flask, there is a puff of green smoke, which turns white as it floats into the sky. 'This is good news. It appears that this is the cause for her disease, but I have neither the tools, nor the knowledge to create a cure. There is rumor of an indigo orc who may prove useful to us in this area, but he is imprisoned in the Plane of Justice. Ask him about rare diseases. He was known to have cured many, prior to his imprisonment.");

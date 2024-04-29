@@ -27,7 +27,7 @@ function event_trade(e)
 		e.other:Faction(e.self,333,1,0); -- Faction: King Ak'Anon
 		e.other:Faction(e.self,238,-1,0); -- Faction: Dark Reflection
 		e.other:Faction(e.self,1604,-1,0); -- Faction: Clan Grikbar
-		e.other:QuestReward(e.self,0,math.random(10),0,0,eq.ChooseRandom(5013,10018,5014,10060,2159,5015,6016,17009,5016,9009,7010,5019,7009,5020,5023,12340,12340,17033,13004,13077,6027),200); -- Ran quest 50+ times, added all the rewards -- rusty, patchwork, hematite, chunk of metal ore, small buckler, large lantern, Purse, Forging Hammer
+		e.other:QuestReward(e.self,0,math.random(1,10),0,0,eq.ChooseRandom(5013,10018,5014,10060,2159,5015,6016,17009,5016,9009,7010,5019,7009,5020,5023,12340,12340,17033,13004,13077,6027),200); -- Ran quest 50+ times, added all the rewards -- rusty, patchwork, hematite, chunk of metal ore, small buckler, large lantern, Purse, Forging Hammer
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 9426, item2 = 28618, item3 = 29906, item4 = 28165})) then -- Bundle of Super Conductive Wires, Gold Tipped Boar Horn, Shard of Pure Energy, Silicorrosive Grease
 		e.self:Say("Wow! I see my nephew finally read my list of items. I also see he is not delivering them himself, he is too young to bind himself to the library like that. These items should help me in my research to upgrade the scrapyard. Here let me pen a note to him so you can take it back to him.");
 		e.other:QuestReward(e.self,0,0,0,0,15980,1000); -- Note for Fimli
@@ -44,7 +44,7 @@ function event_trade(e)
 		e.other:Faction(e.self,288,2,0); -- Faction: Merchants of Ak'Anon
 		e.other:Faction(e.self,238,-2,0); -- Faction: Dark Reflection
 		e.other:Faction(e.self,1604,-1,0); -- Faction: Clan Grikbar
-		e.other:QuestReward(e.self,math.random(10),math.random(10),math.random(5),0,eq.ChooseRandom(17981, 17981, 6027),250);
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,10),math.random(1,5),0,eq.ChooseRandom(17981,17981,6027),250);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

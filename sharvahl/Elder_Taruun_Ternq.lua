@@ -79,7 +79,7 @@ function event_trade(e)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 5558, item2 = 6158})) then
 		e.self:Say("Well done.  Take this new cloak and wear it with pride.  You can now be called journeyman!");
 		e.self:Shout("Hear me fellow Vah Shir! The Taruun have seen fit to escalate citizen " .. e.other:GetCleanName() .. " to the rank of journeyman. He grows in strength and wisdom daily. We are proud as should you all be. May this student of our ways continue to progress and live worthy of our noble heritage.");
-		e.other:QuestReward(e.self,{items = {6158,6275},exp = 10000}); -- Item: Cloak of the Taruun Journeyman
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(6158,6275),10000); -- Item: Cloak of the Taruun Journeyman
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

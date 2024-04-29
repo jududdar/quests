@@ -38,7 +38,7 @@ function event_trade(e)
 		if ( questState == 6 ) then
 			e.self:Emote("looks up at you in surprise. 'I can't believe you brought the missing pieces back to me so quickly. I have a team of men who have been looking for these pieces for weeks now. That's quite a feat. Unfortunately, I will be unable to make use of the Crystalline Globe at this time. A message has been dispatched to my platoon asking us to return to the Halls of Honor. It looks as if we'll be joining up with the rest of our company fairly soon. Keep the globe. If you're able to rally enough people together to take on Aerin`Dar then perhaps you'll be able accomplish an objective that our platoon was unable to do. I must go now. Good luck to you "..e.other:GetName()..".'");
 			-- Confirmed Live Experience
-			e.other:QuestReward(e.self, { itemid = 25596, exp = 1 }); -- A Crystalline Globe
+			e.other:QuestReward(e.self,0,0,0,0,25596,1); -- A Crystalline Globe
 		else
 			e.self:Say("Thanks for the gift."); -- This text is a guess.  The quest was changed to not eat items well after AK's time, so can't get the real text
 		end

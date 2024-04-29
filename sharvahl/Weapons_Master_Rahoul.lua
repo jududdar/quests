@@ -83,7 +83,7 @@ function event_trade(e)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 9051})) then
 		e.self:Say("These claws should work well for you. The design was research by Historian Qua. They should work to neutralize the magical field that protects the dark animist and allow you to tear his scaly flesh from his frame. Remember that all of this is theoretical. Those claws are an original creation. You will be the first to prove their effectiveness in combat.");
 		e.self:Say("Take the claws back to Animist Dumul and show him their design. Use them well, " .. e.other:GetCleanName() .. ". May the spirits guide you in your attack. ");
-		e.other:QuestReward(e.self,{items = {9055,9056}}); -- Item: Jagged Claw of Rending
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(9055,9056)); -- Item: Jagged Claw of Rending
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

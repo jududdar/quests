@@ -19,37 +19,37 @@ function event_trade(e)
 		-- Confirmed Live Experience and Faction
 		e.other:Faction(e.self,445,5); -- Faction: Scaled Mystics
 		e.other:Faction(e.self,441,1); -- Faction: Legion of Cabilis
-		e.other:QuestReward(e.self,{itemid = 7827,exp = 250}); -- Item: Patriarch's Bracer
+		e.other:QuestReward(e.self,0,0,0,0,7827,250); -- Item: Patriarch's Bracer
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 13099, item2 = 13099, item3 = 13099, item4 = 13849},1,text1)) then	-- 2nd Test of the Patriarch
 		e.self:Say("You have overcome sturdy yet unintelligent creatures that plague our kind. You are now ready to face our foes that are more intelligent than the insects you have defeated. We have many foes possessing a degree of intelligence, the least of these foes being the tribes of goblins that inhabit our Empires lands. Even now there are goblin watchers prowling just outside our gates. Locate four of these watchers, slay them and return to me with their Goblin Watcher Signal Torches.");
 		-- Confirmed Live Experience and Faction
 		e.other:Faction(e.self,445,5); -- Faction: Scaled Mystics
 		e.other:Faction(e.self,441,1); -- Faction: Legion of Cabilis
-		e.other:QuestReward(e.self,{itemid = 7828,exp = 400}); -- Item: Patriarch's Cap
+		e.other:QuestReward(e.self,0,0,0,0,7828,400); -- Item: Patriarch's Cap
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 12441, item2 = 12441, item3 = 12441, item4 = 12441},1,text2)) then	-- 3rd Test of the Patriarch
 		e.self:Say("You have triumphed over the watchers, young patriarch, but they are among the weakest of our sentient foes. Mere fodder sent to warn to the more powerful goblins of an opportunity to strike. It is time for you to face the Goblin Hunters, and learn of our enemies the Sarnak, a species of dragonmen that once served the Iksar Empires of old. Journey to the wilderness and return with two Goblin Hunter Javelins and two Sarnak Broodling Fangs.");
 		-- Confirmed Live Experience and Faction
 		e.other:Faction(e.self,445,8); -- Faction: Scaled Mystics
 		e.other:Faction(e.self,441,2); -- Faction: Legion of Cabilis
-		e.other:QuestReward(e.self,{itemid = 7829,exp = 600}); -- Item: Patriarch's Leggings
+		e.other:QuestReward(e.self,0,0,0,0,7829,600); -- Item: Patriarch's Leggings
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 14599, item2 = 14599, item3 = 12432, item4 = 12432},1,text3)) then	-- 4th Test of the Patriarch
 		e.self:Say("Now you will learn of another enemy of the Legion of Cabilis, the frogloks. The frogloks from the froglok settlement of Krup often sent their tuk warriors to prey on unsuspecting Iksar citizens that ventures outside the gates of Cabilis. Find these Froglok Tuk Warriors and return with four of their buckler shields.");
 		-- Confirmed Live Experience and Faction
 		e.other:Faction(e.self,445,10); -- Faction: Scaled Mystics
 		e.other:Faction(e.self,441,2); -- Faction: Legion of Cabilis
-		e.other:QuestReward(e.self,{itemid = 7830,exp = 1000}); -- Item: Patriarch's Claw
+		e.other:QuestReward(e.self,0,0,0,0,7830,1000); -- Item: Patriarch's Claw
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 8999, item2 = 8999, item3 = 8999, item4 = 8999},1,text4)) then		-- 5th Test of the Patriarch
 		e.self:Say("Congratulations young Patriarch, you have learned all that I can teach you at this time. You must venture forth now on your own and fulfill the fate that has been glimpsed by the Hierophants before your hatching.");
 		-- Confirmed Live Experience and Faction
 		e.other:Faction(e.self,445,10); -- Faction: Scaled Mystics
 		e.other:Faction(e.self,441,2); -- Faction: Legion of Cabilis
-		e.other:QuestReward(e.self,{itemid = 7831,exp = 1000}); -- Item: Patriarch's Leather
+		e.other:QuestReward(e.self,0,0,0,0,7831,1000); -- Item: Patriarch's Leather
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 18848})) then	--A tattered note
 		e.self:Say("The Hierophants have sensed that your spirit is strong with obedience inspiring fear! You must learn to harness your [powers] over the scaled wolves! Wear this tunic so that the Legion of Cabilis will recognize you as a Scaled Spiritist.");
 		e.other:Faction(e.self,445,15); --Scaled Mystics
 		e.other:Faction(e.self,441,3); 	--Legion of Cabilis
 		-- Confirmed Live Experience
-		e.other:QuestReward(e.self,{itemid = 13577,exp = 100}); --Dusty Green Tunic
+		e.other:QuestReward(e.self,0,0,0,0,13577,100); --Dusty Green Tunic
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

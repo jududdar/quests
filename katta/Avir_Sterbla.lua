@@ -22,7 +22,7 @@ function event_trade(e)
 		e.other:Faction(e.self,1484,-1); -- -Hand of Seru
 		e.other:Faction(e.self,1485,-1);  -- -Eye of Seru
 		e.other:Faction(e.self,1541,-1); -- -Hand Legionnaries
-		e.other:QuestReward(e.self,{items = {10015,10015,10015,10015,10015,10015,10015,10015},exp = 5000}); -- Malachite 8x
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(10015,10015,10015,10015,10015,10015,10015,10015),5000); -- Malachite 8x
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

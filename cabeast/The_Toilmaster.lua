@@ -29,7 +29,7 @@ function event_trade(e)
 		e.other:QuestReward(e.self,math.random(0,5),math.random(0,3),0,0,12689,350); -- Item: Pile of Granite Pebbles
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 18271})) then --The Penance quest
 		e.self:Emote("looks at the tome and speaks to you, scowling, 'Very well Broodling, I have a task for you. I should make you work at the feet of my Froglok Slaves, crushing granite, but the lore of the Brood has a specific rite for this situation. Take this book and learn the will of Cazic-Thule. Read it and ask me any questions that you may have before you start your penance. It would be a shame for you to fail at this task as well... though I wouldn't mind destroying you.");
-		e.other:QuestReward(e.self,{itemid = 18272}); -- Item: Rites of Exoneration
+		e.other:QuestReward(e.self,0,0,0,0,18272); -- Item: Rites of Exoneration
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

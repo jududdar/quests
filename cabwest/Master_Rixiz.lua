@@ -33,7 +33,7 @@ function event_trade(e)
 		e.self:Say("You have done well. Here is your final apprentice skullcap.");
 		e.other:Faction(e.self,443,10); -- Faction: Brood of Kotiz
 		e.other:Faction(e.self,441,2); -- Faction: Legion of Cabilis
-		e.other:QuestReward(e.self,0,0,math.random(15),0,4262,150); -- Item: Apprentice Skullcap - 3rd Rank
+		e.other:QuestReward(e.self,0,0,math.random(1,15),0,4262,150); -- Item: Apprentice Skullcap - 3rd Rank
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 14794})) then
 		e.self:Emote("takes the note and after reading a few lines opens his eyes wide in astonishment. He looks up at you and stares at you a while before he says,");
 		e.self:Say("You spoke to the Brothers? A common soldier such as yourself interested in silly stories to frighten broodlings? Fine, then. You shall know confidence, if you live. If you have the strength to stride into a lair, go before the owner, and kill that thing in its own home, you will acquire a small part of the virtue we as necromancers must master to ply our art. In the Frontier Mountains lives a unit of the troublesome burynai. Invade their home and destroy their leader. Bring me proof and two fire emeralds.");

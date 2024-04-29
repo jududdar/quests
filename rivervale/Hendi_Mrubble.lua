@@ -24,7 +24,7 @@ function event_trade(e)
 		eq.SelfCast(12);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 13936})) then -- doesnt appear to have a faction requirement for recharging squad ring
 		e.self:Say("May the swift and silent spirit of Fizzlethorpe Bristlebane smile upon your frail soul.");
-		e.other:QuestReward(e.self,{itemid = 13936});
+		e.other:QuestReward(e.self,0,0,0,0,13936);
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end

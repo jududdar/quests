@@ -37,7 +37,7 @@ function event_trade(e)
 		e.other:QuestReward(e.self,0,0,0,0,2054,1000); -- Sanctified bone dust
 	elseif(e.other:GetFaction(e.self) < 2 and item_lib.check_turn_in(e.self, e.trade, {item1 = 2055,item2 = 1868,item3 = 2056})) then -- Finished Tsuba, Bronzewood Staff, Finished Naginata Blade
 		e.self:Emote("takes the staff, blade, and tsuba and looks them over. He says, 'Excellent craftsmanship. These will make a fine weapon. But one part remains to join all the pieces together. That is the fitings.' The Wyvern then hands you the items back along with a vial of blood and says, 'This vial of blood will allow you to awaken Garzicor's spirit.'");
-		e.other:QuestReward(e.self,{items = {2426,2063}}); -- assembled Naginata, vial of Kromzek blood
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(2426,2063)); -- assembled Naginata, vial of Kromzek blood
 	elseif(e.other:GetFaction(e.self) < 2 and item_lib.check_turn_in(e.self, e.trade, {item1 = 1728}, 0)) then -- Ethereal Bladed Naginata
 		e.self:Say("You have succeeded " .. e.other:GetCleanName() .. ". Garzicor's spirit no longer calls to us from beyond. Now we ask that you do one more thing. You must wield this weapon against all giant kind to satiate Garzicor's thirst for vengeance. The Naginata has a special power against the Kromzek, they will fall easily before it. However, if you do not wish to, hand the weapon back to me and I'll give you an earring more worthy of a being of faith. If you are one of sorcerous powers, hand me the earring and I'll hand you a ring more suited to you.");
 		e.other:Faction(e.self,430,10);  	--CoV

@@ -79,7 +79,7 @@ function event_trade(e)
 		if(math.random(100) < 20) then
 			e.other:QuestReward(e.self,math.random(0,10),math.random(0,10),math.random(0,5),0,eq.ChooseRandom(13219,13220));
 		else
-			e.other:QuestReward(e.self,math.random(0,10),math.random(0,10),math.random(0,5),0,eq.ChooseRandom(1013, 1018, 1015, 1019, 1022, 1023, 1024, 1017, 1016, 1020, 1014, 1021));
+			e.other:QuestReward(e.self,math.random(0,10),math.random(0,10),math.random(0,5),0,eq.ChooseRandom(1013,1018,1015,1019,1022,1023,1024,1017,1016,1020,1014,1021));
 		end		
 	end
 	item_lib.return_items(e.self, e.other, e.trade)

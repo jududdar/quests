@@ -20,7 +20,7 @@ function event_trade(e)
 		e.other:Faction(e.self,336,3,0); -- Faction: Coalition of Tradefolk Underground
 		e.other:Faction(e.self,281,-2,0); -- Faction: Knights of Truth
 		e.other:Faction(e.self,362,-2,0); -- Faction: Priests of Marr
-		e.other:QuestReward(e.self,0,math.random(10),0,0,0,5000);		
+		e.other:QuestReward(e.self,0,math.random(1,10),0,0,0,5000);		
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 13926})) then
 		e.self:Say("So, it was Alayle! He was of no importance to us. He knew nothing. I thank you for assisting the Freeport Militia. My men shall keep an eye out for you. Unfortunately, so will the Knights of Truth. Might I suggest you spend less time in North Freeport?"); 
 		-- HK confirmed live factions
@@ -28,7 +28,7 @@ function event_trade(e)
 		e.other:Faction(e.self,336,3,0); -- Faction: Coalition of Tradefolk Underground
 		e.other:Faction(e.self,281,-2,0); -- Faction: Knights of Truth
 		e.other:Faction(e.self,362,-2,0); -- Faction: Priests of Marr
-		e.other:QuestReward(e.self,0,0,math.random(10),0,0,7500);		
+		e.other:QuestReward(e.self,0,0,math.random(1,10),0,0,7500);		
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end

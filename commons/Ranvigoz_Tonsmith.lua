@@ -17,27 +17,36 @@ function event_trade(e)
 
 	if(e.other:GetFaction(e.self) < 6) then
 		if(item_lib.check_turn_in(e.self, e.trade, {item1 = 4177})) then
-			factionsay(e)
+			e.self:Say("Here is your armor. I hope it fits better now.");
+			e.other:Faction(e.self,229,1,0); -- coalition of tradefolk
+			e.other:Faction(e.self,281,1,0); -- knights of truth
+			e.other:Faction(e.self,291,1,0); -- merchants of qeynos
+			e.other:Faction(e.self,336,1,0); -- coalition of trade folk underground
 			e.other:QuestReward(e.self,0,0,0,0,4185); -- Item: Small Crafted Bracers
 		elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 4179})) then
-			factionsay(e)
+			e.self:Say("Here is your armor. I hope it fits better now.");
+			e.other:Faction(e.self,229,1,0); -- coalition of tradefolk
+			e.other:Faction(e.self,281,1,0); -- knights of truth
+			e.other:Faction(e.self,291,1,0); -- merchants of qeynos
+			e.other:Faction(e.self,336,1,0); -- coalition of trade folk underground
 			e.other:QuestReward(e.self,0,0,0,0,4187); -- Item: Small Crafted Greaves
 		elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 4175})) then
-			factionsay(e)
+			e.self:Say("Here is your armor. I hope it fits better now.");
+			e.other:Faction(e.self,229,1,0); -- coalition of tradefolk
+			e.other:Faction(e.self,281,1,0); -- knights of truth
+			e.other:Faction(e.self,291,1,0); -- merchants of qeynos
+			e.other:Faction(e.self,336,1,0); -- coalition of trade folk underground
 			e.other:QuestReward(e.self,0,0,0,0,4183); -- Item: Small Crafted Pauldron
 		elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 4174})) then
-			factionsay(e)
+			e.self:Say("Here is your armor. I hope it fits better now.");
+			e.other:Faction(e.self,229,1,0); -- coalition of tradefolk
+			e.other:Faction(e.self,281,1,0); -- knights of truth
+			e.other:Faction(e.self,291,1,0); -- merchants of qeynos
+			e.other:Faction(e.self,336,1,0); -- coalition of trade folk underground
 			e.other:QuestReward(e.self,0,0,0,0,4182); -- Item: Small Crafted Breastplate
 		end
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end
 
-function factionsay(e)
-	e.self:Say("Here is your armor. I hope it fits better now.");
-	e.other:Faction(e.self,229,1,0); -- coalition of tradefolk
-	e.other:Faction(e.self,281,1,0); -- knights of truth
-	e.other:Faction(e.self,291,1,0); -- merchants of qeynos
-	e.other:Faction(e.self,336,1,0); -- coalition of trade folk underground
-end
 -- EOF zone: commons NPC: Ranvigoz_Tonsmith

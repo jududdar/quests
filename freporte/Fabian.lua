@@ -29,10 +29,11 @@ function event_trade(e)
 		e.other:Faction(e.self,262, 1,0); -- Faction: Guards of Qeynos
 		e.other:Faction(e.self,304, -1,0); -- Faction: Ring of Scale
 		e.other:Faction(e.self,285, -1,0); -- Faction: Mayong Mistmoore
-		if(math.random(3) == 3) then -- you only get the coin sometimes
-			etched = 13710; -- Etched Silver Coin
+		if(math.random(1,3) == 3) then -- you only get the coin sometimes
+			e.other:QuestReward(e.self,0,0,0,0,13710);
+			note = You only get the coin sometimes
 		end
-		e.other:QuestReward(e.self,0,math.random(20),math.random(10),1,etched,5000);
+		e.other:QuestReward(e.self,0,math.random(1,20),math.random(1,10),1,0,5000);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 13710})) then -- Etched Silver Coin
 		e.self:Say("'My lucky coin! How did it get in there? Well, never mind that. You are an honest person and although honesty is its own reward, I feel obligated to return the favor. Take this to Dionna if you enjoy music. Farewell friend!");
 		e.other:Faction(e.self,284, 2); -- Faction: League of Antonican Bards

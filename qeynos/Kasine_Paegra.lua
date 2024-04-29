@@ -36,7 +36,7 @@ function event_trade(e)
         e.other:Faction(e.self,221,-10);	--BloodSabers
         e.other:Faction(e.self,341,7);		--Priest of Life
         e.other:Faction(e.self,262,7);		--Guards of Qeynos
-		e.other:QuestReward(e.self,{exp = 1000});
+		e.other:QuestReward(e.self,0,0,0,0,0,1000);
 	elseif(e.other:GetFactionValue(e.self) >= 0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13288}, 0)) then --Order of Thunder (Drosco)
 		e.self:Say("You have returned an Order of Thunder which has been drained of all its power.  I wonder how this could have happened.  No doubt evil is behind this.  Thank you for its return.  I give you the blessings of Karana.  Go and serve the Rainkeeper.");
 		e.self:CastSpell(200,e.other:GetID()); -- minor healing
@@ -44,7 +44,7 @@ function event_trade(e)
         e.other:Faction(e.self,221,-20);	--BloodSabers
         e.other:Faction(e.self,341,15);		--Priest of Life
         e.other:Faction(e.self,262,15);		--Guards of Qeynos
-		e.other:QuestReward(e.self,{exp = 1000});
+		e.other:QuestReward(e.self,0,0,0,0,0,1000);
 	elseif(e.other:GetFactionValue(e.self) >= 900 and item_lib.check_turn_in(e.self, e.trade, {item1 = 6358, gold = 500},1,text)) then -- useless recharge quest, item doesn't have charges anymore -- Bonethunder Staff
 		e.self:Say("The Rainkeeper has bestowed this weapon with power once more. Take it and defend our temple.");
 		e.other:QuestReward(e.self,0,0,0,0,6358,0);

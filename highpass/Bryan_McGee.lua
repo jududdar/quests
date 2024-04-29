@@ -39,7 +39,7 @@ function event_trade(e)
 		e.other:Faction(e.self,329,2,0); -- Carson McCabe
 		e.other:Faction(e.self,230,1,0); -- Corrupt Qeynos Guards
 		e.other:Faction(e.self,330,3,0); -- The Freeport Militia
-		e.other:QuestReward(e.self,0,0,0,math.random(10),12348,15000); -- Item: Gem of Stamina
+		e.other:QuestReward(e.self,0,0,0,math.random(1,10),12348,15000); -- Item: Gem of Stamina
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

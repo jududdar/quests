@@ -63,7 +63,7 @@ function event_trade(e)
 		e.other:Faction(e.self,343,1); -- Faction: QRG Protected Animals
 		e.other:Faction(e.self,324,-2); -- Faction: Unkempt Druids
 		e.other:Faction(e.self,262,1); -- Faction: Guards of Qeynos
-		e.other:QuestReward(e.self,math.random(10),math.random(10),math.random(0,8),math.random(0,2),0,1500);
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,10),math.random(0,8),math.random(0,2),0,1500);
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13231,item2 = 13232},1,text)) then
 		e.self:Say("Excellent! Here is a Jaggedpine Crook of your own. Please use it only to defend yourself and never to attack one of Tunare's creatures. You will find that while wielding the crook, Tunare grants you a boon of strength and the power to smite enemies who would otherwise be impervious to physical attacks.");
 		e.other:Faction(e.self,272,10); -- Faction: Jaggedpine Treefolk

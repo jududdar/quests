@@ -70,7 +70,7 @@ function event_trade(e)
 		e.other:Faction(e.self,343, 4,0); --QRG Protected Animals
 		e.other:Faction(e.self,324, -7,0); --Unkempt Druids
 		e.other:Faction(e.self,262, 4,0);   --Guards of Qeynos
-		e.other:QuestReward(e.self,0,math.random(10),math.random(5),0,0,5000);
+		e.other:QuestReward(e.self,0,math.random(1,10),math.random(1,5),0,0,5000);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 18806})) then -- Sealed Letter [Note To Jaggedpine - fake]
 		e.self:Say("This is dreadful news. We have been nothing but kind neighbors to Qeynos. Now Antonius Bayle wishes to abuse our friendship. This will not sit well with the others. Begone, messenger!");
 		-- confirmed live factions		

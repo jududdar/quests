@@ -7,16 +7,16 @@ end
 function event_trade(e)
 	local item_lib = require("items");
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 21810})) then
-		e.other:QuestReward(e.self,{itemid = 21820}); -- Item: Bag of Platinum Pieces
+		e.other:QuestReward(e.self,0,0,0,0,21820); -- Item: Bag of Platinum Pieces
 
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 21811})) then
-		e.other:QuestReward(e.self,{itemid = 21821}); -- Item: Heavy Bag of Platinum
+		e.other:QuestReward(e.self,0,0,0,0,21821); -- Item: Heavy Bag of Platinum
 
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 21812})) then
-		e.other:QuestReward(e.self,{itemid = 21822}); -- Item: Big Bag of Platinum
+		e.other:QuestReward(e.self,0,0,0,0,21822); -- Item: Big Bag of Platinum
 
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 21813})) then
-		e.other:QuestReward(e.self,{itemid = 21823}); -- Item: Huge Bag of Platinum
+		e.other:QuestReward(e.self,0,0,0,0,21823); -- Item: Huge Bag of Platinum
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

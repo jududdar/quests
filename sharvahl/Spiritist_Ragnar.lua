@@ -31,7 +31,7 @@ function event_trade(e)
 		repeat
 			e.self:Say("A blessing indeed! You have done well to bring this to me. With these glands I will be able to save many lives. Thank you friend. Shar Vahl And its people are in your debt. Please, accept these gifts to assist you in your endeavors. It Is the least I can do to return the favor!");
 			e.other:Faction(e.self,1513,1); -- Faction: Guardians of Shar Vahl
-			e.other:QuestReward(e.self,0,math.random(10),0,0,eq.ChooseRandom(31584,31589,31586,31590,31593,31594,31595,31588,31585,31592),250);
+			e.other:QuestReward(e.self,0,math.random(1,10),0,0,eq.ChooseRandom(31584,31589,31586,31590,31593,31594,31595,31588,31585,31592),250);
 			gland = gland - 1;
 		until gland == 0
 	end		
@@ -40,12 +40,14 @@ function event_trade(e)
 		e.self:Say("Well done " .. e.other:GetCleanName() .. ", I hope it isnt too late.'' Ragnar begins to chant over the carapace and the claw, holding each in opposite hands. A soft light travels from the claw to the carapace as the claw turns to dust. Ragnar opens his eyes and begins to speak, ''It has worked, but all we have done is buy ourselves more time. While you were away, I have been speaking to Master Barkhem. He has a shield frame that can support these carapaces. You will need to craft such a shield by including this carapace and into the frame along with enough to fill each slot. You are doing quite well young Astrall, Siver has grown a little stronger. You can make use of her innate dexterity by weaving this spell.'");
 		e.self:Emote("hands " .. e.other:GetCleanName() .. " a scroll before he continues to speak. 'When you have completed the construction of the shield, return it to me and I will strengthen the anchor.'");
 		e.other:Faction(e.self,1513,1); -- Faction: Guardians of Shar Vahl
-		e.other:QuestReward(e.self,{items = {15040,30977}});
+		e.other:QuestReward(e.self,0,0,0,0,15040);
+		e.other:QuestReward(e.self,0,0,0,0,30977);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30965})) then
 		e.self:Say("Nicely done " .. e.other:GetCleanName() .. ". This anchor should be sufficient to keep Siver bound to this realm for a while. She is strong enough to blind your enemies with a bright flash of light now, all you have to do is call on her spirit. I still cannot make complete sense of her thoughts. I think she is trying to tell me of another whisperling entrapped within the crater. Keep an eye open for the whisperling Scorpialis.");
 		e.self:Say("In the meantime, you can seek out a shield made of Xakra. Xakra made of the ethereal fabric of the spirit realm. I know the Shak Dratha within the thicket are weavers of this rare form of shadow silk. Such a shield can help us strengthen the anchor, making it easier for Siver to aid you. It will also improve her health greatly. She has been through a lot and is in rather poor condition as it stands now.");
 		e.other:Faction(e.self,1513,2); -- Faction: Guardians of Shar Vahl
-		e.other:QuestReward(e.self,{items = {15201,30966},exp = 1000});
+		e.other:QuestReward(e.self,0,0,0,0,15201,1000);
+		e.other:QuestReward(e.self,0,0,0,0,30966);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30962}, 0)) then
 		e.self:Say("Eh? What have we here?'' Ragnar examines the frosted claw carefully. He closes his eyes and begins to chant while holding the claw cupped between his hands. As he opens his eyes he nods at you and begins to speak. ''You have done well to bring her here Astrall. This is a whisperling, her name is Siver. She is very young, so it is hard for me to understand her. From what I gather, she has an important task to fulfill, but I am still unsure what that task may be. Please take her with you for now, I think that is her wish. Perhaps Grawleh will be able to assist us further, and maybe even find a more suitable anchor for her. I think it would be wise to show her to him.");
 		e.other:QuestReward(e.self,0,0,0,0,30963,1000);

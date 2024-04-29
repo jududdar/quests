@@ -31,7 +31,7 @@ function event_trade(e)
 		e.other:Faction(e.self,296,5); -- Opal Dark Briar
 		e.other:Faction(e.self,341,-12); -- Priest of Life
 		e.other:Faction(e.self,230,2); -- Corrupt Qeynos Guards
-		e.other:QuestReward(e.self,0,math.random(10),0,0,18806,100); -- Sealed Letter [Note To Jaggedpine - fake]
+		e.other:QuestReward(e.self,0,math.random(1,10),0,0,18806,100); -- Sealed Letter [Note To Jaggedpine - fake]
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end	

@@ -17,7 +17,8 @@ function event_trade(e)
 
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 14360,item2 = 14361})) then -- Staff of the Wheel / Star of Eyes
 		e.self:Say("Wonderful, you have brought me the Wheel. Here is the reward I promised you.");
-		e.other:QuestReward(e.self,{items = {11881,11880},exp = 100000}); -- Rune of the Astral,  Rune of Frost
+		e.other:QuestReward(e.self,0,0,0,0,11881,100000); -- Rune of the Astral,  Rune of Frost
+		e.other:QuestReward(e.self,0,0,0,0,11880);
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end

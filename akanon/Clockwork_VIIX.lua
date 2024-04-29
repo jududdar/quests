@@ -22,7 +22,8 @@ function event_trade(e)
 	local item_lib = require("items");
 	if (item_lib.check_turn_in(e.self, e.trade, {item1 = 10604})) then
 		e.self:Say("It is time then, are you ready to get the required components?");
-		e.other:QuestReward(e.self,{items = {10604,17861}}) -- Item: Jeb's Seal
+		e.other:QuestReward(e.self,0,0,0,0,10604) -- Item: Jeb's Seal
+		e.other:QuestReward(e.self,0,0,0,0,17861) -- Item: An Enchanters Sack
 	elseif (item_lib.check_turn_in(e.self, e.trade, {item1 = 10636})) then
 		e.self:Say("Oh excellent, you have done what is required. Here take this part, and seek the third master, you are well on your way.");
 		e.other:Faction(e.self,404,100); -- Faction: True Spirit

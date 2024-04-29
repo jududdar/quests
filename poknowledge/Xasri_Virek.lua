@@ -16,7 +16,7 @@ function event_trade(e)
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 28788, item2 = 29145})) then --Beginner Combat Manual, Junk Beast Power Source
 		e.self:Say("Very impressive, " .. e.other:GetCleanName() .. ". This proves you have clearly graduated to the next phase of training we have to offer. Keep this book by your side and speak to Gwiraba Gelrid when you are ready for your next lesson.");
 		-- Confirmed Live Experience
-		e.other:QuestReward(e.self,0,math.random(5),0,0,28790,500000);--Intermediate Combat Manual
+		e.other:QuestReward(e.self,0,math.random(1,5),0,0,28790,500000);--Intermediate Combat Manual
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

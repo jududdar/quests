@@ -36,7 +36,7 @@ function event_trade(e)
 		e.other:Faction(e.self,262,10); 		-- Guards of Qeynos
 		e.other:Faction(e.self,221,-5); 		-- BloodSabers
 		e.other:Faction(e.self,219,3); 		-- Antonious Bayle
-		e.other:QuestReward(e.self,{itemid = 13306,exp = 1000}); -- T.O.L. 2020
+		e.other:QuestReward(e.self,0,0,0,0,13306,1000); -- T.O.L. 2020
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 18936})) then -- A Sealed Note
 		e.self:Say("Finally!! I see that Ariska has found a noble knight to retrieve Soulfire. Per Ariska's orders I am not to give Soulfire to you until you can show me [proof of nobility]. You must honor both the Temple of Life as well as the Hall of Truth and to a high degree. Only then shall you hold Soulfire.");
 		e.other:Faction(e.self,341,10); 		-- Priest of Life
@@ -53,7 +53,7 @@ function event_trade(e)
 			e.other:Faction(e.self,262,50); 		-- Guards of Qeynos
 			e.other:Faction(e.self,221,-25); 		-- BloodSabers
 			e.other:Faction(e.self,219,15); 		-- Antonious Bayle
-			e.other:QuestReward(e.self,{itemid = 5504,exp = 10000});	--  soulfire
+			e.other:QuestReward(e.self,0,0,0,0,5504,10000);	--  soulfire
 		else
 			e.self:Say("Your mere presence disgusts me.  Please remove yourself from my sight.  Until you change yourself and your ways, you are unwelcome in the Temple of Life.");
 			-- faction not high enough, items get eaten.

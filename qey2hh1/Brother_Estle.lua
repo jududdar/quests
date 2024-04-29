@@ -42,7 +42,7 @@ function event_trade(e)
 		e.other:Faction(e.self,262,7,0); -- Faction: Guards of Qeynos
 		e.other:Faction(e.self,221,-3,0); -- Faction: Bloodsabers
 		e.other:Faction(e.self,219,2,0); -- Faction: Antonius Bayle
-		e.other:QuestReward(e.self,{copper = math.random(10),silver = math.random(0,5),itemid = 13911,exp = 800}); -- Item: PrayerBeads
+		e.other:QuestReward(e.self,math.random(1,10),math.random(0,5),0,0,13911,800); -- Item: PrayerBeads
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

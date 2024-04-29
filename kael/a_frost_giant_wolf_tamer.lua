@@ -48,7 +48,8 @@ function event_trade(e)
 		e.other:QuestReward(e.self,0,0,0,0,30274);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30273,item2 = 30249}, 0)) then
 		e.self:Say("Yes.  Exactly as I thought.  Hrm.  I'd keep this but you've done much work.  You may be one of the filthy outlanders but you can keep it.  You can save your thanks.");
-		e.other:QuestReward(e.self,{items = {30274,30249}}); -- Item: Blood Wolf Harness
+		e.other:QuestReward(e.self,0,0,0,0,30274); -- Item: Blood Wolf Harness
+		e.other:QuestReward(e.self,0,0,0,0,30249);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

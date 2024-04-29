@@ -37,7 +37,7 @@ function event_trade(e)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 1176,item2 = 1422})) then -- thoridains seal and cloth shawl
 		e.self:Say("Well done, " .. e.other:GetCleanName() .. ", the council will be impressed with your effort. Here is the woven prayer shawl, wear it with pride. I know there is talk of great plans for you, be sure to come back and ask me what the council has [brewing].");
 		ColdainFaction(e);
-		e.other:QuestReward(e.self,{items = {1422,1177},exp = 50000}); -- Item: Seal of Thoridain
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(1422,1177),50000); -- Item: Seal of Thoridain
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 1177,item2 = 1560})) then -- tanik's note and woven shawl
 		e.self:Say("Words cannot express our gratitude for your deeds outlander, you have saved a hero of our people from certain death. Please accept this, the Fur-lined shawl, as a token of our sincere appreciation. You are indeed among the most highly regarded " .. e.other:Race() .. "s to set foot in Thurgadin. The next time we meet be sure to ask me how to further advance your reputation with the coldain.");
 		e.other:Faction(e.self,406,20); -- coldain

@@ -26,7 +26,7 @@ function event_trade(e)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 31839}, 0)) then -- Resealed Runed Iron Bound Chest
 		e.self:Say("It appears this situation is much more dire than we had first presumed. It would be unsafe to send this crate within the walls of Shar Vahl should another innocent be possessed and the tormented vah shir be resurrected once more. I shall scribe a note explaining the occurrences for you to deliver along with the crate to Spiritist Roleko at the vah shir outpost in Grimling Forest.");
 		e.other:Faction(e.self,1513,2); -- Guardian of Shar Vahl
-		e.other:QuestReward(e.self,{items = {31840,31841},exp = 10000}); -- Resealed Warded Iron Bound Chest, Roshawna's Report of Occurrences
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(31840,31841),10000); -- Resealed Warded Iron Bound Chest, Roshawna's Report of Occurrences
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

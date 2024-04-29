@@ -18,7 +18,7 @@ function event_trade(e)
 		e.other:Faction(e.self,341,1,0); -- Faction: Priests of Life
 		e.other:Faction(e.self,280,1,0); -- Faction: Knights of Thunder
 		e.other:Faction(e.self,223,-1,0); -- Faction: Circle of Unseen Hands
-		e.other:QuestReward(e.self,math.random(20),0,0,0,0,2000);
+		e.other:QuestReward(e.self,math.random(1,20),0,0,0,0,2000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

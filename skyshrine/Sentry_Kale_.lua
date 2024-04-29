@@ -16,10 +16,11 @@ function event_trade(e)
 		e.other:Faction(e.self,430,5);  	--CoV
 		e.other:Faction(e.self,436,1);  	-- Yelinak
 		e.other:Faction(e.self,448,-2); 	-- Kromzek
-		if(math.random(3) == 1) then
-			hammerrew = 1727; -- bracer of the hammerfall
+		if(math.random(1,3) == 1) then
+			e.other:QuestReward(e.self,0,0,0,0,1727); -- bracer of the hammerfall
+			note = Items not always given
 		end
-		e.other:QuestReward(e.self,math.random(10),math.random(10),math.random(10),math.random(0,10),hammerrew,5000);
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,10),math.random(1,10),math.random(0,10),0,5000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

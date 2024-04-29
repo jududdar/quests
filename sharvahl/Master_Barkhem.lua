@@ -31,55 +31,49 @@ end
 
 function event_trade(e)
 	local item_lib = require("items");
-	local bloodling = 0;
 	-- You can buy Nepeta Oil Extract from a merchant named Chialle in the southern part of Shar Vahl. The mail sectional mold is sold by Apprentice Garr, near Master Barkhem. Combine the oil, mold and two plates in a forge (trivial 32) to create a Bloodling Plate Mail.
 	-- give Bloodling plate mail
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 30646})) then
-		bloodling = 30646; -- Item: Bloodling Plate Helm
-		vah_armor = 1;
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30647})) then
-		bloodling = 30647; -- Item: Bloodling Plate Mask
-		vah_armor = 1;
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30648})) then
-		bloodling = 30648; -- Item: Bloodling Plate Gorget
-		vah_armor = 1;
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30649})) then
-		bloodling = 30649; -- Item: Bloodling Plate Mail
-		vah_armor = 1;
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30650})) then
-		bloodling = 30650; -- Item: Bloodling Plate Mantle
-		vah_armor = 1;
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30651})) then
-		bloodling = 30651; -- Item: Bloodling Plate Cloak
-		vah_armor = 1;
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30652})) then
-		bloodling = 30652; -- Item: Bloodling Plate Belt
-		vah_armor = 1;
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30653})) then
-		bloodling = 30653; -- Item: Bloodling Plate Sleeves
-		vah_armor = 1;
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30654})) then
-		bloodling = 30654; -- Item: Bloodling Plate Bracer
-		vah_armor = 1;
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30655})) then
-		bloodling = 30655; -- Item: Bloodling Plate Gauntlets
-		vah_armor = 1;
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30656})) then
-		bloodling = 30656; -- Item: Bloodling Plate Leggings
-		vah_armor = 1;
-	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30657})) then
-		bloodling = 30657; -- Item: Bloodling Plate Boots
-		vah_armor = 1;
-	end
-	if(vah_armor == 1) then
 		e.self:Say("I knew that old thing would make a fine bit of armor in the right hands. Talent like yours should not go to waste! Take this, it is the mallet that I used to smith my very first bit, you can learn with it until you earn something better. Here is your first lesson " .. e.other:GetCleanName() .. ", use this mallet to pound out the dents in the guard's shields. The ones guarding the bridges into town will need it most, as they can not leave their posts. Show each guard a [repair order] and have them sign off on it when you are through.");
-		e.other:QuestReward(e.self,{items = {bloodling,29802}});
-		vah_armor = 0;
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(30646,29802));
+	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30647})) then
+		e.self:Say("I knew that old thing would make a fine bit of armor in the right hands. Talent like yours should not go to waste! Take this, it is the mallet that I used to smith my very first bit, you can learn with it until you earn something better. Here is your first lesson " .. e.other:GetCleanName() .. ", use this mallet to pound out the dents in the guard's shields. The ones guarding the bridges into town will need it most, as they can not leave their posts. Show each guard a [repair order] and have them sign off on it when you are through.");
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(30647,29802));
+	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30648})) then
+		e.self:Say("I knew that old thing would make a fine bit of armor in the right hands. Talent like yours should not go to waste! Take this, it is the mallet that I used to smith my very first bit, you can learn with it until you earn something better. Here is your first lesson " .. e.other:GetCleanName() .. ", use this mallet to pound out the dents in the guard's shields. The ones guarding the bridges into town will need it most, as they can not leave their posts. Show each guard a [repair order] and have them sign off on it when you are through.");
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(30648,29802));
+	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30649})) then
+		e.self:Say("I knew that old thing would make a fine bit of armor in the right hands. Talent like yours should not go to waste! Take this, it is the mallet that I used to smith my very first bit, you can learn with it until you earn something better. Here is your first lesson " .. e.other:GetCleanName() .. ", use this mallet to pound out the dents in the guard's shields. The ones guarding the bridges into town will need it most, as they can not leave their posts. Show each guard a [repair order] and have them sign off on it when you are through.");
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(30649,29802));
+	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30650})) then
+		e.self:Say("I knew that old thing would make a fine bit of armor in the right hands. Talent like yours should not go to waste! Take this, it is the mallet that I used to smith my very first bit, you can learn with it until you earn something better. Here is your first lesson " .. e.other:GetCleanName() .. ", use this mallet to pound out the dents in the guard's shields. The ones guarding the bridges into town will need it most, as they can not leave their posts. Show each guard a [repair order] and have them sign off on it when you are through.");
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(30650,29802));
+	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30651})) then
+		e.self:Say("I knew that old thing would make a fine bit of armor in the right hands. Talent like yours should not go to waste! Take this, it is the mallet that I used to smith my very first bit, you can learn with it until you earn something better. Here is your first lesson " .. e.other:GetCleanName() .. ", use this mallet to pound out the dents in the guard's shields. The ones guarding the bridges into town will need it most, as they can not leave their posts. Show each guard a [repair order] and have them sign off on it when you are through.");
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(30651,29802));
+	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30652})) then
+		e.self:Say("I knew that old thing would make a fine bit of armor in the right hands. Talent like yours should not go to waste! Take this, it is the mallet that I used to smith my very first bit, you can learn with it until you earn something better. Here is your first lesson " .. e.other:GetCleanName() .. ", use this mallet to pound out the dents in the guard's shields. The ones guarding the bridges into town will need it most, as they can not leave their posts. Show each guard a [repair order] and have them sign off on it when you are through.");
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(30652,29802));
+	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30653})) then
+		e.self:Say("I knew that old thing would make a fine bit of armor in the right hands. Talent like yours should not go to waste! Take this, it is the mallet that I used to smith my very first bit, you can learn with it until you earn something better. Here is your first lesson " .. e.other:GetCleanName() .. ", use this mallet to pound out the dents in the guard's shields. The ones guarding the bridges into town will need it most, as they can not leave their posts. Show each guard a [repair order] and have them sign off on it when you are through.");
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(30653,29802));
+	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30654})) then
+		e.self:Say("I knew that old thing would make a fine bit of armor in the right hands. Talent like yours should not go to waste! Take this, it is the mallet that I used to smith my very first bit, you can learn with it until you earn something better. Here is your first lesson " .. e.other:GetCleanName() .. ", use this mallet to pound out the dents in the guard's shields. The ones guarding the bridges into town will need it most, as they can not leave their posts. Show each guard a [repair order] and have them sign off on it when you are through.");
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(30654,29802));
+	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30655})) then
+		e.self:Say("I knew that old thing would make a fine bit of armor in the right hands. Talent like yours should not go to waste! Take this, it is the mallet that I used to smith my very first bit, you can learn with it until you earn something better. Here is your first lesson " .. e.other:GetCleanName() .. ", use this mallet to pound out the dents in the guard's shields. The ones guarding the bridges into town will need it most, as they can not leave their posts. Show each guard a [repair order] and have them sign off on it when you are through.");
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(30655,29802));
+	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30656})) then
+		e.self:Say("I knew that old thing would make a fine bit of armor in the right hands. Talent like yours should not go to waste! Take this, it is the mallet that I used to smith my very first bit, you can learn with it until you earn something better. Here is your first lesson " .. e.other:GetCleanName() .. ", use this mallet to pound out the dents in the guard's shields. The ones guarding the bridges into town will need it most, as they can not leave their posts. Show each guard a [repair order] and have them sign off on it when you are through.");
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(30656,29802));
+	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30657})) then
+		e.self:Say("I knew that old thing would make a fine bit of armor in the right hands. Talent like yours should not go to waste! Take this, it is the mallet that I used to smith my very first bit, you can learn with it until you earn something better. Here is your first lesson " .. e.other:GetCleanName() .. ", use this mallet to pound out the dents in the guard's shields. The ones guarding the bridges into town will need it most, as they can not leave their posts. Show each guard a [repair order] and have them sign off on it when you are through.");
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(30657,29802));
 	end
 	-- give 2 Bloodling shields : buy 2 carapace shield frame from Barkhem, fill them with Cht`Thk carapaces, combine
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 30658, item2 = 30658})) then
 		e.self:Emote("smiles and nods his head in approval before speaking. 'This is some quality work my friend. Although you could use some practice in your style, I can sense true potential in your smithing skills. This was too large for me to use for a shield, but I think you can craft it into some fairly good armor. Just treat it in a forge with nepeta oil and the proper mold, the oil should soften it up enough to become pliable. Once fired in the forge it will harden to the mold. I'd love to see how It turns out.'");
-		e.other:QuestReward(e.self,{items = {30664,30664}}); -- Item: A Bloodling Carapace Plate
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(30664,30664)); -- Item: A Bloodling Carapace Plate
 
 	-- Give Master Barkhem the four work orders, from the 4 khala dun
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 29806, item2 = 29809, item3 = 29812, item4 = 29815})) then

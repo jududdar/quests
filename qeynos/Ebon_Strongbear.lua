@@ -48,7 +48,7 @@ function event_trade(e)
 		e.other:Faction(e.self,230,-15,0); -- Corrupted Qeynos Guard
 		e.other:Faction(e.self,330,-15,0); -- The Freeport Militia
 		e.other:Faction(e.self,281,20,0); -- Knight of Truth
-		e.other:QuestReward(e.self,{itemid = 13572,exp = 20}); -- Dirty Training Tunic*
+		e.other:QuestReward(e.self,0,0,0,0,13572,20); -- Dirty Training Tunic*
 	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 27421,item2 = 27421, item3 = 27421,item4 = 27422})) then
 		e.self:Say("I knew he would still have it, such an unintelligent one Beris is. As I promised I have crafted you a blade for your trouble. I hope you will promptly stain it with the blood of the gnolls. You have done well " .. e.other:GetCleanName() .. ", good luck to you.");
 		-- Confirmed Live Experience and Faction
@@ -57,7 +57,7 @@ function event_trade(e)
 		e.other:Faction(e.self,230,-1,0); -- Corrupted Qeynos Guard
 		e.other:Faction(e.self,330,-1,0); -- The Freeport Militia
 		e.other:Faction(e.self,281,2,0); -- Knight of Truth
-		e.other:QuestReward(e.self,{itemid = 27492,exp = 500}); -- Item: Warsword of the Battlemaster
+		e.other:QuestReward(e.self,0,0,0,0,27492,500); -- Item: Warsword of the Battlemaster
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

@@ -40,7 +40,7 @@ function event_trade(e)
 			e.other:Faction(e.self,430,10);  	--CoV
 			e.other:Faction(e.self,436,2);  	-- Yelinak
 			e.other:Faction(e.self,448,-5); 	-- Kromzek
-			e.other:QuestReward(e.self,math.random(10),math.random(10),math.random(10),math.random(10),0,10000);
+			e.other:QuestReward(e.self,math.random(1,10),math.random(1,10),math.random(1,10),math.random(1,10),0,10000);
 			storm_toe = storm_toe - 1;
 		until storm_toe == 0;
 	elseif(assignment > 0) then	
@@ -49,7 +49,7 @@ function event_trade(e)
 			e.other:Faction(e.self,430,5);  	--CoV
 			e.other:Faction(e.self,436,1);  	-- Yelinak
 			e.other:Faction(e.self,448,-2); 	-- Kromzek
-			e.other:QuestReward(e.self,math.random(10),math.random(10),math.random(10),math.random(5),0,5000);
+			e.other:QuestReward(e.self,math.random(1,10),math.random(1,10),math.random(1,10),math.random(1,5),0,5000);
 			assignment = assignment - 1;
 		until assignment == 0;
 	elseif(frost_toe > 0) then	
@@ -58,7 +58,7 @@ function event_trade(e)
 			e.other:Faction(e.self,430,5);  	--CoV
 			e.other:Faction(e.self,436,1);  	-- Yelinak
 			e.other:Faction(e.self,448,-2); 	-- Kromzek
-			e.other:QuestReward(e.self,math.random(10),math.random(10),math.random(10),math.random(5),0,5000);
+			e.other:QuestReward(e.self,math.random(1,10),math.random(1,10),math.random(1,10),math.random(1,5),0,5000);
 			frost_toe = frost_toe - 1;
 		until frost_toe == 0;
 	end

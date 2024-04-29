@@ -80,7 +80,7 @@ function event_trade(e)
 	end
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 3460, item2 = 3464, item3 = 2878, item4 = 3456})) then
 		e.self:Say("Your hard work is pleasing to the Taruun, " .. e.other:GetCleanName() .. ", which now accepts you as an official recruit. Wear this cloak with pride. Your buckler has been treated with a special epoxy and should protect you more effectively now. Show the buckler to Taruun Joharr and he will continue to guide you on your sacred path. I sense a strong spirit in you, young one. May it guide you to greatness!");
-		e.other:QuestReward(e.self,{items = {3465,3466}}); -- Item: Hardened Buckler of the Beetle
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(3465,3466)); -- Item: Hardened Buckler of the Beetle
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

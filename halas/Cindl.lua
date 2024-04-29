@@ -21,14 +21,14 @@ function event_trade(e)
 		e.other:Faction(e.self,328, 5); -- Faction: Merchants of Halas
 		e.other:Faction(e.self,320, 3); -- Faction: Wolves of the North
 		e.other:Faction(e.self,327, 3); -- Faction: Shamen of Justice		
-		e.other:QuestReward(e.self,0,0,math.random(5),0,eq.ChooseRandom(2131, 2134, 2127, 2126, 2129, 2125, 2133),1000); -- Item(s): Large Tattered Belt (2131)
+		e.other:QuestReward(e.self,0,0,math.random(1,5),0,eq.ChooseRandom(2131,2134,2127,2126,2129,2125,2133),1000); -- Item(s): Large Tattered Belt (2131)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 12223, item2 = 12223},1,text)) then -- can be done at dubiously
 		e.self:Say("Fine work hunter!  As your reward please accept this item which I have fashioned for you.");
 		-- Confirmed Live Factions		
 		e.other:Faction(e.self,328, 10); -- Faction: Merchants of Halas
 		e.other:Faction(e.self,320, 7); -- Faction: Wolves of the North
 		e.other:Faction(e.self,327, 7); -- Faction: Shamen of Justice		
-		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(2034, 2171, 2164),1000); -- Item(s): Large Leather Gloves (2034)
+		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(2034,2171,2164),1000); -- Item(s): Large Leather Gloves (2034)
 	end	
 	item_lib.return_items(e.self, e.other, e.trade)	
 end

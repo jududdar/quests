@@ -13,7 +13,7 @@ function event_trade(e)
 		e.other:Faction(e.self,419,1); -- Faction: Kromrif
 		e.other:Faction(e.self,429,1); -- Faction: King Tormax
 		e.other:Faction(e.self,430,-1); -- Faction: Claws of Veeshan
-		e.other:QuestReward(e.self,math.random(10),math.random(10),0,0,0,500);
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,10),0,0,0,500);
 		eq.depop_with_timer();
 	end
 	item_lib.return_items(e.self, e.other, e.trade)

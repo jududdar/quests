@@ -25,7 +25,7 @@ function event_trade(e)
 		e.other:Faction(e.self,444,200); 	--Swift Tails
 		e.other:Faction(e.self,441,50); 	--Legion of Cabilis
 		-- Confirmed Live Experience and Faction
-		e.other:QuestReward(e.self,{itemid = 4190,exp = 1000});	-- Shackle of Dust
+		e.other:QuestReward(e.self,0,0,0,0,4190,1000);	-- Shackle of Dust
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 14788})) then
 		e.self:Emote("sits whispering incoherently for a long moment before even regarding the note you dropped in front of him. The Grand Master suddenly snatches up the note from Xlixinar, removes a small charcoal marker from a belt pouch, and scrawls some intructions upon it. He drops the note immediately after finishing and resumes his meditation without a word.");
 		e.other:QuestReward(e.self,0,0,0,0,18980); -- Item: Note from Glox

@@ -12,7 +12,7 @@ function event_trade(e)
 		e.other:QuestReward(e.self,0,0,0,0,31496,6400); -- Item: Bridle of Sir Ariam
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 18474})) then
 		e.self:Say("By Marr, what is this? .. Burning Dead .. .. Marnek! By my blade this must be stopped! Where did you find this?");
-		e.other:QuestReward(e.self,math.random(10),math.random(10),0,0,0,6400);
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,10),0,0,0,6400);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

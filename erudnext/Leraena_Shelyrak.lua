@@ -40,14 +40,15 @@ function event_trade(e)
 		e.other:QuestReward(e.self,0,0,0,0,13546,20); -- Faded Silver Tunic*
 	elseif(e.other:GetFaction(e.self) < 5 and item_lib.check_turn_in(e.self, e.trade, {item1 = 14585},0)) then -- requires amiably
 		e.self:Say("It is imperative that we discern the nature of these symbols and the source of the kobolds shamanistic powers. There is a citizen of Erudin residing in Freeport named Glyssa Sonshaw. She is quite possibly the most knowledgeable individual in the field of heraldic and hieroglyphic studies. Take the high shamans necklace and this note to her. When you have discovered the nature of the symbols return to me with the documentation and your Disciple Symbol of Quellious.");
-		e.other:QuestReward(e.self,{items = {1772,14585}}); -- Item: Odd Cold Iron Necklace
+		e.other:QuestReward(e.self,0,0,0,0,1772); -- Item: Odd Cold Iron Necklace
+		e.other:QuestReward(e.self,0,0,0,0,14585);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 2049},0)) then --  rolled up strip of cloth
 		e.self:Say("This is important news indeed. It seems there is a tribe of cat men in the Stonebrunt Mountains that wishes to form an alliance with Erudin. I must alert the High Council of this immediately, thank you for your services."); 
 		-- Confirmed Live Factions
 		e.other:Faction(e.self,298,2); --  Peace Keepers.
 		e.other:Faction(e.self,266,1); --  High Council of Erudin.
 		e.other:Faction(e.self,265,-1); --  Heretics.
-		e.other:QuestReward(e.self,math.random(10),math.random(5),0,0,0,1000);
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,5),0,0,0,1000);
 	elseif(e.other:GetFaction(e.self) < 5 and item_lib.check_turn_in(e.self, e.trade, {item1 = 14582},0)) then -- requires amiably
 		e.self:Say("I am unfamiliar with the markings that adorn these necklaces. You have done well thus far in hindering the kobolds worship of their evil deity. I award you the Initiate Symbol of Quellious. Return to me when you feel you are ready to deal with the [greater kobold shaman].");
 		-- Confirmed Live Factions
@@ -61,7 +62,7 @@ function event_trade(e)
 		e.other:Faction(e.self,298,20); -- Faction: Peace Keepers
 		e.other:Faction(e.self,266,5); -- Faction: High Council of Erudin
 		e.other:Faction(e.self,265,-5); -- Faction: Heretics
-		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(15213, 15011),500);
+		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(15213,15011),500);
 	elseif(e.other:GetFaction(e.self) < 5 and item_lib.check_turn_in(e.self, e.trade, {item1 = 14583,item2 = 1564})) then -- requires amiably
 		-- Confirmed Live Factions
 		e.self:Say("Your service to this temple is commendable. I award you the rank of Disciple for your devotions to The Tranquil. When you are [ready to advance] return to me and I will set you upon another task.");

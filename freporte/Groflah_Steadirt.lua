@@ -36,7 +36,7 @@ function event_trade(e)
 			e.other:Faction(e.self,336,10,0); -- Faction: Coalition of Tradefolk Underground
 			e.other:Faction(e.self,281,10,0); -- Faction: Knights of Truth
 			e.other:Faction(e.self,291,7,0); -- Faction: Merchants of Qeynos
-			e.other:QuestReward(e.self,math.random(10),math.random(10),math.random(2),0,0,15);
+			e.other:QuestReward(e.self,math.random(1,10),math.random(1,10),math.random(1,2),0,0,15);
 			Tumpy_Tonic = Tumpy_Tonic - 1;
 		until Tumpy_Tonic == 0
 	end

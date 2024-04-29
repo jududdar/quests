@@ -33,20 +33,18 @@ function event_timer(e)
 		return;
 	end
 	
-	local elist = eq.get_entity_list();
-	
 	if ( e.timer == "arbiter" ) then
-		if ( not elist:IsMobSpawnedByNpcTypeID(71008) ) then -- a_spiroc_arbiter
+		if ( not eq.get_entity_list():IsMobSpawnedByNpcTypeID(71008) ) then -- a_spiroc_arbiter
 			eq.update_spawn_timer(364315, 1000);
 		end
 		
 	elseif ( e.timer == "caller" ) then
-		if ( not elist:IsMobSpawnedByNpcTypeID(71015) ) then -- a_spiroc_caller
+		if ( not eq.get_entity_list():IsMobSpawnedByNpcTypeID(71015) ) then -- a_spiroc_caller
 			eq.update_spawn_timer(364310, 1000);
 		end
 	
 	elseif ( e.timer == "expulser" ) then
-		if ( not elist:IsMobSpawnedByNpcTypeID(71011) ) then -- a_spiroc_expulser
+		if ( not eq.get_entity_list():IsMobSpawnedByNpcTypeID(71011) ) then -- a_spiroc_expulser
 			eq.update_spawn_timer(364321, 1000);
 		end
 	end

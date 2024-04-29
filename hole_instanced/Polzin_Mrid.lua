@@ -21,7 +21,8 @@ function event_trade(e)
 	local item_lib = require("items");
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 10604})) then -- Item: Jeb's Seal
 		e.self:Say("Jeb has spoken with you already, excellent. Tell me are you ready for the test of the phantasm?");
-		e.other:QuestReward(e.self,{items = {17861,10604}});
+		e.other:QuestReward(e.self,0,0,0,0,17861);
+		e.other:QuestReward(e.self,0,0,0,0,10604);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 10638})) then
 		e.self:Say("You have done well, take this last piece and return them to Jeb. He will be able to complete the final crafting.");
 		e.other:Faction(e.self,404,100); -- Faction: True Spirit

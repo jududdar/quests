@@ -23,7 +23,7 @@ function event_trade(e)
 		e.other:Faction(e.self,230,-1,0); -- Corrupt Qeynos Guards
 		e.other:Faction(e.self,223,-2,0); -- Circle Of Unseen Hands
 		e.other:Faction(e.self,291,1,0); -- Merchants of Qeynos 
-		e.other:QuestReward(e.self,math.random(20),0,math.random(10),0,eq.ChooseRandom(5369,9002,4209,5028,5034,2248,5310,9003,7350,5350),50000); -- Bunker Battle Blade , Round Shield, Bronze Bracers, Bronze Battle Axe, Bronze Scimitar, Reinforced Boots, Tentacle Whip, Targ Shield, Fine Steel Dagger, Fine Steel Long Sword
+		e.other:QuestReward(e.self,math.random(1,20),0,math.random(1,10),0,eq.ChooseRandom(5369,9002,4209,5028,5034,2248,5310,9003,7350,5350),50000); -- Bunker Battle Blade , Round Shield, Bronze Bracers, Bronze Battle Axe, Bronze Scimitar, Reinforced Boots, Tentacle Whip, Targ Shield, Fine Steel Dagger, Fine Steel Long Sword
 			cgb = cgb - 1;
 		until cgb == 0
 	end	

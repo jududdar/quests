@@ -29,7 +29,7 @@ function event_trade(e)
 		e.other:Faction(e.self,226,1); -- Clerics of Tunare got better. 
 		e.other:Faction(e.self,310,1); -- Soldiers of Tunare got better. 
 		e.other:Faction(e.self,234,-1); -- Crushbone Orcs got worse. 
-		e.other:QuestReward(e.self,0,math.random(9),0,0,8091,500); -- Treant Bow Staff
+		e.other:QuestReward(e.self,0,math.random(1,9),0,0,8091,500); -- Treant Bow Staff
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 18785})) then -- A tattered note
 		e.self:Say("Hail, " .. e.other:GetCleanName() .. ", and welcome.. I am Maesyn Trueshot, leader of Faydark's Champions. I will teach and train you, as I have done for many others. Let's get started.. Here, put this on.. it'll help protect you from the elements. You look pretty bright. Train hard, and I'm sure you'll do well.");
 		e.other:Faction(e.self,246,100);  --  Faydark's Champions

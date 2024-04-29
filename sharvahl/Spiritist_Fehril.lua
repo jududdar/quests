@@ -20,7 +20,7 @@ function event_trade(e)
 		e.self:Emote("craftily places the hides in a circular frame and hands you the product, 'You've completed my first task and as a reward I present you with this small token. May it serve to protect you from our enemies.");
 		e.self:Say("As a member of the sacred Dar Khura, you will be asked to become proficient in the art of brewing. Sweetwater is produced by combining xakra bile and scorpion blood with a flask of water in a brew barrel. Pour two flasks of sweetwater into this cask and return it to me.");
 		eq.signal(155164,1,0); -- NPC: Elder_Spiritist_Grawleh
-		e.other:QuestReward(e.self,{items = {3489,17232},exp = 500}); --Hopper hide Buckler.
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(3489,17232),500); --Hopper hide Buckler.
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 3493})) then
 		e.self:Emote("takes a sip from the cask and furrows his brow.");
 		e.self:Say("Well, it's a start I suppose. With a little practice you are certain to get better. Here is some hide treatment I just made, it will make your buckler stronger. It just needs some time to ferment before I apply it.");
@@ -30,12 +30,12 @@ function event_trade(e)
 		e.self:Say("Well done you " .. e.other:GetCleanName() .. ", your deeds will not go unnoticed. You will now be known throughout the land as an official recruit of the revered Dar Khura. As your status improves so will the rewards for your service. Here is your treated buckler, your new cloak, and a spell I trust you will find a use for. Show your buckler to Fharra Cawfeet and she will continue your training.");
 		e.self:Emote("shouts, 'My fellow Vah Shir, I present to you the newest recruit to the sacred Dar Khura. " .. e.other:GetCleanName() .. " has shown great potential in the service of our sect. Please join me in thanking this citizen for service to our people!'");
 		eq.set_global("Shar_Vahl_Cit","8",5,"F");
-		e.other:QuestReward(e.self,{items = {3495,3496,15275},exp = 500}); --Treated Hopperhide Buckler, Cloak of the Dar Khura Recruit, Spell: Frost Rift.
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(3495,3496,15275),500); --Treated Hopperhide Buckler, Cloak of the Dar Khura Recruit, Spell: Frost Rift.
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 5542, item2 = 3496, item3 = 5543})) then
 		e.self:Say("Your progress fills me with pride. Please take these things as a sign of our appreciation. I hope that they help you as much as you have helped us. When you are ready to continue your training, please contact Jaima Seyel. You'll most likely find her in the Dar Khura Guildhall. She will train you from this point.");
 		e.self:Shout("Fellow citizens, may I present to you with our newest apprentice to the sacred Dar Khura. " .. e.other:GetCleanName() .. " has assisted us for some time now and we can only hope that this assistance doesn't go unnoticed. Now, please join me in thanking " .. e.other:GetCleanName() .. " for such selfless service to our people.");
 		e.other:Faction(e.self,1533,20); -- Faction: Dar Khura
-		e.other:QuestReward(e.self,{items = {5543,5544,15282},exp = 1500}); -- Item: Imbued Hopperhide Buckler, Cloak of the Dar Khura Apprentice
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(5543,5544,15282),1500); -- Item: Imbued Hopperhide Buckler, Cloak of the Dar Khura Apprentice
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

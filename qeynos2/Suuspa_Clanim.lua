@@ -35,7 +35,7 @@ function event_trade(e)
 		e.other:Faction(e.self,262,2,0); -- Guards of Qeynos
 		e.other:Faction(e.self,221,-1,0); -- Bloodsabers
 		e.other:Faction(e.self,219,1,0); -- Antonius Bayle
-		e.other:QuestReward(e.self,math.random(10),math.random(10),0,0,0,1000);
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,10),0,0,0,1000);
 	elseif(e.other:GetFactionValue(e.self) >= 0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13908})) then
 		e.self:Say("This is not good. Hmph. It appears they are shattered. For the first time one of our members has been swayed. I reward you for your deed. Also, if you have found anything upon Trintle, let me know.");
 		-- Confirmed Live Factions
@@ -44,7 +44,7 @@ function event_trade(e)
 		e.other:Faction(e.self,262,2,0); -- Guards of Qeynos
 		e.other:Faction(e.self,221,-1,0); -- Bloodsabers
 		e.other:Faction(e.self,219,1,0); -- Antonius Bayle
-		e.other:QuestReward(e.self,math.random(10),math.random(10),0,0,0,1000);
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,10),0,0,0,1000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

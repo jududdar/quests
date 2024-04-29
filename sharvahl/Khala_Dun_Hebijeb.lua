@@ -84,7 +84,7 @@ function event_trade(e)
 		e.self:Say("Your progress pleases our order young one, and I am proud to promote you to the rank of recruit within the Khala Dun. Wear this cloak with pride, " .. e.other:GetCleanName() .. ". I have completed your buckler as well as enhanced your sword. The blade will now be more effective when used against the skeletons from which it was constructed. Show the buckler to Armsman Khaigesh and he will instruct you further.");
 		e.self:Shout("Fellow citizens of Shar Vahl, help me welcome " .. e.other:GetCleanName() .. " to the rank of recruit in the honorable Khala Dun. May his actions henceforth reflect the strict sense of loyalty to our king that defines our order. May he exhaust his every resource in glorious defense of our proud people!");
 		e.other:Faction(e.self, 1513,10 ); -- Faction: Guardians of Shar Vahl
-		e.other:QuestReward(e.self,{items = {3452,3453,3454},exp = 2000}); -- Item: Buckler of the Recruit, Cloak of the Khala Dun Recruit
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(3452,3453,3454),2000); -- Item: Buckler of the Recruit, Cloak of the Khala Dun Recruit
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

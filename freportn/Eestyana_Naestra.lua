@@ -18,7 +18,7 @@ function event_trade(e)
 		e.other:Faction(e.self,330,-1,0); -- Faction: The Freeport Militia
 		e.other:Faction(e.self,362,2,0); -- Faction: Priests of Marr
 		e.other:Faction(e.self,311,1,0); -- Faction: Steel Warriors
-		e.other:QuestReward(e.self,math.random(10),0,0,0,9985,500);
+		e.other:QuestReward(e.self,math.random(1,10),0,0,0,9985,500);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 18816})) then
 		e.self:Say("Thank you, defender of Karana! We have heard rumors of the followers of Bertoxxulous gaining knowledge of our knight who infiltrated the ranks of the [Militia]. They would have tried to sell the information to the Militia. We will inform our knight immediately. As for you, here is a donation to your journey's expenses. Stay clear of the Freeport Militia. There is no doubt they have learned of your alliance with us.");
 		-- Confirmed Live Factions
@@ -27,7 +27,7 @@ function event_trade(e)
 		e.other:Faction(e.self,330,-3,0); -- Faction: The Freeport Militia
 		e.other:Faction(e.self,362,4,0); -- Faction: Priests of Marr
 		e.other:Faction(e.self,311,2,0); -- Faction: Steel Warriors
-		e.other:QuestReward(e.self,0,0,math.random(10),math.random(0,2),eq.ChooseRandom(6016,13296),1000);
+		e.other:QuestReward(e.self,0,0,math.random(1,10),math.random(0,2),eq.ChooseRandom(6016,13296),1000);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 18735})) then -- Tattered Note
 		e.self:Say("The Truthbringer welcomes you into his life. Here is the tunic of Marr. Wear it with pride and be sure to conduct yourself with valor.");
 		e.other:Faction(e.self,281,100,0); -- knight of truth

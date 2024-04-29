@@ -10,7 +10,7 @@ function event_trade(e)
 	local item_lib = require("items");
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 5580, item2 = 6181, item3 = 6181})) then
 		e.self:Say("'These claws are very nice! Don't you think they will make splendid earrings? Of course you do! Well, she'd better like them after all of the trouble I had to go through to get them. Here are your dowels. If you need more, I'll have a new crate of them tomorrow. Take care and enjoy... Thank you for shopping with Jhimis!");
-		e.other:QuestReward(e.self,{items = {5580,6138}}); -- Item: Cloak of the Khati Sha Apprentice
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(5580,6138)); -- Item: Cloak of the Khati Sha Apprentice
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

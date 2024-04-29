@@ -42,7 +42,7 @@ function event_trade(e)
 		e.other:Faction(e.self,304,-5,0); -- Faction: Ring of Scale
 		e.other:Faction(e.self,273,-10,0); -- Faction: Kane Bayle
 		e.other:Faction(e.self,291,10,0); -- Faction: Merchants of Qeynos
-		e.other:QuestReward(e.self,{silver = math.random(0,5),gold = math.random(0,2),itemid = eq.ChooseRandom(13053,10010,10018,10017,10015),exp = 1000});
+		e.other:QuestReward(e.self,0,math.random(0,5),math.random(0,2),0,eq.ChooseRandom(13053,10010,10018,10017,10015),1000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

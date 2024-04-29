@@ -20,7 +20,7 @@ function event_trade(e)
 		e.other:Faction(e.self,322,-1); 	--Miners Guild 628
 		e.other:Faction(e.self,293,1); 	--Miners Guild 249
 		e.other:Faction(e.self,274,1); 	--Kazon Stormhammer
-		e.other:QuestReward(e.self,{gold = math.random(5,8), exp = 500})
+		e.other:QuestReward(e.self,0,0,math.random(5,8),0,0,500);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 1838}, 0)) then  -- Bag of Bread Loaves
 		e.self:Say("Well now, what do we have here? You actually went out of your way to fetch bread for me? Thank ye so kindly. Please accept this payment for your service.");
 		e.other:Faction(e.self,290,4); 	--Merchants of Kaladim
@@ -28,7 +28,7 @@ function event_trade(e)
 		e.other:Faction(e.self,322,-1); 	--Miners Guild 628
 		e.other:Faction(e.self,293,1); 	--Miners Guild 249
 		e.other:Faction(e.self,274,1); 	--Kazon Stormhammer
-		e.other:QuestReward(e.self,{gold = math.random(5,8), platinum = math.random(1,2), exp = 500})
+		e.other:QuestReward(e.self,0,0,math.random(5,8),math.random(1,2),0,500)
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

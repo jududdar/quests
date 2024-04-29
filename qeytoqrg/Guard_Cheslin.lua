@@ -23,7 +23,7 @@ function event_trade(e)
 		e.other:Faction(e.self,230,-3,0); -- Corrupt Qeynos Guards
 		e.other:Faction(e.self,223,-5,0); -- Circle of Unseen Hands
 		e.other:Faction(e.self,291,2,0); -- Merchants of Qeynos
-		e.other:QuestReward(e.self,math.random(9),math.random(9),math.random(2),0,18839,1500); -- Item: A Sealed Letter
+		e.other:QuestReward(e.self,math.random(1,9),math.random(1,9),math.random(1,2),0,18839,1500); -- Item: A Sealed Letter
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 13904}) or item_lib.check_turn_in(e.self, e.trade, {item1 = 13905}) or item_lib.check_turn_in(e.self, e.trade, {item1 = 13906}) or item_lib.check_turn_in(e.self, e.trade, {item1 = 13907})) then
 		e.self:Say("Wow!! I thought I lost this for good. All together I lost the [illusion] cards: Ebon Lotus, Library of Erudin, Chrono Cyclone and Diamond Vale. Man!! Those are rare cards!")
 	end

@@ -28,7 +28,7 @@ function event_trade(e)
 		e.other:Faction(e.self,221,-1,0);
 		e.other:Faction(e.self,296,-1,0);
 		-- Confirmed Live Experience
-		e.other:QuestReward(e.self,math.random(10),0,0,0,0,300);
+		e.other:QuestReward(e.self,math.random(1,10),0,0,0,0,300);
 	end
 	local returned = item_lib.return_items(e.self, e.other, e.trade, false)
 	if ( returned ) then

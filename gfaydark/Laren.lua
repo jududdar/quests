@@ -27,7 +27,7 @@ function event_trade(e)
 	if(e.other:GetFactionValue(e.self) >= 400 and item_lib.check_turn_in(e.self, e.trade, {item1 = 12186})) then -- Half Elf Head
 		e.self:Say("You have proven yourself to be a worthy Scout of Tunare and as such you are worthy to hold the hilt of a scout blade. Remember, rogues in class are we, but in our chests beats the heart of the forest. Our skills are used in defense of Kelethin and her allies. Next you shall speak to Master Tylfon. He will inform you of the [scout silvermesh leggings].");
 		e.other:Faction(e.self,316,10); -- Scouts of Tunare
-		e.other:QuestReward(e.self,0,0,math.random(30),0,7321,20000);
+		e.other:QuestReward(e.self,0,0,math.random(1,30),0,7321,20000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

@@ -1,6 +1,4 @@
 function event_say(e)
-	local fac = e.other:GetFaction(e.self);
-
 	if(e.message:findi("hail")) then
 		e.self:Say("Peace and tranquility be with you. " .. e.other:GetCleanName() .. ".  Are you a [new acolyte of peace] or are you [here to pay homage] to the child of tranquility?");
 	elseif(e.message:findi("new acolyte of peace") or e.message:findi("retrieve the peacekeeper staffs") or e.message:findi("battle the undead") or e.message:findi("important missions") or e.message:findi("track down the staff")) then
@@ -39,14 +37,14 @@ function event_trade(e)
 		e.other:Faction(e.self,266,2,0);  -- High Council of Erudin      
 		e.other:Faction(e.self,265,-2,0);  -- Heretics
 		-- Confirmed Live Experience - custom quarm data
-		e.other:QuestReward(e.self,0,math.random(20),math.random(5),0,eq.ChooseRandom(17005,17002,10018,2144,2145,2146,6011,6016,15203,15207,15201,15208,15209,15014,15205,15210,6012),2500); -- Item(s): Backpack (17005), Belt Pouch (17002), Hematite (10018), Raw-hide Sleeves (2144), Raw-hide Wristbands (2145), Raw-hide Gloves (2146), Rusty Mace (6011), Rusty Morning Star (6016)
+		e.other:QuestReward(e.self,0,math.random(1,20),math.random(1,5),0,eq.ChooseRandom(17005,17002,10018,2144,2145,2146,6011,6016,15203,15207,15201,15208,15209,15014,15205,15210,6012),2500); -- Item(s): Backpack (17005), Belt Pouch (17002), Hematite (10018), Raw-hide Sleeves (2144), Raw-hide Wristbands (2145), Raw-hide Gloves (2146), Rusty Mace (6011), Rusty Morning Star (6016)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 13816})) then -- The completed Peacekeeper Staff
 		e.self:Say("You have done well, neophyte.Let me add the touch of harmony to finish the job.. Here, then. Take these supplies. I am sure you'll need them. Soon you may be able to assist us in [important missions].");
 		-- Confirmed Live Factions
 		e.other:Faction(e.self,298,10,0);  -- Peace Keepers (Quellious temple)      
 		e.other:Faction(e.self,266,2,0);  -- High Council of Erudin      
 		e.other:Faction(e.self,265,-2,0);  -- Heretics      
-		e.other:QuestReward(e.self,math.random(20),math.random(10),0,0,eq.ChooseRandom(17005,17002,10018,2144,2145,2146,6011,6016,6012,2109,2101,2106),2500); -- Item(s): Backpack (17005), Belt Pouch (17002), Hematite (10018), Raw-hide Sleeves (2144), Raw-hide Wristbands (2145), Raw-hide Gloves (2146), Rusty Mace (6011), Rusty Morning Star (6016), Worn Great Staff (6012), Tattered Wristband, Tattered Skullcap, Patchwork Cloak
+		e.other:QuestReward(e.self,math.random(1,20),math.random(1,10),0,0,eq.ChooseRandom(17005,17002,10018,2144,2145,2146,6011,6016,6012,2109,2101,2106),2500); -- Item(s): Backpack (17005), Belt Pouch (17002), Hematite (10018), Raw-hide Sleeves (2144), Raw-hide Wristbands (2145), Raw-hide Gloves (2146), Rusty Mace (6011), Rusty Morning Star (6016), Worn Great Staff (6012), Tattered Wristband, Tattered Skullcap, Patchwork Cloak
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end

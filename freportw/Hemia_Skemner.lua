@@ -25,7 +25,7 @@ function event_trade(e)
 		e.other:Faction(e.self,281,2,0); -- Knights of Truth
 		e.other:Faction(e.self,296,-1,0); -- Opal Dark Briar
 		e.other:Faction(e.self,330,-1,0); -- Freeport Militia
-		e.other:QuestReward(e.self,math.random(10),math.random(10),math.random(5),0,0,500);
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,10),math.random(1,5),0,0,500);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

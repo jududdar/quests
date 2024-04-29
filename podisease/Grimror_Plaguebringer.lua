@@ -35,7 +35,7 @@ function event_trade(e)
 		-- if(not e.other:KeyRingCheck(9294)) then
 			-- e.other:KeyRingAdd(9294);
 			-- Confirmed Live Experience
-		e.other:QuestReward(e.self,{itemid = 9294,exp = 1});
+		e.other:QuestReward(e.self,0,0,0,0,9294,1);
 			--if(e.other:HasZoneFlag(200) == false) then
 			--	e.other:SetZoneFlag(200);
 			--end

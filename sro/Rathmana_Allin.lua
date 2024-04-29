@@ -26,7 +26,7 @@ function event_trade(e)
 		e.self:Say("Good luck, my friend. May Solusek Ro guide your hand.");
 		e.other:Faction(e.self,415,5);  -- Temple of Solusek Ro
 		e.other:Faction(e.self,416,-1); -- Shadowed Men
-		e.other:QuestReward(e.self,math.random(100),math.random(100),math.random(20),0,eq.ChooseRandom(15022, 15035, 15038, 15039, 15303, 15328, 15355, 15364, 15445, 15300, 13360, 13360, 13360, 13360, 13360, 13360, 13360, 13360, 13360, 13360, 13360, 13360, 13360, 13360, 13360, 13360, 13360, 13360, 13360, 13360),100);
+		e.other:QuestReward(e.self,math.random(1,100),math.random(1,100),math.random(1,20),0,eq.ChooseRandom(15022,15035,15038,15039,15303,15328,15355,15364,15445,15300,13360,13360,13360,13360,13360,13360,13360,13360,13360,13360,13360,13360,13360,13360,13360,13360,13360,13360,13360,13360),100);
 		-- Force Snap, Bind Affinity, Lightning Bolt, Quickness, Whirl Til You Hurl, Column of Fire, Engulfing Darkness, Banshee Aura, Lifedraw, Charm, Rotted Illegible Scroll (Multiple copies added to increase percentage)
 	-- The Bayle List quest
 	elseif (item_lib.check_turn_in(e.self, e.trade, {item1 = 18808, item2 = 18809, item3 = 18810, gold = 20},1,text)) then -- Bayle List I, Bayle List II, Bayle List III

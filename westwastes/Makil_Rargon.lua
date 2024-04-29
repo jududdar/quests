@@ -27,7 +27,7 @@ function event_trade(e)
 		e.self:Emote("begins to examine the contents of the crate and proceeds to conduct an experiment. He then turns toward you and says, 'Excellent job! As promised, here is one of Master Al'Kabor's fusiblity research creations.'");
 		e.other:Faction(e.self,415,5); -- Faction: Temple of Sol Ro
 		e.other:Faction(e.self,416,-5); -- Faction: Shadowed Men
-		e.other:QuestReward(e.self,math.random(50),math.random(50),math.random(50),math.random(30),24070,5000000);
+		e.other:QuestReward(e.self,math.random(1,50),math.random(1,50),math.random(1,50),math.random(1,30),24070,5000000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

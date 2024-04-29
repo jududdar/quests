@@ -12,13 +12,13 @@ function event_trade(e)
 		e.other:Faction(e.self,276,2); 	--kelethin merchants
 		e.other:Faction(e.self,246,1); 	--faydarks champions
 		e.other:Faction(e.self,326,1);	--emerald warriors
-		e.other:QuestReward(e.self,{gold = math.random(5,8), exp = 500})
+		e.other:QuestReward(e.self,0,0,math.random(5,8),0,0,500)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 1838}, 0)) then  -- Bag of Bread Loaves
 		e.self:Say("Excellent, I see you made it back safely. Thank you so much, here is your payment as promised. Now I can get back to business as usual.");
 		e.other:Faction(e.self,276,4); 	--kelethin merchants
 		e.other:Faction(e.self,246,1); 	--faydarks champions
 		e.other:Faction(e.self,326,1);	--emerald warriors
-		e.other:QuestReward(e.self,{gold = math.random(5,8), platinum = math.random(1,2), exp = 500})
+		e.other:QuestReward(e.self,0,0,math.random(5,8),math.random(1,2),0,500)
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

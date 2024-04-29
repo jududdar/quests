@@ -76,7 +76,7 @@ function event_trade(e)
 		e.other:Faction(e.self,330,-15); -- Freeport Militia
 		e.other:Faction(e.self,362,20); -- Priest of Marr
 		e.other:Faction(e.self,311,10); -- Steel Warriors
-		e.other:QuestReward(e.self,0,0,math.random(10),0,18828,100); -- Testimony
+		e.other:QuestReward(e.self,0,0,math.random(1,10),0,18828,100); -- Testimony
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

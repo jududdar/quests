@@ -48,7 +48,8 @@ function event_trade(e)
 		e.other:QuestReward(e.self,0,0,0,0,1710,1000); -- inscribed velium tablet
 	elseif(e.other:GetFactionValue(e.self) >= 0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 1722}, 0)) then -- Helssen's Voucher
 		e.self:Say("Excellent choice, " .. e.other:Race() .. ". Competence and a sense of style. When we are ready to take the Wakening I will most definitely welcome your participation. Here is your reward.");
-		e.other:QuestReward(e.self,{items = {1723,1720},exp = 2000}); -- Noble's Seal, Helssen's Prismatic Trinket
+		e.other:QuestReward(e.self,0,0,0,0,1723,2000); -- Noble's Seal, Helssen's Prismatic Trinket
+		e.other:QuestReward(e.self,0,0,0,0,1720);
 	elseif(e.other:GetFactionValue(e.self) >= 0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 1712,item2 = 1714},1,text)) then -- Arcanum of Roth, Ancient Rusted Key
 		e.self:Say("Ahhh, you suprise me mercenary. You have found the book as well as the key to open it. I must begin my research as soon as possible. But first, your reward. With this voucher you can receive 1 of the 3 treasures I will offer you. If given to Kellek you will receive an item worthy of a hearty and rugged combatant. If given to Wenglawks you will aquire an item to be worn by only the most pious. And if given to me I will give you a sorcerous trinket of my own design.");
 		e.other:Faction(e.self,448,11); -- Faction: Kromzek

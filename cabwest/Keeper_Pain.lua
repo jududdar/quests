@@ -18,7 +18,7 @@ function event_trade(e)
 		e.self:Emote("begins jumping for joy. 'Yoohoo!! My wand!! Thank you. You must be some powerful adventurer. You can help me collect a few components. Fill this chest with a frost crystal, a cockatrice egg, a giant hornet egg and a plains pebble. Return the full chest to me and I shall offer you a spell I recently researched.");
 		e.other:Faction(e.self,443,5); 		--Brood of Kotiz
 		e.other:Faction(e.self,441,1); 	--Legion of Cabilis
-		e.other:QuestReward(e.self,0,0,math.random(5),0,17041,100); -- Item: Component Chest
+		e.other:QuestReward(e.self,0,0,math.random(1,5),0,17041,100); -- Item: Component Chest
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 12885})) then
 		e.self:Say("Yes this is exactly what I wanted. Here is your spell.");
 		e.other:Faction(e.self,443,5); 		--Brood of Kotiz

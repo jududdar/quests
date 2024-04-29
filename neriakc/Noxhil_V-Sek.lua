@@ -42,11 +42,11 @@ function event_trade(e)
 		e.other:Faction(e.self,245,-1); --Eldritch Collective
 		e.other:Faction(e.self,1522,-20); --Primordial Malice
 		if(randomloot == 1) then
-			e.other:QuestReward(e.self,{silver = 16, exp = 17150, items = {13021,13022}}) -- Item(s): Neriak Nectar (13021), Rotgrub Rye (13022)
+			e.other:QuestReward(e.self,0,16,0,0,GiveAll(13021,13022),17150) -- Item(s): Neriak Nectar (13021), Rotgrub Rye (13022)
 		elseif(randomloot == 2) then
-			e.other:QuestReward(e.self,{silver = 16, exp = 17150, items = {13021,13021,13022,13022}})
+			e.other:QuestReward(e.self,0,16,0,0,GiveAll(13021,13021,13022,13022),17150)
 		elseif(randomloot == 3) then
-			e.other:QuestReward(e.self,{silver = 16, exp = 17150});
+			e.other:QuestReward(e.self,0,16,0,0,0,17150);
 		end
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13395, item2 = 10124},1,text)) then -- Beetle Eye Chest and Mammoth Tusks
 		e.self:Say("Excellent work, young one! You are sure to be an asset to our faction. Let us see if we can help you on your journey to power. I believe this can be of assistance to a young necromancer of the Dead.");

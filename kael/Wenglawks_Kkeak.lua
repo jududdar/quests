@@ -48,7 +48,8 @@ function event_trade(e)
 		e.other:QuestReward(e.self,0,0,0,0,17049,2000); -- Wenglawks Manly Purse
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 1722}, 0)) then -- Helssen's Voucher
 		e.self:Say("So you are the mercenary I have been hearing about! Not what I expected. Anyway, here is your reward. Carry it well. Also, this noble's seal will prove your loyalty to anyone who is skeptical.");
-		e.other:QuestReward(e.self,{items = {1719,1723},exp = 2000}); -- Girdle of Reflection, Noble's Seal
+		e.other:QuestReward(e.self,0,0,0,0,1719,2000); -- Girdle of Reflection, Noble's Seal
+		e.other:QuestReward(e.self,0,0,0,0,1723);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 29068, platinum = 100}, 0)) then
 		e.self:Say("Here is the information your employer requested. Now be gone. I have more business to take care of.");
 		e.other:QuestReward(e.self,0,0,0,0,29626);

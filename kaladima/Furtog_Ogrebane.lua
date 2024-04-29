@@ -38,7 +38,7 @@ function event_trade(e)
 		e.other:Faction(e.self,293, 7); -- Miners Guild 249
 		e.other:Faction(e.self,290, 12); -- Merchants of Kaladim
 		e.other:Faction(e.self,232, -12); -- Craknek Warriors
-		e.other:QuestReward(e.self,0,math.random(10), math.random(10), math.random(3),6302,250); -- Ogre War Maul
+		e.other:QuestReward(e.self,0,math.random(1,10), math.random(1,10), math.random(1,3),6302,250); -- Ogre War Maul
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

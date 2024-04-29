@@ -45,7 +45,7 @@ function event_trade(e)
 		e.other:Faction(e.self,343,1); --qrg protected animals
 		e.other:Faction(e.self,324,-2); --unkempt druids
 		e.other:Faction(e.self,262,1); --guards of qeynos
-		e.other:QuestReward(e.self,{itemid = 19950,exp = 1000}); -- Item: Rusty Pine Scout Sword
+		e.other:QuestReward(e.self,0,0,0,0,19950,1000); -- Item: Rusty Pine Scout Sword
 	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 20104,item2 = 13915, item3 = 19945})) then
 		e.self:Emote("fashions a grip from the large king snake skin, attaches the gnoll fang to the heel of the swords hilt, and polishes the blade of the sword with a luminescent green polish. 'Here is your new weapon young ranger. May it serve you well.'");
 		e.other:Faction(e.self,272,5); --jaggedpine treefolk
@@ -53,7 +53,7 @@ function event_trade(e)
 		e.other:Faction(e.self,343,1); --qrg protected animals
 		e.other:Faction(e.self,324,-1); --unkempt druids
 		e.other:Faction(e.self,262,1); --guards of qeynos
-		e.other:QuestReward(e.self,{itemid = 20263,exp = 1000}); -- Item: Pine Scout Longsword
+		e.other:QuestReward(e.self,0,0,0,0,20263,1000); -- Item: Pine Scout Longsword
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end

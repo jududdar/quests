@@ -51,14 +51,14 @@ function event_trade(e)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 14381})) then
 		e.self:Say("Here, you take this shroud. You must now find the spirit of glohnor and place this item on him. This should force him back into his mummified body and then you must destroy this newly raised form and return to me its wrappings.");
 		e.other:Faction(e.self,404, 5); -- Faction: True Spirit
-		e.other:QuestReward(e.self,{itemid = 14377}); -- Item: Dark Shroud
+		e.other:QuestReward(e.self,0,0,0,0,14377); -- Item: Dark Shroud
 		eq.delete_global("Marl");
 		eq.depop_with_timer();
 	elseif(e.other:GetFactionValue(e.self) >= -72) then
 		if(item_lib.check_turn_in(e.self, e.trade, {item1 = 14379})) then
 			e.self:Say("You've done it! Your efforts will stand as a tribute to our kind for time eternal, my friend. Although nothing could possibly serve as a just reward for your accomplishments, please accept this as well as my eternal gratitude. It has been fashioned from the wraps of the mummy and shall protect you well.");
 			e.other:Faction(e.self,404, 5); -- Faction: True Spirit
-			e.other:QuestReward(e.self,{itemid = 14370}); -- Item: Will of Innoruuk
+			e.other:QuestReward(e.self,0,0,0,0,14370); -- Item: Will of Innoruuk
 		end
 	end
 	item_lib.return_items(e.self, e.other, e.trade)

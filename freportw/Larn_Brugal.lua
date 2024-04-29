@@ -28,7 +28,7 @@ function event_trade(e)
 		e.other:Faction(e.self,230,-3); -- Corrupt Qeynos Guards
 		e.other:Faction(e.self,330,-3); -- Freeport Militia
 		e.other:Faction(e.self,281,4); -- Knights of Truth
-		e.other:QuestReward(e.self,0,math.random(10),math.random(10),0,13919,1000);
+		e.other:QuestReward(e.self,0,math.random(1,10),math.random(1,10),0,13919,1000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end

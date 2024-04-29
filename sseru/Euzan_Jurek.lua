@@ -28,7 +28,7 @@ function event_trade(e)
 		e.other:Faction(e.self,1485,-1); -- Eye of Seru
 		e.other:Faction(e.self,1541,-1); -- Hand Legionnaries
 		-- Confirmed no experience reward
-		e.other:QuestReward(e.self,{items = {29891,29858}}); -- 29891  Report to Tilbok, 29858  Etched Earring of Veracity
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(29891,29858)); -- 29891  Report to Tilbok, 29858  Etched Earring of Veracity
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

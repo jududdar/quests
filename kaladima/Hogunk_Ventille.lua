@@ -37,7 +37,7 @@ function event_trade(e)
 		e.other:Faction(e.self,293,2); -- Faction: Miners Guild 249
 		e.other:Faction(e.self,5025,3); -- Faction: Kaladim Merchants
 		e.other:Faction(e.self,232,-3); -- Faction: Craknek Warriors
-		e.other:QuestReward(e.self,math.random(10),math.random(10),math.random(16),0,eq.ChooseRandom(5027,5034,6019,6024,7013,6018,5070,5071,6351),5000); -- Item(s): Bronze Long Sword (5027), Bronze Scimitar (5034), Bronze Mace (6019), Bronze Morning Star (6024), Bronze Rapier (7013), Fine Steel Morning Star (6351)
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,10),math.random(1,16),0,eq.ChooseRandom(5027,5034,6019,6024,7013,6018,5070,5071,6351),5000); -- Item(s): Bronze Long Sword (5027), Bronze Scimitar (5034), Bronze Mace (6019), Bronze Morning Star (6024), Bronze Rapier (7013), Fine Steel Morning Star (6351)
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

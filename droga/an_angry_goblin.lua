@@ -18,7 +18,7 @@ function event_trade(e)
 		eq.start(99);
 		e.self:Emote("howls in triumph! 'This is just what I needed! Skargus is mine now, wait until he finds out, just wait! His death is close at hand. Follow me and I'll take you to Skargus's chamber, you can wait there while I take this report to the chief!'");
 		-- Confirmed Live Experience
-		e.other:QuestReward(e.self,{exp = 50000});
+		e.other:QuestReward(e.self,0,0,0,0,0,50000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

@@ -25,7 +25,7 @@ function event_trade(e)
 		e.other:Faction(e.self,223,-1); 															--Circle of Unseen Hands
 		e.other:Faction(e.self,336,-1); 															--Coalition of Tradefolk Underground
 		e.other:Faction(e.self,244,-2); 															--Ebon Mask		
-		e.other:QuestReward(e.self,0,math.random(10),math.random(10),1,eq.ChooseRandom(15270,15275,15075,15271,15279,15212,15079,15050,15224,15036),1600); -- Spells: Drowsy, Frost Rift, Sicken, Fleting Fury, Spirit of Bear, Cure Blindness, Spirit Sight, Gate, Endure Fire, Summon Food
+		e.other:QuestReward(e.self,0,math.random(1,10),math.random(1,10),1,eq.ChooseRandom(15270,15275,15075,15271,15279,15212,15079,15050,15224,15036),1600); -- Spells: Drowsy, Frost Rift, Sicken, Fleting Fury, Spirit of Bear, Cure Blindness, Spirit Sight, Gate, Endure Fire, Summon Food
 	elseif(e.other:GetFaction(e.self) < 5 and  item_lib.check_turn_in(e.self, e.trade, {item1 = 13969})) then	-- requires amiably, Caster Beads
 		e.self:Say("Finally! Intact! This IS good news! I can continue me investigation now. As fer yer loyal deed, I'll offer ye this, the Gavel of Justice. May ye employ it well in the service o' justice.");
 		-- Confirmed Live Factions
@@ -34,7 +34,7 @@ function event_trade(e)
 		e.other:Faction(e.self,223,-3); 															--Circle of Unseen Hands
 		e.other:Faction(e.self,336,-3); 															--Coalition of Tradefolk Underground
 		e.other:Faction(e.self,244,-5); 															--Ebon Mask		
-		e.other:QuestReward(e.self,0,math.random(10),math.random(10),math.random(0,2),6028,6400); --Gavel of Justice	
+		e.other:QuestReward(e.self,0,math.random(1,10),math.random(1,10),math.random(0,2),6028,6400); --Gavel of Justice	
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

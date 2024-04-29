@@ -52,10 +52,10 @@ function event_trade(e)
 		e.other:Faction(e.self,226,2);  -- Clerics of Tunare
 		e.other:Faction(e.self,310,2); -- Soldiers of Tunare
 		e.other:Faction(e.self,234,-2); -- Crushbone Orcs
-		e.other:QuestReward(e.self,math.random(10),0,0,0,eq.ChooseRandom(5047,5048,7032,5046),2500); -- Tarnished Scimitar, Tarnished Bastard Sword, Cast-Iron Rapier, Tarnished Battle Axe
-		e.other:SummonItem(eq.ChooseRandom(5047,5048,7032,5046)); -- he awards more than one weapon
+		e.other:QuestReward(e.self,math.random(1,10),0,0,0,eq.ChooseRandom(5047,5048,7032,5046),2500); -- Tarnished Scimitar, Tarnished Bastard Sword, Cast-Iron Rapier, Tarnished Battle Axe
+		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(5047,5048,7032,5046)); -- he awards more than one weapon
 		if ( math.random() < 0.5 ) then
-			e.other:SummonItem(eq.ChooseRandom(5047,5048,7032,5046));
+			e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(5047,5048,7032,5046));
 		end
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 18840})) then -- Sealed Letter (Letter To King Naythox Thex)
 		e.self:Say("Yes. A recent report has proven this to be true. An evil alliance has been made. We shall soon need many more experienced adventurers such as yourself. For now, take this reward and strengthen your skills.");
@@ -72,7 +72,7 @@ function event_trade(e)
 		e.other:Faction(e.self,226,5);  -- Clerics of Tunare
 		e.other:Faction(e.self,310,5); -- Soldiers of Tunare
 		e.other:Faction(e.self,234,-5); -- Crushbone Orcs
-		e.other:QuestReward(e.self,math.random(0,10),math.random(0,10),math.random(0,10),0,eq.ChooseRandom(2001, 2002, 2008, 2010, 2140, 2142, 2147, 2148),21800);
+		e.other:QuestReward(e.self,math.random(0,10),math.random(0,10),math.random(0,10),0,eq.ChooseRandom(2001,2002,2008,2010,2140,2142,2147,2148),21800);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

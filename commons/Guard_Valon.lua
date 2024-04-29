@@ -29,7 +29,7 @@ function event_trade(e)
 		e.other:Faction(e.self,336,1); -- coalition of tradefolk underground
 		e.other:Faction(e.self,281,-1); -- knights of truth
 		e.other:Faction(e.self,362,-1); -- priests of marr
-		e.other:QuestReward(e.self,0,0,math.random(5),0,0,500);
+		e.other:QuestReward(e.self,0,0,math.random(1,5),0,0,500);
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 12272})) then
 		e.self:Say("Excellent work, "..e.other:GetName().."!! You are quite formidable. Maybe soon you shall aid in our efforts to rid the Northern part of Freeport of the paladins!! Until then keep up the good work. Take this Armory Token to the Militia Armorer in the Militia House in Freeport to receive your tunic. He may not be there, but I assure you he will show up at some time. On the second floor. Hail Sir Lucan!!");
 		e.other:Faction(e.self,330,10); -- freeport militia

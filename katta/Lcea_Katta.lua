@@ -15,7 +15,7 @@ function event_trade(e)
 		e.other:Faction(e.self,1483,-10); -- seru
 		e.other:Faction(e.self,1486,-50); -- heart of seru
 		-- Confirmed Live Experience
-		e.other:QuestReward(e.self,{itemid = 29860,exp = 10000}); -- 29860  Signet Earring of Veracity
+		e.other:QuestReward(e.self,0,0,0,0,29860,10000); -- 29860  Signet Earring of Veracity
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 29860,item2 = 7810})) then
 		e.self:Say("This is astounding, I find myself at a loss for words. You have done Katta a great justice, Sanctus Seru will never be the same now that the truth is known. Their leader has fallen.");
 		e.other:Faction(e.self,1561,200); -- concillium universus

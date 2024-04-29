@@ -25,10 +25,11 @@ function event_trade(e)
 		e.self:Say("Uggh!! Froglok legs!! Me hate smelly legs, but me need it for fat trolls.");
 		-- Confirmed Live Factions		
 		e.other:Faction(e.self,353,5); -- Neriak Ogre
-		if(math.random(100) < 20) then
-			randrew = eq.ChooseRandom(13386,13385); -- Item(s): Ogre Butcher Gloves (13386), Ogre Meat Cleaver (13385)
+		if(math.random(1,100) < 20) then
+			e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(13386,13385));
+			note = Item not always given
 		end
-		e.other:QuestReward(e.self,0,0,math.random(5),0,randrew,5000);
+		e.other:QuestReward(e.self,0,0,math.random(1,5),0,0,5000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

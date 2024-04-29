@@ -46,7 +46,7 @@ function event_trade(e)
 		e.other:Faction(e.self,221,-10,0); -- Faction: Bloodsabers
 		e.other:Faction(e.self,341,7,0); -- Faction: Priests of Life
 		e.other:Faction(e.self,262,7,0); -- Faction: Guards of Qeynos
-		e.other:QuestReward(e.self,math.random(20),math.random(20),0,0,eq.ChooseRandom(15210,15207,15201),2000);
+		e.other:QuestReward(e.self,math.random(1,20),math.random(1,20),0,0,eq.ChooseRandom(15210,15207,15201),2000);
 	elseif(e.other:GetFactionValue(e.self) >= 250 and item_lib.check_turn_in(e.self, e.trade, {item1 = 12101,item2 = 12101},1,text)) then -- spectacle
 		e.self:Say("Excellent work. These foul men have no right to be proficient in the ways of healing. Here then is your bounty. Use it in your continued war against the Karana bandits.");
 		-- Confirmed Live Faction
@@ -54,7 +54,7 @@ function event_trade(e)
 		e.other:Faction(e.self,221,-20,0); -- Faction: Bloodsabers
 		e.other:Faction(e.self,341,15,0); -- Faction: Priests of Life
 		e.other:Faction(e.self,262,15,0); -- Faction: Guards of Qeynos
-		e.other:QuestReward(e.self,0,math.random(10),math.random(20),0,eq.ChooseRandom(15226,15219),20000); -- Spell: Endure Disease or Spell: Center
+		e.other:QuestReward(e.self,0,math.random(1,10),math.random(1,20),0,eq.ChooseRandom(15226,15219),20000); -- Spell: Endure Disease or Spell: Center
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

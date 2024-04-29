@@ -17,7 +17,7 @@ function event_trade(e)
 		e.other:Faction(e.self,1484,-1); -- Hand of Seru
 		e.other:Faction(e.self,1485,-1); -- Eye of Seru
 		e.other:Faction(e.self,1541,-1); -- Hand Legionnaries
-		e.other:QuestReward(e.self,{items = {7271,7272},exp = 1000000}); -- Shade Figurine Sketch, Conlegium Enchanted Glaze
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(7271,7272),1000000); -- Shade Figurine Sketch, Conlegium Enchanted Glaze
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 7273}, 0)) then
 		e.self:Say("Excellent, this figurine will work wonderfully. A group of my best summoners is gathering on the first floor at the largest of the summoning circles to call forth the shade. Please take the figurine to Theurgus Ajeea Polaja immediately.");
 		e.other:Faction(e.self,1504,5);

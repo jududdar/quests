@@ -41,7 +41,7 @@ function event_trade(e)
 		e.other:Faction(e.self,333,1); -- king akanon
 		e.other:Faction(e.self,238,-1); -- dark reflection
 		e.other:Faction(e.self,1604,-1); -- clan grikbar
-		e.other:QuestReward(e.self,math.random(9),math.random(9),math.random(5),0,0,1500);
+		e.other:QuestReward(e.self,math.random(1,9),math.random(1,9),math.random(1,5),0,0,1500);
 	end	
 	item_lib.return_items(e.self, e.other, e.trade)
 end

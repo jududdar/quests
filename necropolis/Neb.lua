@@ -24,7 +24,7 @@ function event_trade(e)
 		e.other:Faction(e.self,463,100); -- Faction: Paebala
 		e.other:Faction(e.self,462,-10); -- Faction: Chetari
 		e.other:Faction(e.self,464,-10); -- Faction: Zlandicar
-		e.other:QuestReward(e.self,{items = {28060,26040},exp = 25000}); -- Item: Neb's Warbone
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(28060,26040),25000); -- Item: Neb's Warbone
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

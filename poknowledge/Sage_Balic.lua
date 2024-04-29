@@ -44,35 +44,35 @@ function event_trade(e)
 	local item_lib = require("items");
 	
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 15946}, 0)) then -- Word of Combine
-		e.other:QuestReward(e.self,{itemid = 32019,exp = 100000}) -- Sage's Apprentice Cap
+		e.other:QuestReward(e.self,0,0,0,0,32019,100000) -- Sage's Apprentice Cap
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 15947}, 0)) then -- Word of Sorcery
-		e.other:QuestReward(e.self,{itemid = 32020,exp = 100000}) -- Twisted Talisman
+		e.other:QuestReward(e.self,0,0,0,0,32020,100000) -- Twisted Talisman
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 15948}, 0)) then -- Word of Helix
-		e.other:QuestReward(e.self,{itemid = 32021,exp = 100000}) -- Three Ringed Hoop
+		e.other:QuestReward(e.self,0,0,0,0,32021,100000) -- Three Ringed Hoop
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 15949}, 0)) then -- Word of Inverse
-		e.other:QuestReward(e.self,{itemid = 32022,exp = 100000}) -- Joined Signet
+		e.other:QuestReward(e.self,0,0,0,0,32022,100000) -- Joined Signet
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 15950}, 0)) then -- Word of Impetus
-		e.other:QuestReward(e.self,{itemid = 32023,exp = 100000}) -- Apprentice's Notebook
+		e.other:QuestReward(e.self,0,0,0,0,32023,100000) -- Apprentice's Notebook
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 15952}, 0)) then -- Evocation Binding
-		e.other:QuestReward(e.self,{exp = 100000})
+		e.other:QuestReward(e.self,0,0,0,0,0,100000)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 15954}, 0)) then -- Abjuration Binding
-		e.other:QuestReward(e.self,{exp = 100000})
+		e.other:QuestReward(e.self,0,0,0,0,0,100000)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 15955}, 0)) then -- Spell: Strong Poison
-		e.other:QuestReward(e.self,{exp = 100000})
+		e.other:QuestReward(e.self,0,0,0,0,0,100000)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 15951}, 0)) then -- Spell: Ykesha
-		e.other:QuestReward(e.self,{exp = 100000})
+		e.other:QuestReward(e.self,0,0,0,0,0,100000)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 15953}, 0)) then -- Spell: Screaming Mace
-		e.other:QuestReward(e.self,{exp = 100000}) 
+		e.other:QuestReward(e.self,0,0,0,0,0,100000) 
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 15956}, 0)) then -- Aqi Note
-		e.other:QuestReward(e.self,{exp = 100000}) 
+		e.other:QuestReward(e.self,0,0,0,0,0,100000) 
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 15942}, 0)) then -- Bep Note
-		e.other:QuestReward(e.self,{exp = 100000}) 
+		e.other:QuestReward(e.self,0,0,0,0,0,100000) 
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 15943}, 0)) then -- Cjo Note
-		e.other:QuestReward(e.self,{exp = 100000}) 
+		e.other:QuestReward(e.self,0,0,0,0,0,100000) 
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 15944}, 0)) then -- Da Note
-		e.other:QuestReward(e.self,{exp = 100000}) 
+		e.other:QuestReward(e.self,0,0,0,0,0,100000) 
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 15945}, 0)) then -- Eio Note
-		e.other:QuestReward(e.self,{exp = 100000}) 
+		e.other:QuestReward(e.self,0,0,0,0,0,100000) 
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

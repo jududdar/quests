@@ -22,7 +22,7 @@ function event_trade(e)
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13099,item2 = 13099,item3 = 13099,item4 = 13099})) then
 		e.self:Say("Splendid job! Now if you can just keep a tune, you'll be a fine bard.");
 		e.other:Faction(e.self,401,5); -- Song Weavers
-		e.other:QuestReward(e.self,0,0,math.random(5),0,13000,1000);
+		e.other:QuestReward(e.self,0,0,math.random(1,5),0,13000,1000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

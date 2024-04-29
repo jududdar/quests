@@ -54,7 +54,7 @@ function event_trade(e)
 		e.other:Faction(e.self,272,5,0); -- Jaggedpine Treefolk
 		e.other:Faction(e.self,306,-3,0); -- Sabertooths of Blackburrow
 		e.other:Faction(e.self,262,5,0); -- Guards of Qeynos
-		e.other:QuestReward(e.self,0,math.random(15),math.random(10),0,eq.ChooseRandom(17804,9006,9001,8011),1000); -- Item: Tailored Quiver, Item: Wooden Shield, Item: Buckler, Item: Hunting Bow
+		e.other:QuestReward(e.self,0,math.random(1,15),math.random(1,10),0,eq.ChooseRandom(17804,9006,9001,8011),1000); -- Item: Tailored Quiver, Item: Wooden Shield, Item: Buckler, Item: Hunting Bow
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end

@@ -67,7 +67,7 @@ function event_trade(e)
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 6144})) then
 		e.self:Say("Well, you're going to need to practice for a while to make these things. Take these sketches and read up on the lore concerning sonic wolves. You'll learn how to use the sketches. Practice all you can. I'm sure that you're going to have a lot of people coming to you with requests.");
 		e.other:Faction(e.self, 1513,10 ); -- Faction: Guardians of Shar Vahl
-		e.other:QuestReward(e.self,{items = {6139,6144,6137}}); -- Item: Jharin Hilt Piece, Claw Lining Sketches
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(6139,6144,6137)); -- Item: Jharin Hilt Piece, Claw Lining Sketches
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

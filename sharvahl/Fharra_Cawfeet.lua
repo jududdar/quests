@@ -12,7 +12,7 @@ function event_trade(e)
 	local item_lib = require("items");
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 3495})) then
 		e.self:Emote("looks like she has been awake for many hours. She looks up and says 'Are you here to assist me with these sick citizens? I was told that a few of our newest Dar Khura recruits might be coming to aid me. I could definitly use the help. Here, take the jar while I explain. Were you told about the [tasks] that I need help with?' The room is filled with the smell of aromatic herbs and the sweat of the feverish.");
-		e.other:QuestReward(e.self,{items = {3495,17077}}); -- Item: Treated Hopperhide Buckler
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(3495,17077)); -- Item: Treated Hopperhide Buckler
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 5536})) then
 		e.self:Emote("perks up when you hand her the jar. 'Many thanks,' she exclaims, as she digs in her medicine bag. 'Your assistance is greatly appreciated. Please take this tincture. It will help to strength your buckler. Mydi Darjik can help you apply it. She is a friend and a wonderful alchemist. Tell her that you need her to treat your buckler. Take care, friend!'");
 		e.other:QuestReward(e.self,0,0,0,0,5537);

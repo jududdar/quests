@@ -23,7 +23,8 @@ function event_trade(e)
 		e.other:Faction(e.self,329,1); -- Carson McCabe
 		e.other:Faction(e.self,230,1); -- Corrupt Qeynos Guards
 		e.other:Faction(e.self,330,1); -- Freeport Militia
-		e.other:QuestReward(e.self,{items = {19919,19920},exp = 100}); -- Item: Dull Coalition Dirk, Faceted Blue Gem
+		e.other:QuestReward(e.self,0,0,0,0,19919,100); -- Item: Dull Coalition Dirk, Faceted Blue Gem
+		e.other:QuestReward(e.self,0,0,0,0,19920);
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end

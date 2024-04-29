@@ -11,7 +11,7 @@ end
 function event_trade(e)
 	local item_lib = require("items");
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 2344})) then
-		e.other:QuestReward(e.self,{itemid = 2369}); -- Item: Rileys Confession
+		e.other:QuestReward(e.self,0,0,0,0,2369); -- Item: Rileys Confession
 		eq.set_global("invest_badge","second_suspect",3,"F");
 		eq.unique_spawn(1201,0,0,-414,-11,-25,0); -- NPC: #Willie_Garrote
 	end

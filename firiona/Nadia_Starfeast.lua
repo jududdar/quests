@@ -25,7 +25,8 @@ function event_trade(e)
 	local item_lib = require("items");
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 10604})) then --Jeb's Seal
 		e.self:Say("Oh it must be time to reveal the staff! The piece I will help you craft is encrusted with magical gems. These gems contain the essence of various creatures. Alone they have very little power. Combined together they are much more powerful. They must be combined in a sack. Just ask if you don't have one.");
-		e.other:QuestReward(e.self,{items = {17861,10604}}); --Jeb's Seal and An Enchanters Sack
+		e.other:QuestReward(e.self,0,0,0,0,17861); --Jeb's Seal and An Enchanters Sack
+		e.other:QuestReward(e.self,0,0,0,0,10604);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 10637})) then --A Sack For Nadia
 		e.self:Say("Lovely! You are indeed quite the charmer. Here, take the third part, and seek out the last master. The time draws near.");
 		e.other:Faction(e.self,404,100); --True Spirit

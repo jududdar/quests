@@ -41,7 +41,7 @@ function event_trade(e)
 		e.other:Faction(e.self,230,-1,0); -- Faction: Corrupt Qeynos Guards
 		e.other:Faction(e.self,330,-1,0); -- Faction: The Freeport Militia
 		e.other:Faction(e.self,281,1,0); -- Faction: Knights of Truth
-		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(1005,17005,13003, 2910, 1037, 1331),500); -- Item(s): Backpack (17005), Small Lantern (13003), Gold Ring (10008), Cloth Shawl (1005)
+		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(1005,17005,13003,2910,1037,1331),500); -- Item(s): Backpack (17005), Small Lantern (13003), Gold Ring (10008), Cloth Shawl (1005)
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

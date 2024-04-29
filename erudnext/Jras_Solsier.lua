@@ -25,14 +25,14 @@ function event_trade(e)
 		e.other:Faction(e.self,298,5,0); -- Faction: Peace Keepers
 		e.other:Faction(e.self,266,1,0); -- Faction: High Council of Erudin
 		e.other:Faction(e.self,265,-1,0); -- Faction: Heretics
-		e.other:QuestReward(e.self,0,math.random(10),math.random(5),0,eq.ChooseRandom(10004,13003,10015,7009),3000); -- Item: Copper Band , Small Lantern, Malachite, Rusty Spear
+		e.other:QuestReward(e.self,0,math.random(1,10),math.random(1,5),0,eq.ChooseRandom(10004,13003,10015,7009),3000); -- Item: Copper Band , Small Lantern, Malachite, Rusty Spear
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13913})) then -- requires amiably, Barbarian Head (Talym's Head) 
 		e.self:Say("It is done! Quellious will look favorably upon our church and we will look favorably upon you. Go in peace.");
 		-- Confirmed Live Factions
 		e.other:Faction(e.self,298,10,0); -- Faction: Peace Keepers
 		e.other:Faction(e.self,266,2,0); -- Faction: High Council of Erudin
 		e.other:Faction(e.self,265,-2,0); -- Faction: Heretics
-		e.other:QuestReward(e.self,0,math.random(10),math.random(5),0,eq.ChooseRandom(15202,15011),5000); -- Item: Spell: Courage, Spell: Holy Armor
+		e.other:QuestReward(e.self,0,math.random(1,10),math.random(1,5),0,eq.ChooseRandom(15202,15011),5000); -- Item: Spell: Courage, Spell: Holy Armor
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end

@@ -25,11 +25,11 @@ function event_trade(e)
 		e.self:Say("I know that you may be nervous right now... after all, this should be a very exciting first step for you.  If you happen to get lost while looking for the registrar, just ask one of the other citizens or guards for directions.  They will most likely know where to find the place or person that you are looking for.");
 		eq.set_global("Shar_Vahl_Cit","1",5,"F");
 		-- Confirmed Live Faction
-		e.other:QuestReward(e.self,{itemid = 2873,exp = 20}); -- Application for Citizenship
+		e.other:QuestReward(e.self,0,0,0,0,2873,20); -- Application for Citizenship
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 2897,item2 = 2877}, 1, text)) then
 		e.self:Say("" .. e.other:GetCleanName() .. ", citizen of Shar Vahl, accept this cloak as a symbol of your loyalty and service to our noble people. It will grow with you, young initiate, and like you it has incredible potential. Present your slate of citizenship to Gherik and he will guide you through your early training. May your songs inspire us all!");
 		eq.set_global("Shar_Vahl_Cit","7",5,"F");
-		e.other:QuestReward(e.self,{items = {2877,2878},exp = 450}); -- Item: Acrylia Slate of Shar Vahl, Initiate's Cloak of Shar Vahl
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(2877,2878),450); -- Item: Acrylia Slate of Shar Vahl, Initiate's Cloak of Shar Vahl
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 3920}, 0)) then
 		e.self:Say("These are finely crafted indeed, " .. e.other:GetCleanName() .. ". Merchant Fahaar told me you were quite the prodigy, but don't tell him I told you that. Take this receipt and show it to Fahaar and tell him the king is quite pleased with both your work, and his teaching!");
 		e.other:QuestReward(e.self,0,0,0,0,3921,1000);

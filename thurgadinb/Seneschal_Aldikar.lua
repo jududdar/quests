@@ -13,11 +13,11 @@ function event_trade(e)
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 30164}, 0)) then
 		if(e.self:GetX() == -3 and e.self:GetY() == 693) then
 			e.self:Say("'Well done, " .. e.other:GetCleanName() .. ", I have heard of your victory over the Ry`Gorr. If you are willing to assist the crown further please follow me.");
-			e.other:QuestReward(e.self,{itemid = 30164}); -- Item: Velium Coldain Insignia Ring
+			e.other:QuestReward(e.self,0,0,0,0,30164); -- Item: Velium Coldain Insignia Ring
 			e.self:CastToNPC():AssignWaypoints(14);
 		else
 			e.self:Say("" .. e.other:GetCleanName() .. " I must speak to the Dain before I instruct you further. Please speak to me while the royal court is in session.");
-			e.other:QuestReward(e.self,{itemid = 30164}); -- Item: Velium Coldain Insignia Ring
+			e.other:QuestReward(e.self,0,0,0,0,30164); -- Item: Velium Coldain Insignia Ring
 		end
 	end
 	item_lib.return_items(e.self, e.other, e.trade)

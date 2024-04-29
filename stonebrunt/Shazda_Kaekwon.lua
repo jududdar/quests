@@ -34,12 +34,12 @@ function event_trade(e)
 		e.self:Say("Less heretics to defile the lands and spirits. You have the gratitude of Kejek for your assistance in repelling the heretic threat.");
 		e.other:Faction(e.self,5011,8); -- Faction: Kejek Village
 		e.other:Faction(e.self,298,1); -- Faction: Peace Keepers
-		e.other:QuestReward(e.self,math.random(9),math.random(9),math.random(9),math.random(3),eq.ChooseRandom(6955,6953),5000);
+		e.other:QuestReward(e.self,math.random(1,9),math.random(1,9),math.random(1,9),math.random(1,3),eq.ChooseRandom(6955,6953),5000);
 	elseif(e.other:GetFactionValue(e.self) >= -200 and item_lib.check_turn_in(e.self, e.trade, {item1 = 6968}, 0)) then
 		e.self:Say("By slaying Rognarog you have spared the lives of those who would have crossed his path. I thank you for your assistance, the spirits have noticed your actions and are pleased.");
 		e.other:Faction(e.self,5011,3); -- Faction: Kejek Village
 		e.other:Faction(e.self,298,1); -- Faction: Peace Keepers
-		e.other:QuestReward(e.self,math.random(9),math.random(9),math.random(9),0,eq.ChooseRandom(6982,6983,6984),5000);
+		e.other:QuestReward(e.self,math.random(1,9),math.random(1,9),math.random(1,9),0,eq.ChooseRandom(6982,6983,6984),5000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

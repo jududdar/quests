@@ -31,7 +31,7 @@ function event_trade(e)
 		e.other:QuestReward(e.self,0,0,0,0,1707); -- Signed Requisition
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 1709}, 0)) then -- Report of Failure
 		e.self:Emote("reads over the report, his face begins to turn red with anger. Drioc shouts, 'How can this be?! I sent you a squad of some of our best trained men and you had them destroyed!! This was supposed to be a routine raid and you return in FAILURE!! I would crush you under my boot right now if I wasn't so angry but I think I'll send you to my finacier. YOU can explain what happened and why his investments have been lost. Now take your carcass out of here!'");
-		e.other:QuestReward(e.self,{itemid = 1709}); -- Report of Failure
+		e.other:QuestReward(e.self,0,0,0,0,1709); -- Report of Failure
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

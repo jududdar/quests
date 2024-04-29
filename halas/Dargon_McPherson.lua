@@ -30,7 +30,7 @@ function event_trade(e)
 		e.other:Faction(e.self,327,1,0); -- Shaman of Justice
 		e.other:Faction(e.self,328,1,0); -- Merchants of Halas
 		e.other:Faction(e.self,311,1,0); -- Steel Warriors
-		e.other:QuestReward(e.self,math.random(5),0,0,0,eq.ChooseRandom(2012,17001,10004,10017,1038,10016,13877,2135,7007,8008,10009,13007,5014,13003,13107),125); -- random low level items
+		e.other:QuestReward(e.self,math.random(1,5),0,0,0,eq.ChooseRandom(2012,17001,10004,10017,1038,10016,13877,2135,7007,8008,10009,13007,5014,13003,13107),125); -- random low level items
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

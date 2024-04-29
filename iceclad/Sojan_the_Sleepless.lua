@@ -14,10 +14,10 @@ function event_trade(e)
 		e.other:QuestReward(e.self,0,0,0,0,20474);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30037}, 0)) then -- Wolf Fur Earcovers
 		e.self:Emote("stares at you and then laughs before putting on the earmuffs.  As he moves around, blissfully protected from noise, a fine chain slips from his coat.  'Hey!  Look at that!  What a fine chain.  It looks familiar but I can't tell how.  Oh, well, you can have it.  It looks like it could be used to fill gaps or if needed to repair another similar metal object.  I can do that if ya ever find need.'");
-		e.other:QuestReward(e.self,{itemid = 30038}); -- Fine Gold Chain
+		e.other:QuestReward(e.self,0,0,0,0,30038); -- Fine Gold Chain
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30057,item2 = 30038})) then -- Golden Broken Key and Fine Gold Chain
 		e.self:Emote("puts a tiny eyeglass up to his eye and studies the key and chain.  'Aye.  This looks like the perfect metal to fix this key.  Gimme just a moment.'  He uses fine and minute tools to pick and push the chain and key over a fire.  'Ha!  Don't say I ain't never done anythin' for ya.  There ya go, " .. e.other:GetCleanName() .. ".'");
-		e.other:QuestReward(e.self,{itemid = 30040}); -- Rum Box Key
+		e.other:QuestReward(e.self,0,0,0,0,30040); -- Rum Box Key
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

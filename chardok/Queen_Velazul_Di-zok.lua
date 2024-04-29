@@ -21,7 +21,8 @@ function event_trade(e)
 		e.other:Faction(e.self,451,3); -- Faction: Brood of Di`Zok
 		e.other:Faction(e.self,307,3)
 		e.other:Faction(e.self,259,-1); -- Faction: Goblins of Mountain Death
-		e.other:QuestReward(e.self,{items = {5723,5727}, exp = 100000}); -- 5723  Spirit Wracked Cord, final reward, 5727 We get Regal Band of Bathezid back
+		e.other:QuestReward(e.self,0,0,0,0,5723,100000); -- 5723  Spirit Wracked Cord, final reward, 5727 We get Regal Band of Bathezid back
+		e.other:QuestReward(e.self,0,0,0,0,5727);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

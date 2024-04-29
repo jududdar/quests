@@ -24,7 +24,7 @@ function event_trade(e)
 		e.other:QuestReward(e.self,0,0,0,0,12852);	--Foot of Candlestick
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 12609, item2 = 12609, item3 = 12609, item4 = 12609},1,nil,text)) then
 		e.self:Emote("swallows the whole bottle in one gulp. 'Here, go buy yourself a brain. What?!! You expecting something? How about this.. <BUUURRRPPPP!!> Thanks for helping me get through my dry spell, croak!! Never mess with a Blue Talon!!");
-		e.other:QuestReward(e.self,math.random(5),0,0,0,0,100);
+		e.other:QuestReward(e.self,math.random(1,5),0,0,0,0,100);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

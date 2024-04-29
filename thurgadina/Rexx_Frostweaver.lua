@@ -16,7 +16,7 @@ function event_trade(e)
 	
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 1179}, 0)) then
 		e.self:Say("Splendid, " .. e.other:GetCleanName() .. ", this is beautiful workmanship! As the Grand Historian may have mentioned, our esteemed Dain Frostreaver the fourth is making some important plans with his council. These plans will doubtlessly include you if the Dain deems you worthy.");
-		e.other:QuestReward(e.self,{itemid = 1179}); -- Item: Silk Coldain Prayer Shawl
+		e.other:QuestReward(e.self,0,0,0,0,1179); -- Item: Silk Coldain Prayer Shawl
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

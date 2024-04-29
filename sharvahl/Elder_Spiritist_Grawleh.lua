@@ -27,15 +27,15 @@ function event_trade(e)
 		e.self:Say("Good " .. e.other:GetCleanName() .. ", I am honored to meet you. You have come of age and it is time for you to register for citzenship of Shar Vahl. The Dar Khura, spiritual guides of our people, have sensed your spirit and deem you to be worthy of our training. First things first, take this application to Registrar Bindarah and return to me with proof of citzenship.");
 		e.self:Say("I know that you may be nervous right now... after all, this should be very exciting first step for you. If you happen to get lost while looking for the registrar, just ask one of the other citizens or guards for directions. They will most likely know where to find the place or person that you are looking for.");
 		eq.set_global("Shar_Vahl_Cit","1",5,"F");
-		e.other:QuestReward(e.self,{itemid = 2873,exp = 20}); -- Application for Citizenship
+		e.other:QuestReward(e.self,0,0,0,0,2873,20); -- Application for Citizenship
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 2897,item2 = 2877}, 1, text)) then --Notorized Application
 		e.self:Say("Welcome back, " .. e.other:GetCleanName() .. "! I see that your documents are in order and you are an official citizen of Shar Vahl, which is great news! Let me be the first to welcome you to the ranks of the Dar Khura! Here, take this cloak and wear it with pride.");
 		e.self:Say("Present your acrylia slate to spiritist Fehril and he will guide you through your early training. May the strongest of our ancestral spirits be your inspiration.");
 		eq.set_global("Shar_Vahl_Cit","7",5,"F");
-		e.other:QuestReward(e.self,{items = {2877,2878},exp = 450}); -- Item: Acrylia Slate of Shar Vahl, Initiate's Cloak of Shar Vahl
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(2877,2878),450); -- Item: Acrylia Slate of Shar Vahl, Initiate's Cloak of Shar Vahl
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30963}, 0)) then
 		e.self:Emote("examines the contents of the bag carefully. This is no ordinary spirit " .. e.other:GetCleanName() .. ". It is a whisperling, a bringer of dreams. You are quite lucky, I think she will go with you. She will be able to protect you from cold magic. If you need more protection you can call on her to help you endure the cold. This is how the Dar Khura weave their spells, we ask the spirits for their aid. This scroll will show you how to call on her for her protection. You will also need to construct her a more suitable spirit anchor. This claw will not contain her much longer. Please hurry to Ragnar with the claw and a fresh [bloodling carapace]. It may buy us some time before she fades away.");
-		e.other:QuestReward(e.self,{items = {15225,30964},exp = 1000});
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(15225,30964),1000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

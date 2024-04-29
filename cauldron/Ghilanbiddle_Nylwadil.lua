@@ -1,7 +1,5 @@
 function event_say(e)
-	fac = e.other:GetFaction(e.self);
-	
-	if(fac < 7) then
+	if(e.other:GetFaction(e.self) < 7) then
 		if(e.message:findi("hail")) then
 			e.self:Say("What business do you have here?!! Trying to keep safe? Expecting us to fight your battles? Bah!!");
 		elseif(e.message:findi("chalice of conquest")) then

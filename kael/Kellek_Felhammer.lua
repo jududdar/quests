@@ -22,7 +22,8 @@ function event_trade(e)
 		e.other:QuestReward(e.self,0,0,0,0,25107); -- Mechanical Net
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 1722}, 0)) then -- Helssen's Voucher
 		e.self:Say("I still cannot believe we are giving such a prized possesion as the Collar of the Storm to a mere mercenary. You better pray you don't bring shame upon the smith who created and enchanted this item. Oh and here is your seal as Helssen has ordered me to give you. It is proof of your service to us.");
-		e.other:QuestReward(e.self,{items = {1723,1721},exp = 2000}); -- Noble's Seal, Collar of the Storm
+		e.other:QuestReward(e.self,0,0,0,0,1723,2000); -- Noble's Seal, Collar of the Storm
+		e.other:QuestReward(e.self,0,0,0,0,1721);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

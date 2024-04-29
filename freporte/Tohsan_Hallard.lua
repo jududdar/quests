@@ -16,7 +16,7 @@ function event_trade(e)
 		e.other:Faction(e.self,281,4); -- Knights of Truth 
 		e.other:Faction(e.self,291,3); -- Merchants of Qeynos
 		e.other:Faction(e.self,336,4); -- Coalition of Tradesfolk Underground 
-		e.other:QuestReward(e.self,0,math.random(10),0,0,eq.ChooseRandom(12264, 12265, 12261, 12262, 12263,12266),200); -- Item(s): Lottery Ticket # 14350 (12264), Lottery Ticket # 16568 (12266)
+		e.other:QuestReward(e.self,0,math.random(1,10),0,0,eq.ChooseRandom(12264,12265,12261,12262,12263,12266),200); -- Item(s): Lottery Ticket # 14350 (12264), Lottery Ticket # 16568 (12266)
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

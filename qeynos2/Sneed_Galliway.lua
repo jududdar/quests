@@ -24,7 +24,7 @@ function event_trade(e)
 		e.other:Faction(e.self,219,3,0); -- Faction: Antonius Bayle
 		e.other:Faction(e.self,229,2,0); -- Faction: Coalition of Tradefolk
 		e.other:Faction(e.self,262,5,0); -- Faction: Guards of Qeynos
-		e.other:QuestReward(e.self,math.random(10),0,0,0,eq.ChooseRandom(13006,13009,13002,13100),200); -- Water Flask, Bandages, Torch, Fishing Pole
+		e.other:QuestReward(e.self,math.random(1,10),0,0,0,eq.ChooseRandom(13006,13009,13002,13100),200); -- Water Flask, Bandages, Torch, Fishing Pole
 	end
 	
 	item_lib.return_items(e.self, e.other, e.trade)

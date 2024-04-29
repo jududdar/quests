@@ -32,7 +32,7 @@ function event_trade(e)
 		e.other:QuestReward(e.self,0,0,0,0,15678,20000); -- Spell: Tashania
 	elseif(e.other:GetFactionValue(e.self) >= 0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 10790})) then -- Coin of Tash
 		e.self:Say("The Coin of Tash. It is of no use to me like this. You must take the coin to Tarn Visilin in High Keep to get it enchanted.");
-		e.other:QuestReward(e.self,{itemid = 10790}); -- Coin of Tash
+		e.other:QuestReward(e.self,0,0,0,0,10790); -- Coin of Tash
 	elseif(e.other:GetFactionValue(e.self) >= 0 and item_lib.check_turn_in(e.self, e.trade, {gold = 50})) then -- 50 gold
 		e.other:Say("Once you combine the coins within the pouch, you must take the Coin of Tash to Tarn Vislin in the HighKeep library to get it enchanted.  Give him the coin and he will enchant it for you.");
 		-- confirmed live faction

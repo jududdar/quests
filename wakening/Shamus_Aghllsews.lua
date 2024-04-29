@@ -24,7 +24,7 @@ function event_trade(e)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 =30222}, 0)) then
 		e.self:Say("You have my gratitude, " .. e.other:GetCleanName() .. ". With these blueprints we can better prepare the forests defenses against the giant invaders. I have yet another favor to ask of you as well. Fill this empty bag with crystallized sulfur. When mixed with the crushed herbs in the other bag it will create an explosion strong enough to destroy stone. Take the two full bags into Kael Drakkel and plant it into a crate of the kromzeks building supplies.");
 		e.other:Faction(e.self,449,30); -- tunarean court
-		e.other:QuestReward(e.self,{items = {17862,24860},exp = 3500}); -- empty sulfur collection bag, pouch of herbs
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(17862,24860),3500); -- empty sulfur collection bag, pouch of herbs
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 22855}, 0)) then
 		e.self:Say("You have proven yourself to the Fauns of the Tunarean Court. The destruction of the Kromzeks building supplies will slow their progress for some time.");
 		e.other:Faction(e.self,449,20); -- tunarean court

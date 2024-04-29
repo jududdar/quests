@@ -13,7 +13,7 @@ function event_trade(e)
 	local item_lib = require("items");
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 22519})) then --Sarnak Blood
 		e.self:Say("Ahh this is exactly what I was looking for. All the information I've gathered from these pools has come from Myrist. Thiran will give you the book I used as a reference. Give him this note so he knows I sent you.");
-		e.other:QuestReward(e.self,{itemid = 15958}); --Note From Tarerd
+		e.other:QuestReward(e.self,0,0,0,0,15958); --Note From Tarerd
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

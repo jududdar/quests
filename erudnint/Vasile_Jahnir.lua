@@ -38,7 +38,7 @@ function event_trade(e)
 		e.other:Faction(e.self,266,1); --faction with High Council of Erudin increased
 		e.other:Faction(e.self,267,1); --faction with High Guards of Erudin increased
 		e.other:Faction(e.self,265,-1); --faction with Heretics decreased
-		e.other:QuestReward(e.self,0,0,math.random(20),0,15313,250); -- Item: Spell: Fire Flux
+		e.other:QuestReward(e.self,0,0,math.random(1,20),0,15313,250); -- Item: Spell: Fire Flux
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end

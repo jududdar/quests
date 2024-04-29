@@ -27,17 +27,17 @@ function event_trade(e)
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 18884}) or item_lib.check_turn_in(e.self, e.trade, {item1 = 18886})) then
 		e.self:Say("I see you finally decided to return. Hmmm. What is this? Those little hoppers have done well. What!! So the troll scum have been aiding our foes, the lizards!! The lizard mystics are trained by this troll shaman called Zimbittle. Find him!! Kill him. Bring me his shaman pouch!! Now!!");
 		e.other:Faction(e.self,394,10); -- Faction: Shamen of War
-		e.other:QuestReward(e.self,{itemid = eq.ChooseRandom(15270,15226,15279,15211),exp = 50}); -- Item(s): Spell: Drowsy (15270), Spell: Endure Disease (15226), Spell: Spirit of Bear (15279), Spell: Summon Drink (15211)
+		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(15270,15226,15279,15211),50); -- Item(s): Spell: Drowsy (15270), Spell: Endure Disease (15226), Spell: Spirit of Bear (15279), Spell: Summon Drink (15211)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 18886})) then
 		e.self:Say("I see you finally decided to return. Hmmm. What is this? This troll called Zimbittle. Find her! Kill her. Bring me proof she dead!"); -- text made up.
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 18885})) then
 		e.self:Say("What is this? More information? There seems to be a larger plan in the making. B'Dynn sounds like a Dark Elf name. I do no like the sound of this.  You must go quickly to North Ro.  Find this Dark Elf.  Find out what he knows.  any way you can.");
 		e.other:Faction(e.self,394,20); -- Faction: Shamen of War
-		e.other:QuestReward(e.self,{itemid = eq.ChooseRandom(15270,15226,15279,15211),exp = 100}); -- Item(s): Spell: Drowsy (15270), Spell: Endure Disease (15226), Spell: Spirit of Bear (15279), Spell: Summon Drink (15211)
+		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(15270,15226,15279,15211),100); -- Item(s): Spell: Drowsy (15270), Spell: Endure Disease (15226), Spell: Spirit of Bear (15279), Spell: Summon Drink (15211)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 17929})) then
 		e.self:Say("Ahhh!! Good work. You are a bright one. Now let us see if you can master this spell. Learn it well and may it bring you much glory.");
 		e.other:Faction(e.self,394,25); -- Faction: Shamen of War
-		e.other:QuestReward(e.self,{itemid = eq.ChooseRandom(15270,15226,15279,15211),exp = 150}); -- Item(s): Spell: Drowsy (15270), Spell: Endure Disease (15226), Spell: Spirit of Bear (15279), Spell: Summon Drink (15211)
+		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(15270,15226,15279,15211),150); -- Item(s): Spell: Drowsy (15270), Spell: Endure Disease (15226), Spell: Spirit of Bear (15279), Spell: Summon Drink (15211)
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

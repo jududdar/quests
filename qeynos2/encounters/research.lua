@@ -164,7 +164,7 @@ function Velarte2Trade(e)
 			e.other:Faction(e.self,262,2); -- Guards of Qeynos
 			e.other:Faction(e.self,221,-1); -- Bloodsabers
 			e.other:Faction(e.self,219,1); -- Antonius Bayle
-			e.other:QuestReward(e.self,math.random(5),math.random(5),math.random(5),math.random(5),0,1000);
+			e.other:QuestReward(e.self,math.random(1,5),math.random(1,5),math.random(1,5),math.random(1,5),0,1000);
 		end
 		jars = 0;
 		ClearEvent();
@@ -190,17 +190,17 @@ function TileTrade(e)
 	local item_lib = require("items");
 	
 	if(jars < 4 and item_lib.check_turn_in(e.self, e.trade, {item1 = 2584})) then 
-		e.other:QuestReward(e.self,{itemid = 2587});
+		e.other:QuestReward(e.self,0,0,0,0,2587);
 		eq.spawn2(enchanted, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), 0);  -- spawn enchanted rat
 		jars = jars + 1;
 		eq.depop(); --depop tile
 	elseif(jars < 4 and item_lib.check_turn_in(e.self, e.trade, {item1 = 2585})) then 
-		e.other:QuestReward(e.self,{itemid = 2588});
+		e.other:QuestReward(e.self,0,0,0,0,2588);
 		eq.spawn2(enchanted, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), 0);  -- spawn enchanted rat
 		jars = jars + 1;
 		eq.depop(); --depop tile
 	elseif(jars < 4 and item_lib.check_turn_in(e.self, e.trade, {item1 = 2586})) then 
-		e.other:QuestReward(e.self,{itemid = 2589});
+		e.other:QuestReward(e.self,0,0,0,0,2589);
 		eq.spawn2(enchanted, 0, 0, e.self:GetX(), e.self:GetY(), e.self:GetZ(), 0);  -- spawn enchanted rat
 		jars = jars + 1;
 		eq.depop(); --depop tile

@@ -345,7 +345,8 @@ function SenschalTrade(e)
 	
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 30369}, 0)) then
 		e.self:Say("Commit these orders to memory, " .. e.other:GetCleanName() .. ", have them ready to speak at a moment's notice. When you are finished memorizing, repeat them to me. Tell your soldiers to prepare themselves. When the orders are handed to Zrelik we will take up our positions.");
-		e.other:QuestReward(e.self,{items = {30369,18511}}); -- Item: Coldain Hero's Insignia Ring
+		e.other:QuestReward(e.self,0,0,0,0,30369); -- Item: Coldain Hero's Insignia Ring
+		e.other:QuestReward(e.self,0,0,0,0,18511);
 		eq.stop_all_timers();
 		eq.depop(118022);
 		eq.unique_spawn(118052,0,0,-142,-520,78,128); -- Zrelik(v2)
@@ -1113,7 +1114,8 @@ function Senschal3Trade(e)
 		e.other:Faction(e.self,405,25); -- dain
 		e.other:Faction(e.self,448,-10); -- kzek
 		e.other:Faction(e.self,419,-50); -- krif
-		e.other:QuestReward(e.self,{items = {1741,30385},exp = 5000});
+		e.other:QuestReward(e.self,0,0,0,0,1741,5000);
+		e.other:QuestReward(e.self,0,0,0,0,30385);
 		e.self:Say("Show the head to the surviving heroes quickly, we must report to the Dain and tend to the wounded.");
 		eq.signal(118137,3);
 		eq.depop();
@@ -1130,7 +1132,8 @@ function Churn2Trade(e)
 		e.other:Faction(e.self,405,25); -- dain
 		e.other:Faction(e.self,448,-10); -- kzek
 		e.other:Faction(e.self,419,-50); -- krif
-		e.other:QuestReward(e.self,{items = {1741,1746},exp = 5000}); -- Crown of Narandi
+		e.other:QuestReward(e.self,0,0,0,0,1741,5000); -- Crown of Narandi
+		e.other:QuestReward(e.self,0,0,0,0,1746);
 		eq.depop();
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
@@ -1145,7 +1148,8 @@ function Corbin2Trade(e)
 		e.other:Faction(e.self,405,25); -- dain
 		e.other:Faction(e.self,448,-10); -- kzek
 		e.other:Faction(e.self,419,-50); -- krif
-		e.other:QuestReward(e.self,{items = {1741,1744},exp = 5000}); -- Earring of the Frozen Skull
+		e.other:QuestReward(e.self,0,0,0,0,1741,5000); -- Earring of the Frozen Skull
+		e.other:QuestReward(e.self,0,0,0,0,1744);
 		eq.depop();
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
@@ -1160,7 +1164,8 @@ function Dobbin2Trade(e)
 		e.other:Faction(e.self,405,25); -- dain
 		e.other:Faction(e.self,448,-10); -- kzek
 		e.other:Faction(e.self,419,-50); -- krif
-		e.other:QuestReward(e.self,{items = {1741,1743},exp = 5000}); -- Faceguard of Bentos the Hero.
+		e.other:QuestReward(e.self,0,0,0,0,1741,5000); -- Faceguard of Bentos the Hero.
+		e.other:QuestReward(e.self,0,0,0,0,1743);
 		eq.depop();
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
@@ -1175,7 +1180,8 @@ function Garadain2Trade(e)
 		e.other:Faction(e.self,405,25); -- dain
 		e.other:Faction(e.self,448,-10); -- kzek
 		e.other:Faction(e.self,419,-50); -- krif
-		e.other:QuestReward(e.self,{items = {1741,1742},exp = 5000}); -- Choker of the Wretched
+		e.other:QuestReward(e.self,0,0,0,0,1741,5000); -- Choker of the Wretched
+		e.other:QuestReward(e.self,0,0,0,0,1742);
 		eq.depop();
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
@@ -1190,7 +1196,8 @@ function Kargin2Trade(e)
 		e.other:Faction(e.self,405,25); -- dain
 		e.other:Faction(e.self,448,-10); -- kzek
 		e.other:Faction(e.self,419,-50); -- krif
-		e.other:QuestReward(e.self,{items = {1741,1745},exp = 5000}); -- Eye of Narandi
+		e.other:QuestReward(e.self,0,0,0,0,1741,5000); -- Eye of Narandi
+		e.other:QuestReward(e.self,0,0,0,0,1745);
 		eq.depop();
 	end
 	item_lib.return_items(e.self, e.other, e.trade)

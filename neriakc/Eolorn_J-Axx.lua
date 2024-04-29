@@ -26,7 +26,7 @@ function event_trade(e)
 		e.other:Faction(e.self,320,-2); --Wolves of the North
 		e.other:Faction(e.self,263,-1); --Guardians of the Vale
 		e.other:Faction(e.self,329,-2); --Carson McCabe
-		e.other:QuestReward(e.self,math.random(10),0,0,0,7007,100); -- rusty dagger
+		e.other:QuestReward(e.self,math.random(1,10),0,0,0,7007,100); -- rusty dagger
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

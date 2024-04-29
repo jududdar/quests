@@ -76,7 +76,7 @@ function event_trade(e)
 		e.other:Faction(e.self,309,10); -- Silent Fist Clan faction
 		e.other:Faction(e.self,262,1); -- Guards of Qeynos faction
 		e.other:Faction(e.self,361,1); -- Ashen Order faction
-		e.other:QuestReward(e.self,{itemid = 27494,exp = 500}); -- Silent Fist Clansman Hand Wraps ID-27494
+		e.other:QuestReward(e.self,0,0,0,0,27494,500); -- Silent Fist Clansman Hand Wraps ID-27494
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

@@ -49,7 +49,7 @@ function event_trade(e)
 		e.other:Faction(e.self,296,1); -- Faction: Opal Dark Briar
 		e.other:Faction(e.self,341,-2); -- Faction: Priests of Life
 		e.other:Faction(e.self,230,1); -- Faction: Corrupt Qeynos Guards
-		e.other:QuestReward(e.self,0,math.random(5),0,0,eq.ChooseRandom(17002,15343),1000); -- Item: Belt Pouch, Spell: Siphon Strength
+		e.other:QuestReward(e.self,0,math.random(1,5),0,0,eq.ChooseRandom(17002,15343),1000); -- Item: Belt Pouch, Spell: Siphon Strength
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 12136})) then
 		e.self:Say("Incredible!! You have slain one of the greatest warriors in Qeynos!! He must have been full of grog. No doubt he drank most of his skill away. Now I shall cast a spell and strip the flesh from his skull and.. Presto!! Take this skull to Lord Grimrot somewhere in the Plains of Karana. He will be in the center of a field of skeletons. If he is not there, wait for his return. He must return eventually.");
 		e.other:Faction(e.self,221,10); -- Faction: Bloodsabers

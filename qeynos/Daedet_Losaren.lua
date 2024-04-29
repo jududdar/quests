@@ -64,7 +64,7 @@ function event_trade(e)
 		e.other:Faction(e.self,221,-10,0); -- Bloodsabers
 		e.other:Faction(e.self,341,7,0); -- Priest of Life
 		e.other:Faction(e.self,262,7,0); -- Guards of Qeynos
-		e.other:QuestReward(e.self,math.random(20),0,0,0,15011,200); -- spell:holy armor
+		e.other:QuestReward(e.self,math.random(1,20),0,0,0,15011,200); -- spell:holy armor
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 13289})) then -- Chest of Faith (closed)
 		e.self:Say("You have done supremely well, my young acolyte of Thunder. For your great service to the Temple of Thunder. Now go and cast the storm into the populace of Antonica.");
 		-- Confirmed Live Factions

@@ -83,7 +83,7 @@ function event_trade(e)
 		e.other:Faction(e.self,242,5,0); --  Deepwater Knights
 		e.other:Faction(e.self,266,1,0); 	--  High Council of Erudin
 		e.other:Faction(e.self,265,-1,0); --  Heretics
-		e.other:QuestReward(e.self,9,3,1,0,eq.ChooseRandom(2104, 2106, 2108, 2111, 2112),1000);-- Item(s): Patchwork Tunic (2104)
+		e.other:QuestReward(e.self,9,3,1,0,eq.ChooseRandom(2104,2106,2108,2111,2112),1000);-- Item(s): Patchwork Tunic (2104)
 	elseif(e.other:GetFactionValue(e.self) >= 350 and item_lib.check_turn_in(e.self, e.trade, {item1 = 18835,item2 = 13838,item3 = 13839,item4 = 13840},1,text1)) then -- requires amiably, Bridge Quest Handin: 3 heads + sealed list
 		e.self:Say("It is done!! I pray to Prexus that the knowledge of the bridge's design has departed from this world with the passing of these intelligent men. A pity they had to die. As for you, the other states may not tolerate your presence any longer, but you have proven that allegiance to Erudin is paramount among all Erudites. I am afraid the [harpoon is no more]!! I bestow upon you Deep Six, my personal cutlass!! May you wield it in the name of Erudin.");
 		-- Confirmed Live Factions

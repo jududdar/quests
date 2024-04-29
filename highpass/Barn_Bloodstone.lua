@@ -18,7 +18,7 @@ function event_trade(e)
 		e.other:Faction(e.self,329,2); -- Carson McCabe
 		e.other:Faction(e.self,230,1); -- Corrupt Qeynos Guards
 		e.other:Faction(e.self,330,3); -- Freeport Militia
-		e.other:QuestReward(e.self,0,math.random(5),0,0,18808,100); -- Bayle List I
+		e.other:QuestReward(e.self,0,math.random(1,5),0,0,18808,100); -- Bayle List I
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end	

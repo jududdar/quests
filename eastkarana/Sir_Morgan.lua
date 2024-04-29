@@ -45,7 +45,7 @@ function event_trade(e)
 
 	if(e.other:GetFactionValue(e.self) >= -100 and item_lib.check_turn_in(e.self, e.trade, {gold = 5})) then
 		e.self:Say("What a grand donation!! You must be a rich noble to be making such a donation. Here, I am but a simple warrior, but I found this lying on the highway to Highpass Hold. The lifeless corpse next to it had no more need of it.");
-		e.other:QuestReward(e.self,{itemid = eq.ChooseRandom(2041,2904,2312,2307,8306,10006,13944,13004,2106,2112,7007,5024,6015,5021,7012,1331,17002,13829,8011,15295,15324,15380,15501,15051,10019)}); --mountain lion cape, bear-hide belt, ratskin gloves, snakeskin mask, halfling knife, silver earring, highkeep flask, large lantern, Patchwork cloak, Patchwork boots, rusty dagger, rusty halberd, rusty flail, rusty scimitar, bronze dagger, damask cap, belt pouch, drom's champagne, hunting bow, spell:mircyls animation, spell:shock of blades, spell:glimpse, spell:soothe, bloodstone 
+		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(2041,2904,2312,2307,8306,10006,13944,13004,2106,2112,7007,5024,6015,5021,7012,1331,17002,13829,8011,15295,15324,15380,15501,15051,10019)); --mountain lion cape, bear-hide belt, ratskin gloves, snakeskin mask, halfling knife, silver earring, highkeep flask, large lantern, Patchwork cloak, Patchwork boots, rusty dagger, rusty halberd, rusty flail, rusty scimitar, bronze dagger, damask cap, belt pouch, drom's champagne, hunting bow, spell:mircyls animation, spell:shock of blades, spell:glimpse, spell:soothe, bloodstone 
 		-- confirmed live, no factions no xp, no faction requirement		
 	end
 	item_lib.return_items(e.self, e.other, e.trade)

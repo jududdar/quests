@@ -14,7 +14,8 @@ function event_trade(e)
 		e.other:Faction(e.self,281,2); -- Faction: Knights of Truth
 		e.other:Faction(e.self,296,-1); -- Faction: Opal Dark Briar
 		e.other:Faction(e.self,330,-1); -- Faction: The Freeport Militia
-		e.other:QuestReward(e.self,{items = {14585,1779},exp = 1000}); -- Odd Cold Iron Necklace, sealed parchment (2nd)
+		e.other:QuestReward(e.self,0,0,0,0,14585,1000); -- Odd Cold Iron Necklace, sealed parchment (2nd)
+		e.other:QuestReward(e.self,0,0,0,0,1779);
 	end
 
 	local enchant_bars_lib = require("self_found_enchant_bars");

@@ -45,7 +45,7 @@ function event_trade(e)
 		e.other:Faction(e.self,262,1,0); -- guards of qeynos
 		e.other:Faction(e.self,304,-1,0); -- ring of scale
 		e.other:Faction(e.self,285,-1,0); -- mayong mistmoore
-		e.other:QuestReward(e.self,{itemid = 27493,exp = 500}); -- Item: Wind Spirits Longsword
+		e.other:QuestReward(e.self,0,0,0,0,27493,500); -- Item: Wind Spirits Longsword
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

@@ -26,7 +26,7 @@ function event_trade(e)
 		e.other:Faction(e.self,1503,-1);
 		e.other:Faction(e.self,1505,-1);
 		e.other:Faction(e.self,1507,1);
-		e.other:QuestReward(e.self,{items = {31750,eq.ChooseRandom(0,31750),eq.ChooseRandom(0,31750),eq.ChooseRandom(0,31750),eq.ChooseRandom(0,31750)},exp = 5000});
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(31750,eq.ChooseRandom(0,31750),eq.ChooseRandom(0,31750),eq.ChooseRandom(0,31750),eq.ChooseRandom(0,31750)),5000);
 	elseif(e.other:GetFactionValue(e.self) >= -500 and item_lib.check_turn_in(e.self, e.trade, {item1 = 31749,item2 = 31749},1,text)) then
 		e.self:Say("Excellent! Two less of those self righteous Validus Custodus goons to worry about!");
 		e.other:Faction(e.self,1506,1);

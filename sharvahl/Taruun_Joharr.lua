@@ -4,7 +4,7 @@ function event_trade(e)
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 3466})) then
 		e.self:Emote("takes the buckler and spins it in his hand for a moment. Eventually he says");
 		e.self:Say("I suppose assumin' you were sent here by Harbin isn't too far from the reality of things. I'll try to think of a few things for you to do, but in the meantime, take these daggers and practice until you can use both of them. You need to get out of the habit of toting this shield around. If your enemy is gettin' close enough to hit you on it, you ain't doin' your job right anyway. I'll do what I can to train you from here, but I'm going to need to eat first. It's been a while since my last meal. Take this meal voucher to Cook Yalkiin. Once they fill the order bring it back and we'll start your lesson. Now scoot.");
-		e.other:QuestReward(e.self,{items = {5559,5560,5561,}}); -- Item: Black Handled Dagger
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(5559,5560,5561)); -- Item: Black Handled Dagger
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 5563})) then
 		e.self:Emote("takes the bag and takes a huge bite of the sandwich.");
 		e.self:Say("This sandwich is almost worth the wait.");

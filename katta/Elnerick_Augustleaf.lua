@@ -19,7 +19,7 @@ function event_trade(e)
 		e.other:Faction(e.self,1483,-5); -- seru
 		e.other:Faction(e.self,1486,-25); -- heart of seru
 		-- Confirmed Live Experience
-		e.other:QuestReward(e.self,{items = {3650,7096},exp = 10000}); -- 7096  Seal of Katta, 3650  Arx Key
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(3650,7096),10000); -- 7096  Seal of Katta, 3650  Arx Key
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

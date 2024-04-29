@@ -44,7 +44,7 @@ function event_trade(e)
 		e.other:Faction(e.self,262,10,0);  -- Guards of Qeynos
 		e.other:Faction(e.self,221,-5,0); -- Bloodsabers
 		e.other:Faction(e.self,219,3,0);    -- Antonius Bayle
-		e.other:QuestReward(e.self,0,0,math.random(10),1,15226,35350); -- Item: Spell: Endure Disease
+		e.other:QuestReward(e.self,0,0,math.random(1,10),1,15226,35350); -- Item: Spell: Endure Disease
 	elseif(e.other:GetFactionValue(e.self) >= -100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13950})) then
 		e.self:Say("This is odd. This could explain the increase in the number of beasts within the lands surrounding Qeynos. You must take this to Freeport. Here. You must speak with Lorme Tredore. Show him this pellet. You had best gear up for the trip. Freeport is very far away. Here is some gold. Outfit yourself at our expense.");
 		-- Confirmed Live Factions and exp data
@@ -53,7 +53,7 @@ function event_trade(e)
 		e.other:Faction(e.self,262,5,0);  -- Guards of Qeynos
 		e.other:Faction(e.self,221,-2,0); -- Bloodsabers
 		e.other:Faction(e.self,219,1,0);    -- Antonius Bayle
-		e.other:QuestReward(e.self,0,0,math.random(20),1,13951,9350); -- Quarm custom EXP data. Normally: 6350, Item: Fleshy Orb
+		e.other:QuestReward(e.self,0,0,math.random(1,20),1,13951,9350); -- Quarm custom EXP data. Normally: 6350, Item: Fleshy Orb
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

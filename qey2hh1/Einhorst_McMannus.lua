@@ -42,7 +42,7 @@ function event_trade(e)
 		e.other:Faction(e.self,327,1,0); -- Shamen of Justice
 		e.other:Faction(e.self,328,1,0); -- Merchants of Halas
 		e.other:Faction(e.self,311,1,0); -- Steel Warriors
-		e.other:QuestReward(e.self,math.random(9),math.random(9),0,0,13962,1600); -- Karana Clover Shipment
+		e.other:QuestReward(e.self,math.random(1,9),math.random(1,9),0,0,13962,1600); -- Karana Clover Shipment
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

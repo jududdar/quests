@@ -19,7 +19,7 @@ function event_trade(e)
 		e.self:Emote("tosses the items into a nearby box and reaches into a sack at his feet. He hands you your reward. 'This spell is going to need some major testing. I can always use more of the same components.'");
 		e.other:Faction(e.self,443,2); -- Faction: Brood of Kotiz
 		e.other:Faction(e.self,441,1); -- Faction: Legion of Cabilis
-		e.other:QuestReward(e.self,0,math.random(10),0,0,eq.ChooseRandom(15338,15344,15339,15340,15225,15229,15346,15491,15502,15341,15342,15347,15348,15331,15221,15343),100);
+		e.other:QuestReward(e.self,0,math.random(1,10),0,0,eq.ChooseRandom(15338,15344,15339,15340,15225,15229,15346,15491,15502,15341,15342,15347,15348,15331,15221,15343),100);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

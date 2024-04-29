@@ -21,7 +21,7 @@ function event_trade(e)
 		e.other:Faction(e.self,298,5,0); -- Faction: Peace Keepers
 		e.other:Faction(e.self,266,1,0); -- Faction: High Council of Erudin
 		e.other:Faction(e.self,265,-1,0); -- Faction: Heretics
-		e.other:QuestReward(e.self,math.random(10),0,0,0,eq.ChooseRandom(13002,13053),2000); -- Item: Torch, Brass Ring
+		e.other:QuestReward(e.self,math.random(1,10),0,0,0,eq.ChooseRandom(13002,13053),2000); -- Item: Torch, Brass Ring
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end

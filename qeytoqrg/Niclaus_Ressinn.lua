@@ -26,7 +26,7 @@ function event_trade(e)
 		e.other:Faction(e.self,262,25); -- Guards of Qeynos
 		e.other:Faction(e.self,221,-12); -- Bloodsabers
 		e.other:Faction(e.self,219,7); -- Antonius Bayle
-		e.other:QuestReward(e.self,{copper = math.random(0,10),itemid = 13724,exp = 4000});
+		e.other:QuestReward(e.self,math.random(0,10),0,0,0,13724,4000);
 	end
 	local returned = item_lib.return_items(e.self, e.other, e.trade, false)
 	if(returned) then

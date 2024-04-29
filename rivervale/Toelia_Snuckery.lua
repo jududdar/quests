@@ -31,7 +31,7 @@ function event_trade(e)
 		e.other:Faction(e.self,292,-1,0); -- Faction: Merchants of Rivervale
 		e.other:Faction(e.self,336,1,0); -- Faction: Coalition of Tradefolk Underground
 		e.other:Faction(e.self,329,1,0); -- Faction: Carson McCabe
-		e.other:QuestReward(e.self,math.random(5),0,0,0,0,100);
+		e.other:QuestReward(e.self,math.random(1,5),0,0,0,0,100);
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13786})) then -- requires amiably
 		e.self:Say("You found it! Heh. Good thing you brought it back bub. This thing isn't priceless, its worthless but at least you proved you are loyal. Poor ol' Chomper..");
 		-- Confirmed Live Factions
@@ -40,7 +40,7 @@ function event_trade(e)
 		e.other:Faction(e.self,292,-1,0); -- Faction: Merchants of Rivervale
 		e.other:Faction(e.self,336,1,0); -- Faction: Coalition of Tradefolk Underground
 		e.other:Faction(e.self,329,1,0); -- Faction: Carson McCabe
-		e.other:QuestReward(e.self,math.random(5),0,0,0,0,1000);
+		e.other:QuestReward(e.self,math.random(1,5),0,0,0,0,1000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

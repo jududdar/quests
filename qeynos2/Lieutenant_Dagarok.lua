@@ -45,7 +45,7 @@ function event_trade(e)
 		e.other:Faction(e.self,273, 3,0); -- Kane Bayle
 		e.other:Faction(e.self,223, 2,0); -- Circle Of Unseen Hands
 		e.other:Faction(e.self,221, 3,0); -- Bloodsabers
-		e.other:QuestReward(e.self,math.random(16),math.random(8),0,0,0,250);
+		e.other:QuestReward(e.self,math.random(1,16),math.random(1,8),0,0,0,250);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

@@ -19,7 +19,7 @@ function event_trade(e)
 			e.other:Faction(e.self,445,1);  -- +Scaled Mystics
 			e.other:Faction(e.self,442,1);   -- +Crusaders of Greenmist
 			e.other:Faction(e.self,444,1);  -- +Swifttails
-			e.other:QuestReward(e.self, {copper = math.random(0,5),silver = math.random(0,5),exp = 2500});
+			e.other:QuestReward(e.self,math.random(0,5),math.random(0,5),0,0,0,2500);
 		elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 18213})) then
 			e.self:Say("Ah!! Good to have you on board. We lack strong young recruits such as yourself. Take this box. Your task is to seek milita skeletons near this gate. Apparently, someone or something has been raising militia corpses and they now walk the land not knowing the difference between friend or foe. They even continue using their old call, 'Halt Who goes there?'. Fill and combine within the box their charred bone shards and return the filled box to me for your geozite tool.");
 			e.other:QuestReward(e.self,0,0,0,0,17996);

@@ -34,7 +34,7 @@ function event_trade(e)
 		e.other:Faction(e.self,230,-1,0); -- Faction: Corrupt Qeynos Guards
 		e.other:Faction(e.self,223,-1,0); -- Faction: Circle of Unseen Hands
 		e.other:Faction(e.self,291,1,0); -- Faction: Merchants of Qeynos
-		e.other:QuestReward(e.self,0,math.random(10),0,0,eq.ChooseRandom(10018,10018,10320),5000);
+		e.other:QuestReward(e.self,0,math.random(1,10),0,0,eq.ChooseRandom(10018,10018,10320),5000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

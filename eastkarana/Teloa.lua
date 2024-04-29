@@ -2,7 +2,7 @@ function event_trade(e)
 	local item_lib = require("items");
 	
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 20451})) then
-		e.self:Say("begins walking toward the gathering spot. 'Follow, friend.'");
+		e.self:Emote("begins walking toward the gathering spot. 'Follow, friend.'");
 		eq.start(12);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)

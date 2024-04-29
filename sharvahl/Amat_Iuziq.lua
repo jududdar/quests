@@ -71,7 +71,7 @@ function event_trade(e)
 		e.other:QuestReward(e.self,0,0,0,0,6266);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 5544, item2 = 6268})) then
 		e.self:Say("Well done " .. e.other:GetCleanName() .. "!  You have proven your worth and can now be considered a Dar Khura Journeyman!");
-		e.other:QuestReward(e.self,{items = {6267,6268},exp = 10000}); -- Item: Sonic Wolf Bane Spear
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(6267,6268),10000); -- Item: Sonic Wolf Bane Spear
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

@@ -18,7 +18,7 @@ function event_trade(e)
 		e.self:Say("Many thanks to you, strange one. Our craftsman will be pleased. They have been in need of a new bundle of ivory.");
 		e.other:Faction(e.self,432, 10); -- Faction: Othmir
 		e.other:Faction(e.self,431, -1); -- Faction: Ulthork
-		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(10036, 22503, 16976, 10037, 10033, 10049, 10031, 10053, 10035, 10051, 10034, 10050, 10032, 10048),1000);
+		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(10036,22503,16976,10037,10033,10049,10031,10053,10035,10051,10034,10050,10032,10048),1000);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 30068}, 0)) then -- Bulthar Herdmaster Tusk
 		e.self:Say("With the Bulthar herd leader dead we can hope that they will move on to less occupied waters.");
 		e.other:Faction(e.self,432, 5); -- Faction: Othmir
@@ -28,7 +28,7 @@ function event_trade(e)
 		e.self:Say("Such wasteful creatures the Bulthar are. It is a shame they are not intelligent enough to realize the harm they do to the very oceans that sustain them.");
 		e.other:Faction(e.self,432, 2); -- Faction: Othmir
 		e.other:Faction(e.self,431, -1); -- Faction: Ulthork
-		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(10036, 22503, 16976, 10037, 10033, 10049, 10031, 10053, 10035, 10051, 10034, 10050, 10032, 10048),1000);
+		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(10036,22503,16976,10037,10033,10049,10031,10053,10035,10051,10034,10050,10032,10048),1000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

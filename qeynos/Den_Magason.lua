@@ -69,7 +69,7 @@ function event_trade(e)
 		e.other:Faction(e.self,230,3,0); 		-- Corrupt Qeynos Guards
 		e.other:Faction(e.self,262,-3,0); 	-- Guards of Qeynos
 		e.other:Faction(e.self,273,3,0);		-- Kane Bayle
-		e.other:QuestReward(e.self,0,math.random(10),0,0,18796,50000);	-- Note for Ghil
+		e.other:QuestReward(e.self,0,math.random(1,10),0,0,18796,50000);	-- Note for Ghil
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

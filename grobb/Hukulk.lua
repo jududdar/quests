@@ -58,7 +58,7 @@ function event_trade(e)
 		e.other:Faction(e.self,261,-6);	-- Green Blood Knights
 		e.other:Faction(e.self,222,-10);	-- Broken Skull Clan
 		e.other:Faction(e.self,235,2);	-- Da Bashers
-		e.other:QuestReward(e.self,0,0,0,math.random(10),3316,1000); -- Helm of Hukulk
+		e.other:QuestReward(e.self,0,0,0,math.random(1,10),3316,1000); -- Helm of Hukulk
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

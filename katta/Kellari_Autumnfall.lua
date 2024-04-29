@@ -18,7 +18,7 @@ function event_trade(e)
 	
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 3870}, 0)) then -- completed specimen kit
 		e.self:Emote("looks at the various trays in the kit and turns pale, even for her normal complexion.  She looks at you and says, 'This is much worse than we thought.  We assumed that this was caused by someone from within our ranks, but I would never have thought that Colain was involved");
-		e.other:QuestReward(e.self,math.random(10),math.random(10),math.random(10),math.random(10),3872,5000);  -- note from kellari
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,10),math.random(1,10),math.random(1,10),3872,5000);  -- note from kellari
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

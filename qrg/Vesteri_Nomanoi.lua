@@ -23,7 +23,7 @@ function event_trade(e)
 		e.other:Faction(e.self,343, 1,0); --QRG Protected Animals
 		e.other:Faction(e.self,324, -1,0); --Unkempt Druids
 		e.other:Faction(e.self,262, 1,0);   --Guards of Qeynos
-		e.other:QuestReward(e.self,math.random(10),math.random(5),0,0,0,250);
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,5),0,0,0,250);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

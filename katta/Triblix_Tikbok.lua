@@ -36,7 +36,7 @@ function event_trade(e)
 		e.other:Faction(e.self,1499,-1); --  -Citizens of Seru
 		e.other:Faction(e.self,1483,-1); --  -Seru
 		e.other:Faction(e.self,1487,-1); --  -Shoulders of Seru
-		e.other:QuestReward(e.self,0,0,math.random(5),0,10694,500); -- Combine Fire Flask
+		e.other:QuestReward(e.self,0,0,math.random(1,5),0,10694,500); -- Combine Fire Flask
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

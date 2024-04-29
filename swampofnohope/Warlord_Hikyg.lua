@@ -24,7 +24,7 @@ function event_trade(e)
 		e.other:Faction(e.self, 445,2); -- Faction: Scaled Mystics
 		e.other:Faction(e.self, 444,2); -- Faction: Swift Tails
 		e.other:Faction(e.self, 442,2); -- Faction: Crusaders of Greenmist
-		e.other:QuestReward(e.self,0,math.random(10),0,0,12657);
+		e.other:QuestReward(e.self,0,math.random(1,10),0,0,12657);
 	end
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 12435, item2 = 12436, item3 = 12437, item4 = 5133},1,text1)) then
 		e.self:Emote("hands you plans for a trooper's pike head. Congratulations. You are now a trooper of the Legion of Cabilis. Now you may fight with honor and a mighty weapon.");

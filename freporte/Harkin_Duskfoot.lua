@@ -23,7 +23,7 @@ function event_trade(e)
 		e.other:Faction(e.self,329,2,0); -- Carson McCabe
 		e.other:Faction(e.self,230,1,0); -- Corrupt Qeynos Guards
 		e.other:Faction(e.self,330,3,0); -- Freeport Militia
-		e.other:QuestReward(e.self,math.random(10),math.random(5),0,0,1054,1500); -- Used Merchants Gloves
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,5),0,0,1054,1500); -- Used Merchants Gloves
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end

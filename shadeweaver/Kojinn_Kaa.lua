@@ -11,7 +11,7 @@ function event_trade(e)
 	local item_lib = require("items");
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 30854})) then--Hero's Shroud
 		e.self:Say("You have proven yourself a hero of our cause, and so I entrust you with this information: the poachers have set up an outpost in the caves on the outskirts of the thicket. Go and wreak havoc upon this deplorable filth that has mistreated our friends. As a badge of the honor you have earned, construct a champion's robe and have the High Priestess Bast bless it for you. The ceremony will require three drops of the blood of those who would bring harm to the felidae. It will be the High Priestess's honor to receive you.");
-		e.other:QuestReward(e.self,{items = {30855,30854}}); --Champion Cape Pattern, Hero's Shroud (giving it back)
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(30855,30854)); --Champion Cape Pattern, Hero's Shroud (giving it back)
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

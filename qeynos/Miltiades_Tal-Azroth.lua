@@ -48,7 +48,7 @@ function event_trade(e)
 		e.other:Faction(e.self,221,-10,0); -- Faction: Bloodsabers
 		e.other:Faction(e.self,341,7,0); -- Faction: Priests of Life
 		e.other:Faction(e.self,262,7,0); -- Faction: Guards of Qeynos
-		e.other:QuestReward(e.self,{itemid = 27488,exp = 500}); -- Item: Rainkeepers Defender Blade
+		e.other:QuestReward(e.self,0,0,0,0,27488,500); -- Item: Rainkeepers Defender Blade
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

@@ -23,11 +23,11 @@ function event_trade(e)
 		e.self:Say("" .. e.other:GetCleanName() .. ", welcome to the Animist's guild. You have grown strong in the safety of our city and it is now time for you to register for official citizenship of Shar Vahl. The Khati Sha, explorers of this hostile land, have granted your request of inclusion and deem you to be worthy of our training. Take this application to Registrar Bindarah and return to me with proof of your citizenship.");
 		e.self:Say("I know that you may be nervous right now... after all, this should be a very exciting first step for you.  If you happen to get lost while looking for the registrar, just ask one of the other citizens or guards for directions.  They will most likely know where to find the place or person that you are looking for.");
 		eq.set_global("Shar_Vahl_Cit","1",5,"F");
-		e.other:QuestReward(e.self,{itemid = 2873,exp = 20}); -- Application for Citizenship
+		e.other:QuestReward(e.self,0,0,0,0,2873,20); -- Application for Citizenship
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 2897,item2 = 2877}, 1, text)) then
 		e.self:Say("Allow me to be the first to welcome you to the Khati Sha, lords of the beasts. Accept this cloak, young initiate. It is a symbol of your loyalty to our noble people. May it serve you as you serve us all. Present your acrylia slate to Animist Poren and he will give you instruction. May the spirits of the beasts guide you and keep you safe.");
 		eq.set_global("Shar_Vahl_Cit","7",5,"F");
-		e.other:QuestReward(e.self,{items = {2877,2878},exp = 450}); -- Item: Acrylia Slate of Shar Vahl, Initiate's Cloak of Shar Vahl
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(2877,2878),450); -- Item: Acrylia Slate of Shar Vahl, Initiate's Cloak of Shar Vahl
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

@@ -10,7 +10,7 @@ function event_trade(e)
 		e.other:Faction(e.self,430,25); -- Faction: Claws of Veeshan
 		e.other:Faction(e.self,436,6); -- Faction: Yelinak
 		e.other:Faction(e.self,448,-12); -- Faction: Kromzek
-		e.other:QuestReward(e.self,{items = {29688,29685},exp = 10000}); -- Scout Report, Robe of Benevolence
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(29688,29685),10000); -- Scout Report, Robe of Benevolence
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 29685}, 0)) then -- Robe of Benevolence
 		e.self:Say("Didn't like the robe, eh?  How about this then.  They packed it in my scout kit, and it is of no use to me, though it looks very nice.");
 		e.other:QuestReward(e.self,0,0,0,0,29686); -- Bracer of Benevolence

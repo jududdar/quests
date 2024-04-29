@@ -14,12 +14,12 @@ function event_trade(e)
 		e.other:Faction(e.self,405, 50); -- Faction: Dain Frostreaver IV
 		e.other:Faction(e.self,406, 50); -- Faction: Coldain
 		e.other:Faction(e.self,429, -25); -- Faction: King Tormax
-		e.other:QuestReward(e.self,0,0,0,math.random(20),eq.ChooseRandom(30215,30219,30212,30263),5000);
+		e.other:QuestReward(e.self,0,0,0,math.random(1,20),eq.ChooseRandom(30215,30219,30212,30263),5000);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 1199}, 0)) then
 		e.self:Say("One moment the Dain has been waiting for you. I will call for him.. oh here he is now, show your shawl to him.");
 		e.other:QuestReward(e.self,0,0,0,0,8895);
 		if(not e.other:HasItem(17651)) then
-			e.other:QuestReward(e.self,{itemid = 17651}); -- Item: Empty Coldain Issue Kit
+			e.other:QuestReward(e.self,0,0,0,0,17651); -- Item: Empty Coldain Issue Kit
 		end
 		if(eq.get_entity_list():IsMobSpawnedByNpcTypeID(129003) == false and eq.get_entity_list():IsMobSpawnedByNpcTypeID(129101) == false) then
 			eq.spawn_condition("thurgadinb",3,0);
@@ -27,7 +27,7 @@ function event_trade(e)
 		end
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 8895}, 0)) then
 		e.self:Say("As I stated previously, you should show this to the Dain.");
-		e.other:QuestReward(e.self,{itemid = 8895}); -- Item: Runed Coldain Prayer Shawl
+		e.other:QuestReward(e.self,0,0,0,0,8895); -- Item: Runed Coldain Prayer Shawl
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

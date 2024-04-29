@@ -35,7 +35,7 @@ function event_trade(e)
 		e.other:Faction(e.self,223, -1);	-- Circle Of Unseen Hands
 		e.other:Faction(e.self,229,-1);		-- Coalition of Tradefolk
 		e.other:Faction(e.self,244,-2);   -- Ebon Mask
-		e.other:QuestReward(e.self,0,0,math.random(10),0,eq.ChooseRandom(15203, 15270, 15271, 15275, 15036, 15075, 15224, 15269),3000); -- Spells : Cure Poison, Drowsy, Fleeting Fury, Frost Rift, Gate, Sicken, Endure Fire, Feet Like Cat
+		e.other:QuestReward(e.self,0,0,math.random(1,10),0,eq.ChooseRandom(15203,15270,15271,15275,15036,15075,15224,15269),3000); -- Spells : Cure Poison, Drowsy, Fleeting Fury, Frost Rift, Gate, Sicken, Endure Fire, Feet Like Cat
 	elseif(item_lib.check_turn_in(e.self, e.trade, {gold = 10})) then
 		e.self:Say("The scales have been balanced and the Tribunal has spoken. Yer body shall be saved.");
 		e.self:CastSpell(17,e.other:GetID()); -- Spell: Light Healing

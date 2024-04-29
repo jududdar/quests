@@ -48,7 +48,7 @@ function event_trade(e)
 		e.other:Faction(e.self,221,-10); -- Faction: Bloodsabers
 		e.other:Faction(e.self,341,7); -- Faction: Priests of Life
 		e.other:Faction(e.self,262,7); -- Faction: Guards of Qeynos
-		e.other:QuestReward(e.self,{itemid = 27490,exp = 500});
+		e.other:QuestReward(e.self,0,0,0,0,27490,500);
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end

@@ -28,7 +28,7 @@ function event_trade(e)
 		e.other:Faction(e.self,230,1,0); -- Corrupt Qeynos Guards
 		e.other:Faction(e.self,262,-1,0); -- -Guards of Qeynos
 		e.other:Faction(e.self,273,1,0); -- Kane Bayle
-		e.other:QuestReward(e.self,0,0,math.random(8),0,13901,250);
+		e.other:QuestReward(e.self,0,0,math.random(1,8),0,13901,250);
 	end
 	
 	item_lib.return_items(e.self, e.other, e.trade)

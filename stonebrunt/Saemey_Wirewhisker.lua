@@ -39,7 +39,7 @@ function event_trade(e)
 		e.self:Emote("grinds the spiritling stones in a mortar and pestle with foreign runes scratched into the ceramic. 'This powder will assist in matters concerning the contacting or freeing of spirits.'");
 		e.other:Faction(e.self,5011,1); -- Faction: Kejek Village
 		e.other:Faction(e.self,298,1); -- Faction: Peace Keepers
-		e.other:QuestReward(e.self,{items = {6980,eq.ChooseRandom(0,6980),eq.ChooseRandom(0,6980),eq.ChooseRandom(0,6980)},exp = 5000});
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(6980,eq.ChooseRandom(0,6980),eq.ChooseRandom(0,6980),eq.ChooseRandom(0,6980)),5000);
 	elseif(e.other:GetFactionValue(e.self) >= -200 and item_lib.check_turn_in(e.self, e.trade, {item1 = 6980,item2 = 6977}, 0)) then -- Kejek Spirit Powder, Soul Orb
 		e.self:Say("I require a Soul Orb and Kejek Spirit Dust in order to perform the ritual that will free the imprisoned souls.");
 		e.self:Emote("scrawls an arcane symbol on the ground with an odd powder and places the orb in its center. He then begins reciting an incantation and waving his arms over the symbol and orb. Moments later the orb shatters and an apparition appears.");

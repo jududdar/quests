@@ -63,14 +63,14 @@ function event_trade(e)
 		e.other:Faction(e.self,272,6,0); -- Jaggedpine Treefolk
 		e.other:Faction(e.self,306,-3,0); -- Sabertooths of Blackburrow
 		e.other:Faction(e.self,262,1,0); -- Guards of Qeynos
-		e.other:QuestReward(e.self,math.random(5),math.random(5),math.random(5),0,eq.ChooseRandom(2137,2140,9006,5033),20000); --items: Raw-Hide Skullcap, Raw-Hide Tunic, Wooden Shield, Bronze Broad Sword
+		e.other:QuestReward(e.self,math.random(1,5),math.random(1,5),math.random(1,5),0,eq.ChooseRandom(2137,2140,9006,5033),20000); --items: Raw-Hide Skullcap, Raw-Hide Tunic, Wooden Shield, Bronze Broad Sword
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 17970,item2 = 17970, item3 = 17970},1,text)) then
 		e.self:Say("Excellent!  Ridding the area of those foul beasts will certainly slow down whatever it is they are planning.  Here is the Cloak of Jaggedpine.  You should keep this, for you never know when we may decide to alter the enchantments on it.");
 		e.other:Faction(e.self,302,20,0); -- Faction: Protectors of Pine
 		e.other:Faction(e.self,272,5,0); -- Faction: Jaggedpine Treefolk
 		e.other:Faction(e.self,306,-3,0); -- Faction: Sabertooths of Blackburrow
 		e.other:Faction(e.self,262,5,0); -- Faction: Guards of Qeynos
-		e.other:QuestReward(e.self,math.random(5),math.random(5),math.random(5),0,2915,1000); -- Item: Cloak of Jaggedpine
+		e.other:QuestReward(e.self,math.random(1,5),math.random(1,5),math.random(1,5),0,2915,1000); -- Item: Cloak of Jaggedpine
 	elseif(e.other:GetFactionValue(e.self) >= -100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 18811})) then
 		e.self:Say("Fine Work, " .. e.other:GetCleanName() .. ". Hmmm. It seems this needs taking care of. Take this note to the Captain of the City Guard in Qeynos. His name is Captain Tillin. He will have to attend to this matter. Also.. Let me see the gnoll\'s head. I must know you killed him. Be safe, my friend. I am sure that whoever this McNeal is, he was simply a lackey. Whoever he works for is most likely going to be looking for you. Watch your back in Qeynos.");
 		-- Confirmed Live Faction		
@@ -78,7 +78,7 @@ function event_trade(e)
 		e.other:Faction(e.self,272,1,0); -- Jaggedpine Treefolk
 		e.other:Faction(e.self,306,-1,0); -- Sabertooths of Blackburrow
 		e.other:Faction(e.self,262,1,0); -- Guards of Qeynos
-		e.other:QuestReward(e.self,math.random(5),math.random(5),math.random(5),0,18815,5000);
+		e.other:QuestReward(e.self,math.random(1,5),math.random(1,5),math.random(1,5),0,18815,5000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end

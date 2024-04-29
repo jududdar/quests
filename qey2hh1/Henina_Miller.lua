@@ -29,7 +29,7 @@ function event_trade(e)
 		e.other:Faction(e.self,262,1); -- Faction: Guards of Qeynos
 		e.other:Faction(e.self,341,1); -- Faction: Priests of Life
 		e.other:Faction(e.self,280,1); -- Faction: Knights of Thunder
-		e.other:QuestReward(e.self,math.random(5),0,0,0,0,100);
+		e.other:QuestReward(e.self,math.random(1,5),0,0,0,0,100);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

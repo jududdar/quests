@@ -47,9 +47,9 @@ function event_trade(e)
 		e.other:Faction(e.self,279,5,0); -- King Tearis Thex
 		e.other:Faction(e.self,5002,3,0); -- Anti Mage
 		if(math.random(100) > 10) then
-			e.other:QuestReward(e.self,math.random(9),math.random(9),0,0,eq.ChooseRandom(13003, 13004, 14013, 7001, 13005, 13009),500);  -- Large Lantern, Small Lantern, Potion of Sustenance, Dagger, Iron Ration, Bandage
+			e.other:QuestReward(e.self,math.random(1,9),math.random(1,9),0,0,eq.ChooseRandom(13003,13004,14013,7001,13005,13009),500);  -- Large Lantern, Small Lantern, Potion of Sustenance, Dagger, Iron Ration, Bandage
 		else
-			e.other:QuestReward(e.self,math.random(9),math.random(9),0,0,eq.ChooseRandom(15025, 15033, 15032, 15623),500); -- Spells: Pillage Enchantment, Brilliance, Plague, Minor Conjuration:Air
+			e.other:QuestReward(e.self,math.random(1,9),math.random(1,9),0,0,eq.ChooseRandom(15025,15033,15032,15623),500); -- Spells: Pillage Enchantment, Brilliance, Plague, Minor Conjuration:Air
 		end
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13226})) then
 		e.self:Say("So, you succeeded in stopping a Crushbone runner! That is good. Now take this as reward. Keep up your fine work. The people of Felwithe are grateful.");
@@ -57,9 +57,9 @@ function event_trade(e)
 		e.other:Faction(e.self,279,5,0); -- King Tearis Thex
 		e.other:Faction(e.self,5002,3,0); -- Anti Mage
 		if(math.random(100) > 10) then -- Set same rewards as his other quest, comments showed some crossover in rewards but need to find more
-			e.other:QuestReward(e.self,math.random(9),math.random(9),0,0,eq.ChooseRandom(13003, 13004, 14013, 7001, 13005, 13009),500);  -- Large Lantern, Small Lantern, Potion of Sustenance, Dagger, Iron Ration, Bandage
+			e.other:QuestReward(e.self,math.random(1,9),math.random(1,9),0,0,eq.ChooseRandom(13003,13004,14013,7001,13005,13009),500);  -- Large Lantern, Small Lantern, Potion of Sustenance, Dagger, Iron Ration, Bandage
 		else
-			e.other:QuestReward(e.self,math.random(9),math.random(9),0,0,eq.ChooseRandom(15025, 15033, 15032, 15623),500); -- Spells: Pillage Enchantment, Brilliance, Plague, Minor Conjuration:Air
+			e.other:QuestReward(e.self,math.random(1,9),math.random(1,9),0,0,eq.ChooseRandom(15025,15033,15032,15623),500); -- Spells: Pillage Enchantment, Brilliance, Plague, Minor Conjuration:Air
 		end 
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 18840})) then
 		e.self:Say("So, the Teir'Dal are behind the recent advances of the orcs?!! Your news has shed light on their union. It is time to step forth and prove yourself a [faithful paladin of this court].");

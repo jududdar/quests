@@ -52,7 +52,7 @@ function event_trade(e)
 		e.other:Faction(e.self,221,-2); -- Faction: Bloodsabers
 		e.other:Faction(e.self,262,1); -- Faction: Guards of Qeynos
 		e.other:Faction(e.self,296,-1); -- Faction: Opal Dark Briar
-		e.other:QuestReward(e.self,{itemid = 27495,exp = 500}); -- Item: Dagger of Arcane Order
+		e.other:QuestReward(e.self,0,0,0,0,27495,500); -- Item: Dagger of Arcane Order
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

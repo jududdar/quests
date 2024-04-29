@@ -29,17 +29,17 @@ function event_trade(e)
  		e.self:Say("Well, well. I didn't think you could do it. Here's your cut and don't be surprised that it's not much because it's your first lesson. Remember. the smaller the operation. the bigger the share, and the richest rogues have the tightest lips.");
  		-- confirmed live faction
 		e.other:Faction(e.self,316,1); -- Faction: Scouts of Tunare
-		e.other:QuestReward(e.self,0,math.random(5),0,0,7021,500);
+		e.other:QuestReward(e.self,0,math.random(1,5),0,0,7021,500);
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13346,item2 = 13346,gold = 2})) then
  		e.self:Say("Well, well. I didn't think you could do it. Here's your cut and don't be surprised that it's not much because it's your first lesson. Remember. the smaller the operation. the bigger the share, and the richest rogues have the tightest lips.");
  		-- confirmed live faction
 		e.other:Faction(e.self,316,1); -- Faction: Scouts of Tunare
-		e.other:QuestReward(e.self,0,math.random(5),0,0,7021,500);
+		e.other:QuestReward(e.self,0,math.random(1,5),0,0,7021,500);
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 7007,item2 = 13346,gold = 2})) then
  		e.self:Say("Well, well. I didn't think you could do it. Here's your cut and don't be surprised that it's not much because it's your first lesson. Remember. the smaller the operation. the bigger the share, and the richest rogues have the tightest lips.");
 		-- confirmed live faction 		
 		e.other:Faction(e.self,316,1); -- Faction: Scouts of Tunare
-		e.other:QuestReward(e.self,0,math.random(5),0,0,7021,500);
+		e.other:QuestReward(e.self,0,math.random(1,5),0,0,7021,500);
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13322})) then
  		e.self:Say("Excellent job, " .. e.other:GetCleanName() .. ", we will turn you into a rogue of Tunare yet.  Here this is for your trouble.");
 		e.other:QuestReward(e.self,0,0,0,0,3315,100);

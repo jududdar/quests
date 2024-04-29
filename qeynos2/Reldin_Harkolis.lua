@@ -45,11 +45,11 @@ function event_trade(e)
 		e.other:Faction(e.self,230,1,0); 		-- Corrupt Qeynos Guards
 		e.other:Faction(e.self,262,-1,0); 	-- Guards of Qeynos
 		e.other:Faction(e.self,273,1,0);		-- Kane Bayle
-		e.other:QuestReward(e.self,{itemid = 19943,exp = 1000}); -- rusty unseen hands dagger
+		e.other:QuestReward(e.self,0,0,0,0,19943,1000); -- rusty unseen hands dagger
 	elseif(expansion_flag >= 4.0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 19944,item2 = 13915,item3 = 19945})) then
 		e.self:Emote("fashions a grip out of the large king snake skin, fastens the gnoll fang to the heel of the hilt, and polishes the blade with a faintly glowing polish. 'Herei syour new weapon young rogue.'");
 		-- Confirmed Live Experience
-		e.other:QuestReward(e.self,{itemid = 20266,exp = 1000}); -- Dagger of Unseen Hands
+		e.other:QuestReward(e.self,0,0,0,0,20266,1000); -- Dagger of Unseen Hands
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

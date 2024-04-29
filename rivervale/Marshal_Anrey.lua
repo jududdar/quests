@@ -39,7 +39,7 @@ function event_trade(e)
 		e.other:Faction(e.self,355,2); -- Faction: Storm Reapers
 		e.other:Faction(e.self,292,2); -- Faction: Merchants of Rivervale
 		e.other:Faction(e.self,334,-3); -- Faction: Dreadguard Outer
-		e.other:QuestReward(e.self,0,0,math.random(10),1,13941,1000); -- Leatherfoot Skullcap
+		e.other:QuestReward(e.self,0,0,math.random(1,10),1,13941,1000); -- Leatherfoot Skullcap
 	elseif(e.other:GetFactionValue(e.self) >= 200 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13941,item2 = 13942})) then -- Leatherfoot Skullcap, Dragoon Dirk
 		e.self:Say("Congratulations, my young deputy! Welcome to the brotherhood of the Leatherfoot Raiders. You have earned your skullcap. Wear it with pride. You are now one of the elite. Remember our motto, 'Those who risk, prevail'.");
 		-- verified live faction

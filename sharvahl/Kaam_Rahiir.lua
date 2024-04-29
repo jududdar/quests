@@ -22,7 +22,7 @@ function event_trade(e)
 		e.self:Say("I see that you've been getting some use out of these things. They are crude, but they seem sturdy enough.");
 		e.self:Emote("says as he returns the claws. He hands you a small bag and continues.");
 		e.self:Say("I hope the combat you've seen has made an impression on you, young friend. Combat is not pleasant, but it is often unavoidable. We are explorers and conflict often breeds in the unknown. Learn from each encounter and you are less likely to be trapped by conflict in the future.");
-		e.other:QuestReward(e.self,{items = {5574,5575,17113}}); --Reinforced Khati Sha Claw, Small Burlap Bag
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(5574,5575,17113)); --Reinforced Khati Sha Claw, Small Burlap Bag
 		e.self:Say("In preparation for your journey down the path of Khati Sha, you will need to seek out the wolves of the moor. You will need to learn the behavior and abilities of this enemy. Once you have tracked and met these beasts, I will teach you how to best dispose of them in the future. Place two molars from the mouth of one of their pups in that bag and return to me. That will guarantee that you've come face to face with your foe.");
 	end
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 6182})) then --Small Bag of Teeth
@@ -33,7 +33,7 @@ function event_trade(e)
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 5580, item2 = 6185, item3 = 6186})) then --Cloak of the Khati Sha Apprentice, Sonic Wolf Bane Claw, Sonic Wolf Bane Claw
 		e.self:Say("These claws are very well crafted! Your work is very impressive. Please take them to Ahom Guzhin. He is an old friend of mine. The sonic wolf claws were the result of some of his original studies in the moor. He has dedicated his life to studying creatures of the moor and can almost always be found there. Be careful when you go looking for him. You've done well here, but don't get careless. Good journeys.");
 		e.other:Faction(e.self,1532,5); -- Faction: Khati Sha
-		e.other:QuestReward(e.self,{items = {6184,6185,6186},exp = 50000}); --Cloak of the Khati Sha Journeyman, Sonic Wolf Bane Claw, Sonic Wolf Bane Claw
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(6184,6185,6186),50000); --Cloak of the Khati Sha Journeyman, Sonic Wolf Bane Claw, Sonic Wolf Bane Claw
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

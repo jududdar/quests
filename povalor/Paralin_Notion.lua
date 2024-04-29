@@ -74,7 +74,7 @@ function event_trade(e)
 		
 			e.self:Emote("looks at you with surprise. 'Very good my friend. You've definitely proven yourself. Find the Master Sergeant. He should be able to help you this time.'");
 			-- Confirmed Live Experience
-			e.other:QuestReward(e.self, {exp = 1});
+			e.other:QuestReward(e.self,0,0,0,0,0,1);
 			if ( questState == 4 ) then
 				eq.set_global("pov_orb_quest", "5", 1, "H24");
 			end

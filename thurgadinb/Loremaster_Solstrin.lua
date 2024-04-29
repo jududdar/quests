@@ -60,13 +60,13 @@ function event_trade(e)
 	
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 8896}, 0)) then
 		e.self:Say("So, the Dain needs your assistance with the Field Plate. The Dain must trust you a great deal to impart the wisdom of our armor creation to you. Here are the tomes. The first details how to make the basic armor, the other details how to begin [working with gemstones]. If the Dain is asking you for them you should place them in an [Issue Kit]. May Brell guide your hand friend, good luck to you.");
-		e.other:QuestReward(e.self,{items = {18611,18610}}); -- Forge of Icewell Arms (Precious Gem Study), Forge of Icewell Arms (Royal Field Plate Study)
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(18611,18610)); -- Forge of Icewell Arms (Precious Gem Study), Forge of Icewell Arms (Royal Field Plate Study)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 1199}, 0)) then -- Runed Coldain Prayer Shawl (mark 1)
 		e.self:Say("Incredible! Never before has an outlander been skilled and determined enough to craft our sacred rune. You are now worthy of the Dain's most perilous task. You should seek an audience with the Dain immediately. Show him your Runed Prayer Shawl; he will give you the task that has been prepared for you. If the Dain is away show your Shawl to Chamberlain Krystorf and he will call for him.");
-		e.other:QuestReward(e.self,{items = {1199,17651}}); -- Runed Coldain Prayer Shawl (mark 1), Empty Coldain Issue Kit
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(1199,17651)); -- Runed Coldain Prayer Shawl (mark 1), Empty Coldain Issue Kit
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 8895}, 0)) then -- Runed Coldain Prayer Shawl (mark 2)
 		e.self:Say("Incredible! Never before has an outlander been skilled and determined enough to craft our sacred rune. You are now worthy of the Dain's most perilous task. You should seek an audience with the Dain immediately. Show him your Runed Prayer Shawl; he will give you the task that has been prepared for you. If the Dain is away show your Shawl to Chamberlain Krystorf and he will call for him.");
-		e.other:QuestReward(e.self,{items = {8895,17651}}); -- Runed Coldain Prayer Shawl (mark 2), Empty Coldain Issue Kit
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(8895,17651)); -- Runed Coldain Prayer Shawl (mark 2), Empty Coldain Issue Kit
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

@@ -26,7 +26,7 @@ function event_trade(e)
 		e.other:Faction(e.self,300,3,0); -- Priest of Mischief
 		e.other:Faction(e.self,286,1,0); -- Mayor Gubbin
 		e.other:Faction(e.self,263,1,0); -- Guardian of the Vale
-		e.other:QuestReward(e.self,math.random(10),math.random(10),math.random(5),0,eq.ChooseRandom(15014,15201,15207,15208,16303),5000); -- Item(s): Spell: Strike (15014), Spell: Flash of Light (15201), Spell: Divine Aura (15207), Spell: Lull (15208), Spell: Gate (16303)
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,10),math.random(1,5),0,eq.ChooseRandom(15014,15201,15207,15208,16303),5000); -- Item(s): Spell: Strike (15014), Spell: Flash of Light (15201), Spell: Divine Aura (15207), Spell: Lull (15208), Spell: Gate (16303)
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

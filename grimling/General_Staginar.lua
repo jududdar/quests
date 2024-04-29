@@ -20,17 +20,18 @@ function event_trade(e)
 	
 	if ( item_lib.check_turn_in(e.self, e.trade, { item1 = 6190 }, 0) ) then -- Box of the Hero of Shar Vahl
 		e.self:Say("Soldier, that's some fine work! The horde will not easily recover from the destruction you have inflicted upon their kind. You have earned an opportunity to wrestle the key from the grimling high commander. Take these orders to Veteran Cullin. If you can take possession of the grimling bases to the north and defeat the grimling high commander, return to me with his half of the obelisk and the battle orders. Show the grunts no mercy, "..e.other:GetCleanName().."! Good luck!");
-		e.other:QuestReward(e.self, 0, 0, 0, 0, 6191); -- Staginar's Battle Orders
+		e.other:QuestReward(e.self,0,0,0,0,6191); -- Staginar's Battle Orders
 
 	elseif ( item_lib.check_turn_in(e.self, e.trade, { item1 = 5989 }, 0) ) then -- Golden Medal of the Shar Vahl
 	
 		-- note: what the General says from turning in the medal is unknown.  Putting the box turn-in response here as a placeholder:
 		e.self:Say("Soldier, that's some fine work! The horde will not easily recover from the destruction you have inflicted upon their kind. You have earned an opportunity to wrestle the key from the grimling high commander. Take these orders to Veteran Cullin. If you can take possession of the grimling bases to the north and defeat the grimling high commander, return to me with his half of the obelisk and the battle orders. Show the grunts no mercy, "..e.other:GetCleanName().."! Good luck!");
-		e.other:QuestReward(e.self, 0, 0, 0, 0, 6191); -- Staginar's Battle Orders
+		e.other:QuestReward(e.self,0,0,0,0,6191); -- Staginar's Battle Orders
 
 	elseif ( item_lib.check_turn_in(e.self, e.trade, { item1 = 6192 }, 0) ) then -- Acrylia Obelisk Half
 		e.self:Say(e.other:GetCleanName()..", your actions have earned you the respect of all Vah Shir. Upon your shoulders now rests the hope of our people. This hollow acrylia obelisk is the key that will gain you entry to the stronghold of the master of the grimling horde. Once there, you will need to collect enchanted pieces of acrylia from the enemy's vile minions. Once you have collected all five of them, you must place the obelisk into this smelting pot with the acrylia pieces. A special key will form inside that will grant you access to the deepest chamber of the stronghold.");
-		e.other:QuestReward(e.self, { items = { 5972, 17868 } } ); -- Hollow Acrylia Obelisk, Enchanted Acrylia Smelting Pot
+		e.other:QuestReward(e.self,0,0,0,0,5972); -- Hollow Acrylia Obelisk, Enchanted Acrylia Smelting Pot
+		e.other:QuestReward(e.self,0,0,0,0,17868);
 		
 		eq.set_timer("talk2", 20000);
 	else

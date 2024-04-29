@@ -8,17 +8,17 @@ end
 
 function event_trade(e)
 	local item_lib = require("items");
-	local ringrew = 0;
 	
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 29080,item2 = 29080,item3 = 29080,item4 = 29080})) then
 		e.self:Say("Excellent work, " .. e.other:GetCleanName() .. ". Here is your payment. I will also reward you for any more you bring.");
 		e.other:Faction(e.self,430,5);  	--CoV
 		e.other:Faction(e.self,436,1);  	-- Yelinak
 		e.other:Faction(e.self,448,-2); 	-- Kromzek
-		if(math.random(5) == 1) then
-			ringrew = 29063; -- Item: Ring of the Chameleon
+		if(math.random(1,5) == 1) then
+			e.other:QuestReward(e.self,0,0,0,0,29063); -- Item: Ring of the Chameleon
+			note = Item not always given.
 		end
-		e.other:QuestReward(e.self,math.random(10),math.random(10),math.random(10),math.random(0,10),ringrew,5000);
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,10),math.random(1,10),math.random(0,10),0,5000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

@@ -28,7 +28,7 @@ function event_trade(e)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 1701}, 0)) then -- Velium Focus V3
 		e.self:Emote("sends it's thoughts to you, a feeling of disappointment washes over you, It seems the others are not aware of themselves yet. We are alone..So many questions yet we can find no answers. We have been given a very special gift but without direction we are lost. We must find who has made us aware of ourselves and why it has done so.");
 		e.other:Faction(e.self,458,100); -- Faction: Geonid Collective
-		e.other:QuestReward(e.self,{itemid = 1701}); -- Item: Velium Focus
+		e.other:QuestReward(e.self,0,0,0,0,1701); -- Item: Velium Focus
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 1698,item2 = 1699,item3 = 1699,item4 = 1699})) then
 		e.self:Emote("thoughts become your own, a feeling of joy overwhelms you, 'Because of you we can at last speak with our maker. We were once given a gift, and we ask that you accept this gift from us now so that we may come closer to that which we owe our sentience to. Now. ,we must construct the Menhir.");
 		e.other:Faction(e.self,458,100); -- Faction: Geonid Collective

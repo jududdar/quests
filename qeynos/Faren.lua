@@ -43,7 +43,7 @@ function event_trade(e)
 		e.other:Faction(e.self,230,-1); -- Corrupt Qeynos Guards
 		e.other:Faction(e.self,223,-2); -- Circle Of Unseen Hands
 		e.other:Faction(e.self,291,1); -- Merchants of Qeynos
-		e.other:QuestReward(e.self,math.random(20),0,0,0,13129,200); -- Hurrieta's Tunic
+		e.other:QuestReward(e.self,math.random(1,20),0,0,0,13129,200); -- Hurrieta's Tunic
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

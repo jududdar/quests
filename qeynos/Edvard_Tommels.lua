@@ -40,7 +40,7 @@ function event_trade(e)
 				e.self:Say("Why thank you, " .. e.other:GetCleanName() .. ". If you do happen to come across any more of these, please bring them to me.");
 			end
 			if(math.random(100) < 50 and not e.other:HasItem(12076)) then
-				e.other:QuestReward(e.self,{itemid = 12076});
+				e.other:QuestReward(e.self,0,0,0,0,12076);
 			end
 			e.other:Faction(e.self,121,2,0); -- Faction: Qeynos Citizens
 			e.other:QuestReward(e.self,math.random(0,15),math.random(0,8),math.random(0,8),math.random(0,2),0,18750);

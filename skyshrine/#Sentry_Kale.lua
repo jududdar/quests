@@ -15,7 +15,7 @@ function event_trade(e)
 		e.other:Faction(e.self,430,5);  	--CoV
 		e.other:Faction(e.self,436,1);  	-- Yelinak
 		e.other:Faction(e.self,448,-2); 	-- Kromzek
-		e.other:QuestReward(e.self,math.random(10),math.random(10),math.random(10),math.random(0,10),29050,5000);
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,10),math.random(1,10),math.random(0,10),29050,5000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

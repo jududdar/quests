@@ -12,7 +12,7 @@ function event_trade(e)
 	
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 18243, item2 = 12425},1,text)) then --Legion Order (3 signed), Skipping Stone
 		e.self:Say("So smooth. I shall be the skipping stone champion! Here. You may have my autograph.");
-		e.other:QuestReward(e.self,math.random(10),0,0,0,18244,500); --Legion Order (4 signed)
+		e.other:QuestReward(e.self,math.random(1,10),0,0,0,18244,500); --Legion Order (4 signed)
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

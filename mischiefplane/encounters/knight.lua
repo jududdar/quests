@@ -43,7 +43,7 @@ function WhiteTrade(e)
 	
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 24565}, 0)) then
 		e.self:Say("You have found it!!  Thank Tunare! I apologize for my rude behaviour.  These tunnels twist and bend my very thoughts. Perhaps this will assist you in your escape from this cruel joke Fizzlethorpe has been playing with our minds. I thank you friend.");
-		e.other:QuestReward(e.self,{items = {13073,13073,13073,13073},exp = 10000}); -- Item: Bone Chips 4x
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(13073,13073,13073,13073),10000); -- Item: Bone Chips 4x
 		eq.spawn2(126379,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading());
 		eq.depop();
 	end
@@ -55,7 +55,7 @@ function BlackTrade(e)
 	
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 24553}, 0)) then
 		e.self:Say("You have found it!!  Thank Tunare! I apologize for my rude behaviour.  These tunnels twist and bend my very thoughts. Perhaps this will assist you in your escape from this cruel joke Fizzlethorpe has been playing with our minds. I thank you friend.");
-		e.other:QuestReward(e.self,{items = {10028,10028,10028,10028},exp = 10000}); -- Item: Peridot 4x
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(10028,10028,10028,10028),10000); -- Item: Peridot 4x
 		eq.spawn2(126180,0,0,e.self:GetX(),e.self:GetY(),e.self:GetZ(),e.self:GetHeading());
 		eq.depop();
 	end

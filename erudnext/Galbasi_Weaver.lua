@@ -1,6 +1,6 @@
 function event_say(e)
 	if(e.message:findi("hail")) then
-		e.self:Say(string.format("%s, well met!  Perhaps you would care to peruse my wares.'  Galbasi smiles gently and shows you a number of cloth pieces.  'Or maybe you would care to learn of my hand-made [Woven Platinum] or [Steelweave] armors?", e.other:GetCleanName()));
+		e.self:Say("" .. e.self:GetName() .. ", well met!  Perhaps you would care to peruse my wares.'  Galbasi smiles gently and shows you a number of cloth pieces.  'Or maybe you would care to learn of my hand-made [Woven Platinum] or [Steelweave] armors?");
 	elseif(e.message:findi("woven platinum")) then
 		e.self:Say("Woven platinum is a hard-wearing, yet flexible, compound which I use to make protective clothing for the city's learned scholars.  It allows magic to be focused fully, unlike other harder-wearing armors.'  Galbasi peers intently at your clothing.  'Perhaps you'd care to know the [method] of its creation?");
 	elseif(e.message:findi("method")) then

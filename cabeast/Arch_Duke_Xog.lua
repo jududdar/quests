@@ -27,12 +27,12 @@ function event_trade(e)
 		e.other:Faction(e.self,442,100); 	--Crusader of Greenmist
 		e.other:Faction(e.self,441,25); 	--Legion of Cabilis
 		-- Confirmed Live Experience and Faction
-		e.other:QuestReward(e.self,math.random(10),math.random(3),0,0,5120,200);	--Pawn's Khukri
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,3),0,0,5120,200);	--Pawn's Khukri
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 18051, item2 = 5126},1,text3)) then --Test of the Lord (Greenmist Quest 7/8)
 		e.self:Say("A legible tome of the scrolls of Vok Na Zov! What a find this is!! May the unholy curses of Cazic flow through you. Please accept the weapon of a Lord of Pain. To abandon it is to abandon our ways and earn yourself the hatred of our order.");
 		e.other:Faction(e.self,442,10); -- Faction: Crusaders of Greenmist
 		e.other:Faction(e.self,441,2); -- Faction: Legion of Cabilis
-		e.other:QuestReward(e.self,0,0,0,math.random(8),5128,25000); -- Item: Lord of Pain's Khukri
+		e.other:QuestReward(e.self,0,0,0,math.random(1,8),5128,25000); -- Item: Lord of Pain's Khukri
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 14791})) then 				--Trooper Scale Bracers quest
 		e.self:Emote(" takes the note and glances at it briefly then lets out a heavy sigh and stares out over the city for several minutes. Finally he says quietly, 'Several months ago we lost contact with one of our crusaders. His name is, or was, Geanik. The last we heard from him he was furthering our cause against the loathsome Goblins that reside in Warsliks Wood. Just recently we were visited by a [strange Iksar].'");
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 14807, item2 = 10034, item3 = 10034},1,text2)) then

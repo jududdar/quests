@@ -13,7 +13,7 @@ function event_trade(e)
 	
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 12073, item2 = 12073},1,text)) then
 		e.self:Say("Here's the crate of provisions. Take this to Dragoon Szorn in the Lesser Faydark immediately!");
-		e.other:QuestReward(e.self,{itemid = 19030}); --Crate of Teir`Dal Provisions
+		e.other:QuestReward(e.self,0,0,0,0,19030); --Crate of Teir`Dal Provisions
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

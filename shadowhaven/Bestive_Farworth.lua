@@ -17,7 +17,7 @@ function event_trade(e)
 		e.other:Faction(e.self,1510,1); -- House of Fordel
 		e.other:Faction(e.self,1511,1); -- House of Midst
 		e.other:Faction(e.self,1512,1); -- House of Stout
-		e.other:QuestReward(e.self,math.random(10),math.random(10),0,0,17072,500); -- Pristine Beetle Box
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,10),0,0,17072,500); -- Pristine Beetle Box
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

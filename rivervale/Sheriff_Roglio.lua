@@ -34,7 +34,8 @@ function event_trade(e)
 		e.other:Faction(e.self,355, 1,0); -- Storm Reapers
 		e.other:Faction(e.self,292, 1,0); -- Merchants of Rivervale
 		e.other:Faction(e.self,334,-1,0); -- Dreadguard Outer
-		e.other:QuestReward(e.self,{silver = math.random(10),items = {13024,13023},exp = 5000}); -- Tanglefoot Tingle Drink, Bixie Berry Buns ; exp data confirmed
+		e.other:QuestReward(e.self,0,math.random(1,10),0,0,13024,5000); -- Tanglefoot Tingle Drink, Bixie Berry Buns ; exp data confirmed
+		e.other:QuestReward(e.self,0,0,0,0,13023);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

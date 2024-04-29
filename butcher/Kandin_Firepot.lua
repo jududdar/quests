@@ -21,7 +21,8 @@ function event_trade(e)
 		if(e.other:GetFactionValue(e.self) >= -60) then
 			e.self:Say("Oh wow! You found the oil! Where is the golem? You didn't hurt him did you? I am very fond of him. Anyways, here is your reward a note and staff to give to that guy you were asking me about.");
 			e.other:Faction(e.self,404, 10); --Truespirit
-			e.other:QuestReward(e.self,{items = {14339,18168}}); --note, Staff of Gabstik
+			e.other:QuestReward(e.self,0,0,0,0,14339); --note, Staff of Gabstik
+			e.other:QuestReward(e.self,0,0,0,0,18168);
 		else
 			e.self:Say("I have no need for this item " .. e.other:GetCleanName() .. ". You can have it back.")
 			e.other:QuestReward(e.self,0,0,0,0,14349); -- Item: Green Oil

@@ -18,7 +18,7 @@ function event_trade(e)
 		e.other:Faction(e.self,219,1,0); -- Faction: Antonius Bayle
 		e.other:Faction(e.self,229,1,0); -- Faction: Coalition of Tradefolk
 		e.other:Faction(e.self,262,1,0); -- Faction: Guards of Qeynos
-		e.other:QuestReward(e.self,{gold = math.random(5,8), exp = 500})
+		e.other:QuestReward(e.self,0,0,math.random(5,8),0,0,500)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 1838}, 0)) then  -- Bag of Bread Loaves
 		e.self:Say("Ah finally, fresh bread! All right let me get this on the shelves right away. Here is your payment.");
 		e.other:Faction(e.self,291,4,0); -- Faction: Merchants of Qeynos
@@ -26,7 +26,7 @@ function event_trade(e)
 		e.other:Faction(e.self,219,1,0); -- Faction: Antonius Bayle
 		e.other:Faction(e.self,229,1,0); -- Faction: Coalition of Tradefolk
 		e.other:Faction(e.self,262,1,0); -- Faction: Guards of Qeynos
-		e.other:QuestReward(e.self,{gold = math.random(5,8), platinum = math.random(1,2), exp = 500})
+		e.other:QuestReward(e.self,0,0,math.random(5,8),math.random(1,2),0,500)
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

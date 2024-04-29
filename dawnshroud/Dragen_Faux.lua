@@ -9,7 +9,8 @@ function event_trade(e)
 	
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 32170}, 0)) then
 		e.self:Say("I'm sorry to have doubted you before. Please forgive me. My mind is not what it used to be. Since you are the wolf slayer perhaps you cn help us find something. We've been unable to find it. If you can combine the Centerstone along with the Wolf Slayer in this box and bring back what you have. I should be able to reward you once we are through here.");
-		e.other:QuestReward(e.self,{items = {17073,32170},exp = 10000});
+		e.other:QuestReward(e.self,0,0,0,0,17073,10000);
+		e.other:QuestReward(e.self,0,0,0,0,32170);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 32300}, 0)) then
 		e.self:Say("I knew you'd come through. This is going to make someone really happy. Take this for your troubles.");
 		e.other:QuestReward(e.self,0,0,0,0,32189,10000);

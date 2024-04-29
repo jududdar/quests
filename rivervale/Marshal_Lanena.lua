@@ -43,7 +43,7 @@ function event_trade(e)
 		e.other:Faction(e.self,355,1); -- Faction: Storm Reapers
 		e.other:Faction(e.self,292,1); -- Faction: Merchants of Rivervale
 		e.other:Faction(e.self,334,-1); -- Faction: Dreadguard Outer
-		e.other:QuestReward(e.self,0,math.random(5),0,0,17968,200); -- Item: Piranha Bag
+		e.other:QuestReward(e.self,0,math.random(1,5),0,0,17968,200); -- Item: Piranha Bag
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 12155})) then
 		e.self:Say("Fine work. We shall continue to study these and shall determine if we need to seek the source.");
 		e.other:Faction(e.self,263,10); -- Faction: Guardians of the Vale
@@ -51,7 +51,7 @@ function event_trade(e)
 		e.other:Faction(e.self,355,1); -- Faction: Storm Reapers
 		e.other:Faction(e.self,292,1); -- Faction: Merchants of Rivervale
 		e.other:Faction(e.self,334,-1); -- Faction: Dreadguard Outer
-		e.other:QuestReward(e.self,0,math.random(5),0,0,5423,200); -- Item: Rantho Rapier
+		e.other:QuestReward(e.self,0,math.random(1,5),0,0,5423,200); -- Item: Rantho Rapier
 	elseif(e.other:GetFactionValue(e.self) >= 0) then
 		e.self:Say("You are in good standing with the Guardians of the Vale. Continue with your good work and then we may speak.")
 	else

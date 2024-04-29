@@ -30,7 +30,7 @@ function event_trade(e)
 		e.self:Say("You have done well. Here is a small reward for your effort.");
 		-- Confimred Live Factions
 		e.other:Faction(e.self,305,5);	-- Faction Rogue's of the White Rose
-		e.other:QuestReward(e.self,0,math.random(10),math.random(10),math.random(0,1),1349,6000);	--Fang of the Wolf
+		e.other:QuestReward(e.self,0,math.random(1,10),math.random(1,10),math.random(0,1),1349,6000);	--Fang of the Wolf
 	elseif(e.other:GetFactionValue(e.self) >= 0 and item_lib.check_turn_in(e.self, e.trade, {item1 = 7507})) then	-- requires indifferent, Shrieking Ahlspiess
 		e.self:Say("Yay! You got another one for me! I'm so happy! Here as I promised is the sketch.");
 		e.other:Faction(e.self,305,5);	-- Faction Rogue's of the White Rose

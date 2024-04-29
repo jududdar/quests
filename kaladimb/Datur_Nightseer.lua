@@ -26,7 +26,7 @@ function event_trade(e)
 		e.other:Faction(e.self,227, 15); -- Faction: Clerics of Underfoot
 		e.other:Faction(e.self,274, 15); -- Faction: Kazon Stormhammer
 		e.other:Faction(e.self,293, 11); -- Faction: Miners Guild 249
-		e.other:QuestReward(e.self,0,0,0,math.random(5),12281,2500); -- Item: Cape of Underfoot
+		e.other:QuestReward(e.self,0,0,0,math.random(1,5),12281,2500); -- Item: Cape of Underfoot
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

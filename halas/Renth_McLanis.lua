@@ -28,7 +28,7 @@ function event_trade(e)
 		e.other:Faction(e.self, 327, 4); -- Faction: Shamen of Justice
 		e.other:Faction(e.self, 328, 5); -- Faction: Merchants of Halas
 		e.other:Faction(e.self, 311, 1); -- Faction: Steel Warriors
-		e.other:QuestReward(e.self,math.random(5),0,0,0,eq.ChooseRandom(17009,17001,8008),2000); -- Item(s): Purse (17009), Wrist Pouch, Throwing Axe
+		e.other:QuestReward(e.self,math.random(1,5),0,0,0,eq.ChooseRandom(17009,17001,8008),2000); -- Item(s): Purse (17009), Wrist Pouch, Throwing Axe
 	elseif(e.other:GetFaction(e.self) < 5 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13249, item2 = 13248, item3 = 13247, item4 = 13233})) then
 		e.self:Say("Thank ye, " .. e.other:GetCleanName() .. "! I knew ye could do it. It is a sad thing, but at least now he can rest in peace. Here is something for your efforts. If ye are interested, there is a [dangerous matter] that needs to be looked into.");
 		e.other:QuestReward(e.self,0,0,8,0,0,3000);
@@ -40,7 +40,7 @@ function event_trade(e)
 		e.other:Faction(e.self, 327, -2); -- Faction: Shamen of Justice
 		e.other:Faction(e.self, 328, -2); -- Faction: Merchants of Halas
 		e.other:Faction(e.self, 311, -1); -- Faction: Steel Warriors
-		e.other:QuestReward(e.self,0,0,math.random(9),0,5367,10000); -- Item: Langseax
+		e.other:QuestReward(e.self,0,0,math.random(1,9),0,5367,10000); -- Item: Langseax
 	elseif(e.other:GetFaction(e.self) < 5 and item_lib.check_turn_in(e.self, e.trade, {item1 = 12225})) then
 		e.self:Say("Nice work " .. e.other:GetCleanName() .. "! Paglan has always been an outcast of sorts. I'm glad to see you were able to stop him. Here is a Langseax of the Wolves for your efforts.");
 		e.other:Faction(e.self, 320, -20); -- Faction: Wolves of the North

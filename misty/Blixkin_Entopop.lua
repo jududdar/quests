@@ -60,7 +60,7 @@ function event_trade(e)
 		e.other:Faction(e.self,263, 1); -- Faction: Guardians of the Vale
 		e.other:Faction(e.self,286, 1); -- Faction: Mayor Gubbin
 		e.other:Faction(e.self,336, -1); -- Faction: Coalition of Tradefolk Underground
-		e.other:QuestReward(e.self,0,math.random(10),math.random(5),0,eq.ChooseRandom(14010,13281,13280,14015,16875),65); -- Item(s): Potion of Poison Warding (14010), Silver Bracelet (13281), Bracelet of Beetlekind (13280), Spider Venom (14015), Stalking Probe (16875)
+		e.other:QuestReward(e.self,0,math.random(1,10),math.random(1,5),0,eq.ChooseRandom(14010,13281,13280,14015,16875),65); -- Item(s): Potion of Poison Warding (14010), Silver Bracelet (13281), Bracelet of Beetlekind (13280), Spider Venom (14015), Stalking Probe (16875)
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

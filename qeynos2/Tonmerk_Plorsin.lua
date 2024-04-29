@@ -40,7 +40,7 @@ function event_trade(e)
 		e.other:Faction(e.self,262,10,0); -- Guards of Qeynos
 		e.other:Faction(e.self,221,-5,0); -- Bloodsabers
 		e.other:Faction(e.self,219,3,0); -- Antonius Bayle
-		e.other:QuestReward(e.self,0,0,math.random(30),0,15016,100000); -- spell: smite
+		e.other:QuestReward(e.self,0,0,math.random(1,30),0,15016,100000); -- spell: smite
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 16581,item2 = 13009})) then -- Bog Juice, Bandages
 		e.self:Say("The glory of Rodcet Nife flows through your soul. May your body and soul live in righteous health.");
 		e.self:CastSpell(96,e.other:GetID()); -- Spell: Counteract Disease

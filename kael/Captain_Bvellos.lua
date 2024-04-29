@@ -55,7 +55,7 @@ function event_trade(e)
 		e.other:Faction(e.self,419,10); -- Faction: Kromrif
 		e.other:Faction(e.self,429,10); -- Faction: King Tormax
 		e.other:Faction(e.self,430,-20); -- Faction: Claws of Veeshan
-		e.other:QuestReward(e.self,{itemid = eq.ChooseRandom(25077,25084,25018)}); -- Item(s): Silvery Mask (25077), Antlered Mask (25084), Giant Scalemail Tunic (25018)
+		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(25077,25084,25018)); -- Item(s): Silvery Mask (25077), Antlered Mask (25084), Giant Scalemail Tunic (25018)
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 1718}, 0)) then -- Wurmscale Scroll
 		e.self:Say("This indeed points to Wenglawks being a traitor. If only there were more proof I could take this to the king. Thank you, " .. e.other:GetCleanName() .. ", you have done a great service for Kael. Take this mask as a reward for your service to this city.");
 		e.other:Faction(e.self,448,50); -- Faction: Kromzek

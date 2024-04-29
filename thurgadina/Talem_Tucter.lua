@@ -13,7 +13,7 @@ function event_trade(e)
 	
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 1859}, 0)) then-- Item: Velium etched rune
 		e.self:Say("I've heard of your mission, " .. e.other:GetCleanName() .. ". I must admit that I had my doubts you'd make it this far. The rune's creation is nearly impossible for even the most skilled of Coldain craftsmen. You should be exceedingly proud. Many have attempted this feat and nearly all have lacked the skill, faith, patience and persistence that is prerequisite for what destiny holds in store for you. You are now ready to use this pattern to construct the sacred rune's casing and complete the runed shawl.");
-		e.other:QuestReward(e.self,{items = {1859,2040}});
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(1859,2040));
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

@@ -40,7 +40,7 @@ function event_trade(e)
 		e.other:Faction(e.self,327,1,0); -- Faction: Shamen of Justice
 		e.other:Faction(e.self,328,1,0); -- Faction: Merchants of Halas
 		e.other:Faction(e.self,311,1,0); -- Faction: Steel Warriors
-		e.other:QuestReward(e.self,0,math.random(10),0,0,eq.ChooseRandom(13922,13923),200); -- Snapped Pole or Moggok's Right Eye
+		e.other:QuestReward(e.self,0,math.random(1,10),0,0,eq.ChooseRandom(13922,13923),200); -- Snapped Pole or Moggok's Right Eye
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

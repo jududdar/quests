@@ -22,7 +22,7 @@ function event_trade(e)
 		e.other:Faction(e.self,226,1,0); -- Clerics of Tunare
 		e.other:Faction(e.self,310,1,0); -- Soldiers of Tunare
 		e.other:Faction(e.self,234,-1,0); -- Crushbone Orcs
-		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(13824, 13824, 13824, 13824, 13824, 13824, 13824, 13824, 13824, 12334),50); -- 1/10 chance of wooden heart 9/10 chance of Wooden Shards
+		e.other:QuestReward(e.self,0,0,0,0,eq.ChooseRandom(13824,13824,13824,13824,13824,13824,13824,13824,13824,12334),50); -- 1/10 chance of wooden heart 9/10 chance of Wooden Shards
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

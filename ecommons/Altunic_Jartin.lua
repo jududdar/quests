@@ -28,7 +28,7 @@ function event_trade(e)
 		e.other:Faction(e.self,330,-1); -- Faction: The Freeport Militia
 		e.other:Faction(e.self,362,1); -- Faction: Priests of Marr
 		e.other:Faction(e.self,311,1); -- Faction: Steel Warriors
-		e.other:QuestReward(e.self,math.random(10),0,0,0,0,500);
+		e.other:QuestReward(e.self,math.random(1,10),0,0,0,0,500);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 1004})) then
 		e.self:Say("Thank you. You are very noble for a squire. I can see you becoming a very valuable asset to the Hall of Truth. Take this token. Tell Merko that you have [earned the Token of Generosity].");
 		e.other:Faction(e.self,281,5); -- Faction: Knights of Truth

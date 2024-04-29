@@ -37,7 +37,7 @@ function event_trade(e)
 		e.other:Faction(e.self,341,-3); -- Faction: Priests of Life
 		e.other:Faction(e.self,230,1); -- Faction: Corrupt Qeynos Guards
 		e.other:QuestReward(e.self,0,0,0,0,0,0);
-		e.other:QuestReward(e.self,{gold = math.random(1,10), itemid = eq.ChooseRandom(2137,2138,2139,2140,2141,2142,2143,2144,2145,2146,2147,2148), exp = 1000})
+		e.other:QuestReward(e.self,0,0,math.random(1,10),0,eq.ChooseRandom(2137,2138,2139,2140,2141,2142,2143,2144,2145,2146,2147,2148),1000)
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

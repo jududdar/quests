@@ -63,7 +63,7 @@ function event_trade(e)
 		e.other:Faction(e.self,333,5); 	-- King Ak'Anon better
 		e.other:Faction(e.self,238,-5); 	-- Dark Reflection worse
 		e.other:Faction(e.self,1604,-1);  -- Clan Grikbar
-		e.other:QuestReward(e.self,0,0,0,math.random(5),12379,10000);	-- Watchman Boots
+		e.other:QuestReward(e.self,0,0,0,math.random(1,5),12379,10000);	-- Watchman Boots
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

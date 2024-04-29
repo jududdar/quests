@@ -77,7 +77,7 @@ function event_trade(e)
 	local item_lib = require("items");
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 2877})) then
 		e.self:Say("Ah good I was hoping you'd be along soon. I need you to collect some Gravel tea leaves from below the city. I need these leaves to make some tea for the guards under the arena. I need 10 of these leaves to brew enough tea for the guards. Take this pouch and fill it with leaves and return it to me.");
-		e.other:QuestReward(e.self,{items = {2877,17098}});
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(2877,17098));
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 31764})) then
 		e.self:Say("Many thanks " .. e.other:GetCleanName() .. ", I'll be going to brew this tea up for the guards now. Take this seal as proof of your helping me. You wouldn't happen to know anyone who would be [interested] in learning the art of Vah Shir Brewing would you? I could really use the help in these hard times, I can barely keep up with all the demand.");
 		e.other:QuestReward(e.self,0,0,0,0,31774);
@@ -98,7 +98,7 @@ function event_trade(e)
 		e.other:QuestReward(e.self,0,0,0,0,31776);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 31776, item2 = 31771})) then
 		e.self:Say("Here is the Acrylia Handled Strainer.  Use it with regular water to replace the crystal clear water.");
-		e.other:QuestReward(e.self,{items = {31776,31777},exp = 2000});
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(31776,31777),2000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

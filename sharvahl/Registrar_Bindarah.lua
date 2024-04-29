@@ -43,7 +43,7 @@ function event_trade(e)
 		eq.set_global("Shar_Vahl_Cit","6",5,"F");
 		e.self:Say("Oh, by the way, be careful with this as it will be important for recording your service to our society. If you should somehow lose it, ask me about your slate and I will issue you a new one.");
 		e.other:Faction(e.self,1584,400); -- Faction: Citizens of Sharvahl
-		e.other:QuestReward(e.self,{items = {2877,2897},exp = 400}); -- Item: Acrylia Slate of Shar Vahl, Notarized Application
+		e.other:QuestReward(e.self,0,0,0,0,GiveAll(2877,2897),400); -- Item: Acrylia Slate of Shar Vahl, Notarized Application
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

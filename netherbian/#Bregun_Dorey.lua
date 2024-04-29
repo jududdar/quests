@@ -31,11 +31,11 @@ function event_trade(e)
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 13464,item2 = 13464,item3 = 13464,item4 = 13464}, 0)) then -- 4 bixie crunchies
 		e.self:Say("Ah hum!");
 		e.self:RemoveItem(29852);
-		e.other:QuestReward(e.self,{itemid = 29852}); -- bixie charm
+		e.other:QuestReward(e.self,0,0,0,0,29852); -- bixie charm
 		e.self:Say("Give this charm to Torsten as a present from his old friend.");
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 29853}, 0)) then -- sealed note to bregun
 		e.self:Say("Hahaha! Silly Torsten. Always snooping over my shoulder. Well I have nothing to lose... Take this to him, it's directions on how to find the Journal I kept. I hid it where no one would look! Haha! Trog trog trog!");
-		e.other:QuestReward(e.self,{itemid = 29854}); -- bregun's directions
+		e.other:QuestReward(e.self,0,0,0,0,29854); -- bregun's directions
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

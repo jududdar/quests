@@ -53,7 +53,7 @@ function event_trade(e)
 		e.other:Faction(e.self,221,-10,0); -- Bloodsabers
 		e.other:Faction(e.self,341,7,0); -- Preists of Life
 		e.other:Faction(e.self,262,7,0); -- Guards of Qeynos
-		e.other:QuestReward(e.self,math.random(10),math.random(5),0,0,eq.ChooseRandom(13006,13007),4500); -- Item: Water Flask, Ration ; exp data confirmed.
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,5),0,0,eq.ChooseRandom(13006,13007),4500); -- Item: Water Flask, Ration ; exp data confirmed.
 	elseif(e.other:GetFactionValue(e.self) >= -100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 18805})) then
 		e.self:Say("This is terrible news. It is good you did not find your grave in the catacombs. You completed your mission regardless of the odds of survival. The temple thanks you. We shall still require your service, Knight of Thunder. Events have transpired which put all agents of righteousness in danger. We cannot explain all as yet. Take this note to Freeport. You will give it to Eestyana Naestra at the Hall of Truth. Beware, now. The Shrine of Bertoxxulous now knows of your allegiance. Give me any other item.");
 		-- Confirmed Live Factions
@@ -61,7 +61,7 @@ function event_trade(e)
 		e.other:Faction(e.self,221,-50,0); -- Bloodsabers
 		e.other:Faction(e.self,341,37,0); -- Preists of Life
 		e.other:Faction(e.self,262,37,0); -- Guards of Qeynos
-		e.other:QuestReward(e.self,0,0,math.random(10),0,18822,500); -- Item: A Note ID's as: Note to hall of truth
+		e.other:QuestReward(e.self,0,0,math.random(1,10),0,18822,500); -- Item: A Note ID's as: Note to hall of truth
 	elseif(e.other:GetFactionValue(e.self) >= -500 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13396})) then -- Rat Kings Head -- confirmed faction with lower than -300, wouldn't give quest but accepted human head
 		e.self:Say("We have finally destroyed the Rat King. You have performed a great service to Qeynos. Here is a small reward. Please continue with the work of the Rainkeeper.");
 		-- Confirmed Live Factions
@@ -77,7 +77,7 @@ function event_trade(e)
 		e.other:Faction(e.self,221,-50,0); -- Bloodsabers
 		e.other:Faction(e.self,341,37,0); -- Preists of Life
 		e.other:Faction(e.self,262,37,0); -- Guards of Qeynos
-		e.other:QuestReward(e.self,0,0,math.random(10),0,6357,2000); -- Thunder Staff.
+		e.other:QuestReward(e.self,0,0,math.random(1,10),0,6357,2000); -- Thunder Staff.
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

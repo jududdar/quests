@@ -13,7 +13,7 @@ function event_trade(e)
 	
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 12466, item2 = 12466, item3 = 12466, gold = 5},1,text)) then
 		e.self:Emote("quickly inserts the scales into a half finished coif and hands you the coif. 'I am afraid that is not enough and I cannot possibly complete the task while on duty. You must go and find an additional three Scaled Wolf Scales and take them, along with the Unfinished Coif, to the nearest forge and complete the smithing yourself. I hope you are a blacksmith.'");
-		e.other:QuestReward(e.self,{itemid = 12468}); -- Item: Shestar's Unfinished Coif
+		e.other:QuestReward(e.self,0,0,0,0,12468); -- Item: Shestar's Unfinished Coif
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

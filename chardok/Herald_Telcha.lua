@@ -33,7 +33,8 @@ function event_trade(e)
 		e.other:Faction(e.self,307,500); -- Faction: Sarnak Collective
 		e.other:Faction(e.self,259,-200); -- Faction: Goblins of Mountain Death
 		eq.delete_global("RegalBandBathezid");
-		e.other:QuestReward(e.self,{items = {5727,5728},exp = 50000}); -- 5727  Regal Band of Bathezid, Di'zok Signet of Service
+		e.other:QuestReward(e.self,0,0,0,0,5727,50000); -- 5727  Regal Band of Bathezid, Di'zok Signet of Service
+		e.other:QuestReward(e.self,0,0,0,0,5728);
 	elseif((e.other:GetFaction(e.self) <= 1) and item_lib.check_turn_in(e.self, e.trade, {item1 = 5727})) then -- Regal band of Bathezid
 		e.other:QuestReward(e.self,0,0,0,0,5727); -- 5727  Regal Band of Bathezid
 	else 
@@ -46,7 +47,7 @@ function event_trade(e)
 				e.other:Faction(e.self,451,3); -- Faction: Brood of Di`Zok
 				e.other:Faction(e.self,307,3); -- Faction: Sarnak Collective
 				e.other:Faction(e.self,259,-1); -- Faction: Goblins of Mountain Death
-				e.other:QuestReward(e.self,{exp = 500});
+				e.other:QuestReward(e.self,0,0,0,0,0,500);
 				salt = salt -1;
 			until salt == 0;
 		end
@@ -57,7 +58,7 @@ function event_trade(e)
 				e.other:Faction(e.self,451,3); -- Faction: Brood of Di`Zok
 				e.other:Faction(e.self,307,3); -- Faction: Sarnak Collective
 				e.other:Faction(e.self,259,-1); -- Faction: Goblins of Mountain Death
-				e.other:QuestReward(e.self,{exp = 500});
+				e.other:QuestReward(e.self,0,0,0,0,0,500);
 				skin = skin - 1;
 			until skin == 0;
 		end

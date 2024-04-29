@@ -15,7 +15,7 @@ function event_trade(e)
 		e.other:Faction(e.self,336,1,0); -- Coalition of Tradefolk Underground
 		e.other:Faction(e.self,281,-1,0); -- Knights of Truth
 		e.other:Faction(e.self,362,-1,0); -- Priests of Marr
-		e.other:QuestReward(e.self,math.random(5),math.random(5),0,0,13100,2000);
+		e.other:QuestReward(e.self,math.random(1,5),math.random(1,5),0,0,13100,2000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

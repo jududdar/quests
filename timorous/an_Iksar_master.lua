@@ -32,7 +32,7 @@ function event_trade(e)
 		e.self:Emote("bows before you and takes a wrinkled, mummified hand from a pouch at his side. 'Take the hand. Let it rest within Cabilis and be reunited with the left.'");
 		e.other:Faction(e.self,444,20); -- Faction: Swift Tails
 		e.other:Faction(e.self,441,10); -- Faction: Legion of Cabilis
-		e.other:QuestReward(e.self,{itemid = 12797,exp = 20000}); -- Item: Iksar Right Hand =|-
+		e.other:QuestReward(e.self,0,0,0,0,12797,20000); -- Item: Iksar Right Hand =|-
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 12829})) then
 		e.self:Emote("opens the box to reveal a variety of pebbles. 'How grand!! My pebbles!! Now I can continue with my rock garden!! Hmmm. You look familiar. Hey!! I bet you can help me complete my garden!! Would you please [assist old Rinmark in completing his rock garden]?'");
 		e.other:Faction(e.self,444,20); -- Faction: Swift Tails

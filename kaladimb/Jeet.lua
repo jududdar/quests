@@ -77,7 +77,7 @@ function event_trade(e)
 		e.other:Faction(e.self,379, -1); -- Butcherblock Bandits
 		e.other:Faction(e.self,241, 1);  -- Deeppockets
 		e.other:Faction(e.self,244, -1); -- Ebon Mask
-		e.other:QuestReward(e.self,0,math.random(5),0,0,eq.ChooseRandom(10009,10015,10500,13220,10500,10016),5000);
+		e.other:QuestReward(e.self,0,math.random(1,5),0,0,eq.ChooseRandom(10009,10015,10500,13220,10500,10016),5000);
 	elseif(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 12162})) then -- Gnome Take (Good)
 		e.self:Say("Good work miner. This is a fantastic haul!! Those wrinkly little gnomes don't know what is going on. Here is your cut. Now get back to work.");
 		-- verified live faction

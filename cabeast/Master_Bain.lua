@@ -56,7 +56,7 @@ function event_trade(e)
 		-- confirmed faction hits
 		e.other:Faction(e.self,444,5); -- Faction: Swift Tails
 		e.other:Faction(e.self,441,1); -- Faction: Legion of Cabilis
-		e.other:QuestReward(e.self,0,0,math.random(5),0,eq.ChooseRandom(4350,4351,4352,4353,4354,4355,4356,4357,4358,4359),500); --Random Sparring Armor Piece
+		e.other:QuestReward(e.self,0,0,math.random(1,5),0,eq.ChooseRandom(4350,4351,4352,4353,4354,4355,4356,4357,4358,4359),500); --Random Sparring Armor Piece
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

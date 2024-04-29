@@ -48,7 +48,7 @@ function event_trade(e)
 		e.other:Faction(e.self,230,-1,0); -- Faction: Corrupt Qeynos Guards
 		e.other:Faction(e.self,330,-1,0); -- Faction: The Freeport Militia
 		e.other:Faction(e.self,281,1,0); -- Faction: Knights of Truth
-		e.other:QuestReward(e.self,math.random(10),math.random(5),0,0,eq.ChooseRandom(5082,9001,5024),5000);
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,5),0,0,eq.ChooseRandom(5082,9001,5024),5000);
 	elseif(e.other:GetFaction(e.self) <= 4 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13424, item2 =13424, item3 = 13424,item4 = 13424},1,text)) then
 		e.self:Say("Incredible!! Such grand tones. It shall make a fine rug. You have shown me that you cannot always judge a book by its cover. You are quite skilled. Would you like to perform a [dangerous task] for me?");
 		-- Confirmed Live Faction
@@ -57,7 +57,7 @@ function event_trade(e)
 		e.other:Faction(e.self,230,-3,0); -- Faction: Corrupt Qeynos Guards
 		e.other:Faction(e.self,330,-3,0); -- Faction: The Freeport Militia
 		e.other:Faction(e.self,281,4,0); -- Faction: Knights of Truth
-		e.other:QuestReward(e.self,math.random(10),math.random(5),0,0,eq.ChooseRandom(2140,2147,9002),5000); -- Item(s): Raw-hide Tunic (2140), Raw-hide Leggings (2147), Round Shield (9002)
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,5),0,0,eq.ChooseRandom(2140,2147,9002),5000); -- Item(s): Raw-hide Tunic (2140), Raw-hide Leggings (2147), Round Shield (9002)
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

@@ -16,7 +16,7 @@ function event_trade(e)
 		e.other:Faction(e.self,270,-6); -- Indigo Brotherhood
 		e.other:Faction(e.self,325,4); -- Merchants of Felwithe
 		e.other:Faction(e.self,276,4); -- Kelethin Merchants
-		e.other:QuestReward(e.self,0,math.random(9),math.random(9),math.random(9),eq.ChooseRandom(5026,5027,5028,5029,5030,5031,5032,5033,5034,5035,5036,5037,5082,6041,6042,6046,7032),1000);
+		e.other:QuestReward(e.self,0,math.random(1,9),math.random(1,9),math.random(1,9),eq.ChooseRandom(5026,5027,5028,5029,5030,5031,5032,5033,5034,5035,5036,5037,5082,6041,6042,6046,7032),1000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

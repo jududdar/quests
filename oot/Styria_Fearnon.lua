@@ -24,7 +24,7 @@ function event_trade(e)
 		e.other:Faction(e.self,310,5,0); -- Soldiers of Tunare
 		e.other:Faction(e.self,226,5,0); -- Clerics of Tunare
 		e.other:Faction(e.self,234,-5,0); -- Crushbone Orcs		
-		e.other:QuestReward(e.self,0,math.random(5),math.random(5),0,eq.ChooseRandom(5007,5008,3101,3102,3103,3104,3105,3106,3107,3108,3109,3110,3111,3112),250); -- Axe, Broad Sword, All medium ringmail pieces
+		e.other:QuestReward(e.self,0,math.random(1,5),math.random(1,5),0,eq.ChooseRandom(5007,5008,3101,3102,3103,3104,3105,3106,3107,3108,3109,3110,3111,3112),250); -- Axe, Broad Sword, All medium ringmail pieces
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 13336})) then -- Pirate Earrings
 		e.self:Say("Good work. That is one less pirate to worry about. We do not have much, but take this as payment.");
 		-- confirmed live factions
@@ -33,7 +33,7 @@ function event_trade(e)
 		e.other:Faction(e.self,310,1,0); -- Soldiers of Tunare
 		e.other:Faction(e.self,226,1,0); -- Clerics of Tunare
 		e.other:Faction(e.self,234,-1,0); -- Crushbone Orcs
-		e.other:QuestReward(e.self,0,math.random(5),math.random(5),0,eq.ChooseRandom(13339,13342,7017,13340,13075),100); -- Item(s): Aviak Feather (13339), Conch Shell (13342), Fishing Spear (7017), Kiola Nut (13340), Shark Skin (13075)
+		e.other:QuestReward(e.self,0,math.random(1,5),math.random(1,5),0,eq.ChooseRandom(13339,13342,7017,13340,13075),100); -- Item(s): Aviak Feather (13339), Conch Shell (13342), Fishing Spear (7017), Kiola Nut (13340), Shark Skin (13075)
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

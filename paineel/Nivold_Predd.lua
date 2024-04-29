@@ -37,7 +37,7 @@ function event_trade(e)
 		e.other:Faction(e.self,254,-400,0); -- Faction: Gate Callers
 		e.other:Faction(e.self,231,-400,0); -- Faction: Craftkeepers
 		e.other:Faction(e.self,233,-400,0); -- Faction: Crimson Hands
-		e.other:QuestReward(e.self,math.random(9),math.random(9),math.random(9),math.random(9),14105,5000);
+		e.other:QuestReward(e.self,math.random(1,9),math.random(1,9),math.random(1,9),math.random(1,9),14105,5000);
 		eq.unique_spawn(75194,0,0,474,1230,-37,128); -- spawn avatar of dread
 	end
 	item_lib.return_items(e.self, e.other, e.trade);

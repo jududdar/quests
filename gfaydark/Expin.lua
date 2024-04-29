@@ -23,7 +23,7 @@ function event_trade(e)
 	if(e.other:GetFactionValue(e.self) >= 100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 12109})) then -- Pouch of Pixie Dust
 		e.self:Say("Good work, scout!!  You have earned this reward.  It is all we have at the time.  I am certain you are satisfied.  If not, then do not let me hear of it.");
 		e.other:Faction(e.self,316,15); -- Scouts of Tunare
-		e.other:QuestReward(e.self,math.random(10),math.random(20),0,0,eq.ChooseRandom(2104, 2106, 2108, 2111, 2112),800); -- Patchwork
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,20),0,0,eq.ChooseRandom(2104,2106,2108,2111,2112),800); -- Patchwork
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 16390})) then -- Crumpled Piece of Paper
 		e.self:Say("Ahhh! You found it! Here let me make you a copy and put this in a secure spot so I don't lose it again.");
 		e.other:QuestReward(e.self,0,0,0,0,24098,50); -- Remiss Sketch

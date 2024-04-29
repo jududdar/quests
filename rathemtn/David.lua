@@ -21,7 +21,7 @@ function event_trade(e)
 		e.other:Faction(e.self,242,20); -- Faction: Deepwater Knights
 		e.other:Faction(e.self,266,3); -- Faction: High Council of Erudin	
 		e.other:Faction(e.self,265,-3); -- Faction: Heretics
-		e.other:QuestReward(e.self,{itemid = 12301}); -- Item: Mold of Ro Bracer
+		e.other:QuestReward(e.self,0,0,0,0,12301); -- Item: Mold of Ro Bracer
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

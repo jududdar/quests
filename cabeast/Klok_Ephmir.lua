@@ -19,7 +19,10 @@ function event_trade(e)
 	if(item_lib.check_turn_in(e.self, e.trade, {item1 = 12450})) then
 		-- Catfish Croak Sandwich [Part 7]
 		e.self:Emote("takes the disk and attaches it to an odd device powered by a foot pedal. He takes a froglok leg and begins to slice it as chunks of gristle flies into your face. When he is done he hands you some thin sliced froglok. 'There you are. Run along.'");
-		e.other:QuestReward(e.self,{items = {12445,12445,12445,12445}}); -- Item: Thin Sliced Froglok Meat
+		e.other:QuestReward(e.self,0,0,0,0,12445); -- Item: Thin Sliced Froglok Meat
+		e.other:QuestReward(e.self,0,0,0,0,12445);
+		e.other:QuestReward(e.self,0,0,0,0,12445);
+		e.other:QuestReward(e.self,0,0,0,0,12445);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

@@ -21,7 +21,7 @@ function event_trade(e)
 		e.self:Say("Thank you so much. I am so glad I did not have to deal with such a rowdy band of troopers as these. Please take some coin and perhaps a book from my personal library.");
 		e.other:Faction(e.self,440,3); 								--Cabilis Residents
 		e.other:Faction(e.self,441,1); 								--Legion of Cabilis
-		e.other:QuestReward(e.self,0,math.random(10),0,0,eq.ChooseRandom(12460, 12461),1200);		--The Code of Combat, The Book of Knowledge
+		e.other:QuestReward(e.self,0,math.random(1,10),0,0,eq.ChooseRandom(12460,12461),1200);		--The Code of Combat, The Book of Knowledge
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

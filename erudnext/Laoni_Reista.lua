@@ -29,7 +29,7 @@ function event_trade(e)
 		e.other:Faction(e.self,242,10,0); -- Faction: Deepwater Knights
 		e.other:Faction(e.self,266,1,0); -- Faction: High Council of Erudin
 		e.other:Faction(e.self,265,-1,0); -- Faction: Heretics
-		e.other:QuestReward(e.self,math.random(10),0,0,0,0,2000);
+		e.other:QuestReward(e.self,math.random(1,10),0,0,0,0,2000);
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end

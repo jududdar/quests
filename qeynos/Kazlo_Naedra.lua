@@ -23,7 +23,7 @@ function event_trade(e)
 		e.other:Faction(e.self,262,1,0); -- Faction: Guards of Qeynos
 		e.other:Faction(e.self,221,-1,0); -- Faction: Bloodsabers
 		e.other:Faction(e.self,296,-1,0); -- Faction: Opal Dark Briar
-		e.other:QuestReward(e.self,math.random(10),0,0,0,0,200);
+		e.other:QuestReward(e.self,math.random(1,10),0,0,0,0,200);
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

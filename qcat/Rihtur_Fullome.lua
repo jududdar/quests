@@ -38,7 +38,7 @@ function event_trade(e)
 		e.other:Faction(e.self,296,1); --Opal Dark Briar
 		e.other:Faction(e.self,341,-2); --Priest of Life
 		e.other:Faction(e.self,230,1); --Corrupt Qeynos Guards
-		e.other:QuestReward(e.self,{exp = 1000})
+		e.other:QuestReward(e.self,0,0,0,0,0,1000)
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

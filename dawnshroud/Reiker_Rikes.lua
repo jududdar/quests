@@ -14,7 +14,7 @@ function event_trade(e)
 	if(mushroom > 0) then
 		repeat
 			e.self:Emote("grins. 'These should go nicely in my stew.'");
-			e.other:QuestReward(e.self,{exp = 15000});
+			e.other:QuestReward(e.self,0,0,0,0,0,15000);
 			mushroom = mushroom - 1;
 		until mushroom == 0
 	end		

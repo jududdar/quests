@@ -37,7 +37,7 @@ function event_trade(e)
 
 	if(fac < 5 and item_lib.check_turn_in(e.self, e.trade, {item1 = 18814})) then -- A Sealed Letter ID-18814 filename "NERtoShintl"
 			e.self:Say("Oh my! Opal? She is providing these agents of Neriak with information regarding the Acedemy's secrets. I can not tell Cain about this. He will be furious. Show this to Toala. She will know what to do.");
-			e.other:QuestReward(e.self,{itemid = 18814}); -- A Sealed Letter ID-18814 filename "NERtoShintl"
+			e.other:QuestReward(e.self,0,0,0,0,18814); -- A Sealed Letter ID-18814 filename "NERtoShintl"
 	elseif(fac == 5 and item_lib.check_turn_in(e.self, e.trade, {item1 = 18814})) then-- A Sealed Letter ID-18814 filename "NERtoShintl"  Item will be lost if not amiable or better
 			e.self:Say("The Steel Warriors have no cause to dislike you, but you have yet to prove your worth to this guild.");
 	elseif(fac > 5 and item_lib.check_turn_in(e.self, e.trade, {item1 = 18814})) then-- A Sealed Letter ID-18814 filename "NERtoShintl"  Item will be lost if not amiable or better

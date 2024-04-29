@@ -27,7 +27,7 @@ function event_trade(e)
 		e.other:Faction(e.self,262,1,0); -- Guards of Qeynos
 		e.other:Faction(e.self,304,-1,0); -- Ring of scale
 		e.other:Faction(e.self,230,-1,0); -- Mayong Mistmoore
-		e.other:QuestReward(e.self,math.random(10),math.random(10),math.random(10),0,15007,100); -- Song: Hymn of Restoration
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,10),math.random(1,10),0,15007,100); -- Song: Hymn of Restoration
 	end  
 	item_lib.return_items(e.self, e.other, e.trade, e.text)
 end

@@ -46,7 +46,7 @@ function event_trade(e)
 		e.other:Faction(e.self,262,2,0); -- Guards of Qeynos
 		e.other:Faction(e.self,221,-1,0); -- Bloodsabers
 		e.other:Faction(e.self,219,1,0); -- Antonius Bayle
-		e.other:QuestReward(e.self,0,0,0,math.random(5),12238,1000); -- Aegis of Life ID: 12238
+		e.other:QuestReward(e.self,0,0,0,math.random(1,5),12238,1000); -- Aegis of Life ID: 12238
 	end
 	item_lib.return_items(e.self, e.other, e.trade);
 end

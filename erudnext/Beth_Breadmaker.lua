@@ -12,13 +12,13 @@ function event_trade(e)
 		e.other:Faction(e.self,289,2); -- Faction: Merchants of Erudin
 		e.other:Faction(e.self,266,1); -- Faction: High Council of Erudin
 		e.other:Faction(e.self,267,1); -- Faction: High Guard of Erudin
-		e.other:QuestReward(e.self,{gold = math.random(5,8), exp = 500})
+		e.other:QuestReward(e.self,0,0,math.random(5,8),0,0,500)
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 1838}, 0)) then  -- Bag of Bread Loaves
 		e.self:Say("Oh, wonderful fresh bread! Thank you for making the trip, that is such a long way. Here, I hope this covers your travel expenses. You have my deepest thanks.");
 		e.other:Faction(e.self,289,4); -- Faction: Merchants of Erudin
 		e.other:Faction(e.self,266,3); -- Faction: High Council of Erudin
 		e.other:Faction(e.self,267,3); -- Faction: High Guard of Erudin
-		e.other:QuestReward(e.self,{gold = math.random(5,8), platinum = math.random(1,2), exp = 500})
+		e.other:QuestReward(e.self,0,0,math.random(5,8),math.random(1,2),0,500)
 	end
 	item_lib.return_items(e.self, e.other, e.trade)
 end

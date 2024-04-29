@@ -23,7 +23,7 @@ function event_trade(e)
 		e.other:Faction(e.self,312,3); -- +Storm Guard
 		e.other:Faction(e.self,441,-1); -- -Legion of Cabilis
 		e.other:Faction(e.self,313,-1); -- -Pirates of Gunthak
-		e.other:QuestReward(e.self,{copper = math.random(5),silver = math.random(15),gold = math.random(10),itemid = 13155,exp = 10000});
+		e.other:QuestReward(e.self,math.random(1,5),math.random(1,15),math.random(1,10),0,13155,10000);
 	elseif(item_lib.check_turn_in(e.self, e.trade, {item1 = 18076})) then --blood soaked note Captain Nealith's Brother quest
 		e.self:Emote("nearly faints after reading the letter. 'Dear Marltek!! I shall miss you. There is more evil in this land!! Madness beyond description. Thank you " .. e.other:GetCleanName() .. ". You put my soul at ease and give me new direction. Please accept my brothers blade. He found it in the wilds. May you use it to slay many Drolvarg!!'");
 		e.other:Faction(e.self,248,5); -- +Inhabitants of Firiona Vie

@@ -42,7 +42,7 @@ function event_trade(e)
 		e.other:Faction(e.self,293,1);   -- MinersGuild249 better
 		e.other:Faction(e.self,290,1);   -- MerchantsOfKaladim better
 		e.other:Faction(e.self,232,-1);   -- CraknekWarriors worse
-		e.other:QuestReward(e.self,math.random(10),math.random(5),math.random(5),0,eq.ChooseRandom(2113,2114,2115,2116,2117,2118,2119,2120,2121,2122),1000); -- Item(s): Small Tattered Skullcap (2113), Small Tattered Mask (2114), Small Tattered Gorget (2115), Small Tattered Shoulderpads (2117), Small Tattered Belt (2119), Small Tattered Wristbands (2121), Small Tattered Gloves (2122)
+		e.other:QuestReward(e.self,math.random(1,10),math.random(1,5),math.random(1,5),0,eq.ChooseRandom(2113,2114,2115,2116,2117,2118,2119,2120,2121,2122),1000); -- Item(s): Small Tattered Skullcap (2113), Small Tattered Mask (2114), Small Tattered Gorget (2115), Small Tattered Shoulderpads (2117), Small Tattered Belt (2119), Small Tattered Wristbands (2121), Small Tattered Gloves (2122)
 	elseif(e.other:GetFactionValue(e.self) >= -100 and item_lib.check_turn_in(e.self, e.trade, {item1 = 13741, item2 = 13740},1,text)) then
 		e.self:Say("I underestimated you.  You are truly a great warrior.  I reward you with a piece of my own Bloodforge armor.  You would be fine Bloodforge Brigade material!  How would you like to [take a little trip] in the name of the Bloodforge Brigade?");
 		e.other:Faction(e.self,312,20);   -- StormGuard better
